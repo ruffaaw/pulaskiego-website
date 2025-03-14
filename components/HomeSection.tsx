@@ -3,40 +3,44 @@ import Link from "next/link";
 
 export default function HomeSection() {
   return (
-    <section id="home" className=" pt-20 h-screen w-full ">
-      <Image 
-      src="/render1.png"
-      alt="Tło sekcji"
-      fill
-      quality={100}
-      priority
-      className="object-cover object-center"
-      data-aos="fade-in"
-      data-aos-duration="2000"
+    <section id="home" className=" pt-20 h-screen w-full overflow-hidden">
+      <Image
+        src="/0001.png"
+        alt="Tło sekcji"
+        fill
+        quality={100}
+        priority
+        className="object-cover object-center"
+        data-aos="fade-in"
+        data-aos-duration="2000"
       />
-        <div
-            className="h-full w-full flex flex-col justify-center items-center space-y-20 "
+      <div className="absolute inset-0 flex flex-col justify-center items-start text-white bg-black bg-opacity-50 text-center z-10 md:px-12 lg:px-[100px] space-y-4 ">
+        <p
+          className="text-8xl font-bold drop-shadow-lg text-left transition break-words max-w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
         >
-        <div className="flex max-md:flex-col max-md:space-y-5 max-md:w-full max-md:items-center md:space-x-10 mt-8">
-          <Link
-            className="py-3 w-56 max-md:w-3/5  text-white rounded-2xl bg-color3 hover:bg-color2 hover:text-color3 transition break-words max-w-full text-center drop-shadow-xl"
-            href="#houses"
-            data-aos="zoom-in"
-            data-aos-delay="900"
-            data-aos-duration="1000"
-          >
-            Zobacz domy
-          </Link>
-          <Link
-            className="py-3 w-56 max-md:w-3/5  text-white rounded-2xl bg-color3 hover:bg-color2 hover:text-color3 transition break-words max-w-full text-center drop-shadow-xl"
-            href="#contact"
-            data-aos="zoom-in"
-            data-aos-delay="1100"
-            data-aos-duration="1000"
-          >
-            Kontakt
-          </Link>
-        </div>
+          Osiedle <br /> AquaHome
+        </p>
+        <p
+          className="text-3xl font-semibold drop-shadow-lg lg:max-w-[516px] text-left transition break-words max-w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="700"
+        >
+          Nowoczesne osiedle inspirowane harmonią natury i komfortem życia.
+        </p>
+        <Link
+          key={"about-investment"}
+          href={"#about-investment"}
+          className="hover:scale-125 transition-all drop-shadow-md border-2 border-green-spring-100 px-4 py-2 text-xl break-words max-w-full"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="900"
+        >
+          Rozpocznij
+        </Link>
       </div>
     </section>
   );
