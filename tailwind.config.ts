@@ -9,13 +9,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        color1: "var(--color1)",
-        color2: "var(--color2)",
-        color3: "var(--color3)",
-        color4: "var(--color4)",
-        color5: "var(--color5)",
+        background: "#bdc4b4",
+        foreground: "#1a1c17",
+        "green-spring": {
+          "50": "#f3f4f1",
+          "100": "#e4e7e0",
+          "200": "#bdc4b4",
+          "300": "#acb5a1",
+          "400": "#8e9982",
+          "500": "#727d65",
+          "600": "#58624e",
+          "700": "#464d3e",
+          "800": "#3a3f35",
+          "900": "#33382f",
+          "950": "#1a1c17",
+        },
       },
     },
   },
