@@ -29,11 +29,12 @@ export default function Header() {
         data-aos-duration="1000"
       >
         {[
-          { href: "#about-investment", label: "O inwestycji" },
-          { href: "#about-us", label: "O nas" },
-          { href: "#our-values", label: "Nasze wartości" },
-          { href: "#houses", label: "Domy" },
-          { href: "#gallery", label: "Galeria" },
+          { href: "#o-inwestycji", label: "O inwestycji" },
+          { href: "#lokalizacja", label: "Lokalizacja" },
+          { href: "#o-nas", label: "O nas" },
+          // { href: "#nasze-wartosci", label: "Nasze wartości" },
+          { href: "#domy", label: "Domy" },
+          { href: "#galeria", label: "Galeria" },
         ].map((item) => (
           <Link
             key={item.href}
@@ -44,8 +45,8 @@ export default function Header() {
           </Link>
         ))}
         <Link
-          key={"contact"}
-          href={"#contact"}
+          key={"kontakt"}
+          href={"#kontakt"}
           className="hover:text-green-spring-300 hover:scale-125 transition-all drop-shadow-md border-2 border-green-spring-100 hover:border-green-spring-300 px-4 py-2"
         >
           Kontakt
@@ -75,42 +76,49 @@ export default function Header() {
       {isMenuOpen && (
         <div className="fixed flex flex-col items-center top-20 bg-green-spring-800 shadow-md z-30 w-screen h-auto ">
           <Link
-            href="#about-investment"
+            href="#o-inwestycji"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">O inwestycji</p>
           </Link>
           <Link
-            href="#about-us"
+            href="#o-nas"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">O nas</p>
           </Link>
           <Link
-            href="#our-values"
+            href="#lokalizacja"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <p className="break-words max-w-full">Lokalizacja</p>
+          </Link>
+          {/* <Link
+            href="#nasze-wartosci"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Nasze wartości</p>
-          </Link>
+          </Link> */}
           <Link
-            href="#houses"
+            href="#domy"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Domy</p>
           </Link>
           <Link
-            href="#gallery"
+            href="#galeria"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Galeria</p>
           </Link>
           <Link
-            href="#contact"
+            href="#kontakt"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
