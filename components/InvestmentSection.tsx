@@ -21,11 +21,11 @@ export default function InvestmentSection() {
   }, []);
   return (
     <section
-      id="about-investment"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-20 px-[100px]"
+      id="o-inwestycji"
+      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-20 px-[100px] py-8"
     >
       <p
-        className="text-3xl font-bold text-green-spring-950 mt-16"
+        className="text-3xl font-bold text-green-spring-950 "
         data-aos="fade-down"
       >
         O INWESTYCJI
@@ -355,14 +355,14 @@ export default function InvestmentSection() {
             Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni i
             nowoczesnego komfortu.
           </p>
-          <button
+          <Link
             href={"#kontakt"}
-            className="hover:text-green-spring-200 hover:bg-green-spring-900 transition-all drop-shadow-md border-2 border-green-spring-900 text-green-spring-900 px-4 py-2 text-xl w-1/3"
+            className="hover:text-green-spring-200 hover:bg-green-spring-900 transition-all drop-shadow-md border-2 border-green-spring-900 text-green-spring-900 px-4 py-2 text-xl w-1/3 text-center"
             data-aos="fade-right"
             data-aos-delay="100"
           >
             Skontaktuj się z nami
-          </button>
+          </Link>
         </div>
         <p
           className="text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
