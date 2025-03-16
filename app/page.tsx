@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
 import InvestmentSection from "@/components/InvestmentSection";
+import TabsSection from "@/components/TabSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <HomeSection />
       <InvestmentSection />
+      <TabsSection />
     </div>
   );
 }
