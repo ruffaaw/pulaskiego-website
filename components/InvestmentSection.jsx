@@ -22,10 +22,10 @@ export default function InvestmentSection() {
   return (
     <section
       id="about-investment"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-20 px-[100px]"
+      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-20 px-[100px] py-8"
     >
       <p
-        className="text-3xl font-bold text-green-spring-950 mt-16"
+        className="text-3xl font-bold text-green-spring-950 "
         data-aos="fade-down"
       >
         O INWESTYCJI
