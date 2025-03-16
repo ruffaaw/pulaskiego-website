@@ -12,14 +12,11 @@ import {
 
 const TabsSection = () => {
   const [activeTab, setActiveTab] = useState("zakupy");
-  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
     AOS.init({
-      //   duration: 1000, // Czas trwania animacji
-      once: true, // Animacja tylko raz
+      once: true,
     });
-    setIsFirstRender(false);
   }, []);
 
   const tabs = [
