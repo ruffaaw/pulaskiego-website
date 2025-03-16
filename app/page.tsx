@@ -1,3 +1,4 @@
+import AboutInvestorSection from "@/components/AboutInvestorSection";
 import Header from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
 import InvestmentSection from "@/components/InvestmentSection";
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeSection />
       <InvestmentSection />
       <TabsSection />
+      <AboutInvestorSection />
     </div>
   );
 }
