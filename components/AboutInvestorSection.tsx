@@ -116,7 +116,6 @@ const AboutInvestorSection = () => {
             <motion.div
               key={index + 2}
               className="bg-green-spring-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
