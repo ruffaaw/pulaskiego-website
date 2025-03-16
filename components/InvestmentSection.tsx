@@ -21,7 +21,7 @@ export default function InvestmentSection() {
   }, []);
   return (
     <section
-      id="about-investment"
+      id="o-inwestycji"
       className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-20 px-[100px] py-8"
     >
       <p
