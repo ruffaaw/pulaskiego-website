@@ -31,8 +31,7 @@ export default function Header() {
         {[
           { href: "#o-inwestycji", label: "O inwestycji" },
           { href: "#lokalizacja", label: "Lokalizacja" },
-          { href: "#o-nas", label: "O nas" },
-          // { href: "#nasze-wartosci", label: "Nasze wartości" },
+          { href: "#o-inwestorze", label: "O inwestorze" },
           { href: "#domy", label: "Domy" },
           { href: "#galeria", label: "Galeria" },
         ].map((item) => (
@@ -82,13 +81,7 @@ export default function Header() {
           >
             <p className="break-words max-w-full">O inwestycji</p>
           </Link>
-          <Link
-            href="#o-nas"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <p className="break-words max-w-full">O nas</p>
-          </Link>
+
           <Link
             href="#lokalizacja"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
@@ -96,13 +89,13 @@ export default function Header() {
           >
             <p className="break-words max-w-full">Lokalizacja</p>
           </Link>
-          {/* <Link
-            href="#nasze-wartosci"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
+          <Link
+            href="#o-inwestorze"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
             onClick={() => setIsMenuOpen(false)}
           >
-            <p className="break-words max-w-full">Nasze wartości</p>
-          </Link> */}
+            <p className="break-words max-w-full">O inwestorze</p>
+          </Link>
           <Link
             href="#domy"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
