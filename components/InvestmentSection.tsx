@@ -2,14 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import {
-  FaBus,
-  FaCloudRain,
-  FaDroplet,
-  FaLocationDot,
-  FaTemperatureHalf,
-  FaTree,
-} from "react-icons/fa6";
 import AOS from "aos";
 
 export default function InvestmentSection() {
@@ -39,7 +31,7 @@ export default function InvestmentSection() {
             KOMFORT I BEZPIECZEŃSTWO NA WYCIĄGNIĘCIE RĘKI
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left"
+            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -47,7 +39,7 @@ export default function InvestmentSection() {
             rytmie relaksu.
           </p>
           <p
-            className="text-2xl text-green-spring-900 max-w-[1000px] text-left"
+            className="text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
             data-aos="fade-right"
             data-aos-delay="200"
           >
@@ -93,7 +85,7 @@ export default function InvestmentSection() {
             ZDROWIE I EKOLOGIA W STANDARDZIE{" "}
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right"
+            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right mt-4"
             data-aos="fade-left"
             data-aos-delay="100"
           >
@@ -101,7 +93,7 @@ export default function InvestmentSection() {
             rodzinę, żyjąc w harmonii z naturą.
           </p>
           <p
-            className="text-2xl text-green-spring-900 max-w-[1000px] text-right"
+            className="text-2xl text-green-spring-900 max-w-[1000px] text-right mt-6"
             data-aos="fade-left"
             data-aos-delay="200"
           >
@@ -123,7 +115,7 @@ export default function InvestmentSection() {
             WYGODNE ŻYCIE W NOWOCZESNYM OTOCZENIU{" "}
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left"
+            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -131,7 +123,7 @@ export default function InvestmentSection() {
             dostępem do miasta i pełną wygodą.
           </p>
           <p
-            className="text-2xl text-green-spring-900 max-w-[1000px] text-left "
+            className="text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
             data-aos="fade-right"
             data-aos-delay="200"
           >
@@ -146,7 +138,7 @@ export default function InvestmentSection() {
               data-aos="fade-right"
               data-aos-delay="300"
             >
-              <FaLocationDot className="h-10 w-10" />
+              <span className="text-3xl">📍</span>
               <p>
                 Doskonała lokalizacja - Sklepy, restauracje i placówki
                 edukacyjne w zasięgu ręki.
@@ -157,7 +149,7 @@ export default function InvestmentSection() {
               data-aos="fade-right"
               data-aos-delay="400"
             >
-              <FaTree className="h-10 w-10" />
+              <span className="text-3xl">🌳</span>
               <p>
                 Nowoczesny park - 3 km alejek, siłownia plenerowa, place zabaw i
                 strefa wypoczynkowa.
@@ -168,7 +160,7 @@ export default function InvestmentSection() {
               data-aos="fade-right"
               data-aos-delay="500"
             >
-              <FaBus className="h-10 w-10" />
+              <span className="text-3xl">🚌</span>
               <p>
                 Doskonała komunikacja - Szybki dojazd do Krakowa i łatwe
                 przemieszczanie się po Wieliczce.
@@ -210,7 +202,7 @@ export default function InvestmentSection() {
             NOWOCZESNE TECHNOLOGIE I OSZCZĘDNOŚĆ{" "}
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right"
+            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right mt-4"
             data-aos="fade-left"
             data-aos-delay="100"
           >
@@ -218,7 +210,7 @@ export default function InvestmentSection() {
             rozwiązania, które sprawiają, że życie jest łatwiejsze
           </p>
           <p
-            className="text-2xl text-green-spring-900 max-w-[1000px] text-right "
+            className="text-2xl text-green-spring-900 max-w-[1000px] text-right mt-6"
             data-aos="fade-left"
             data-aos-delay="200"
           >
@@ -235,7 +227,7 @@ export default function InvestmentSection() {
                 Doskonała izolacja termiczna – gwarantuje oszczędność energii i
                 wysoki komfort cieplny.
               </p>
-              <FaTemperatureHalf className="h-10 w-10" />
+              <span className="text-3xl">🌡️</span>
             </li>
             <li
               className="flex flex-row space-x-3 py-2 items-center justify-end"
@@ -246,7 +238,7 @@ export default function InvestmentSection() {
                 Zbiorniki na deszczówkę – ekologiczny system nawadniania zieleni
                 osiedlowej.
               </p>
-              <FaCloudRain className="h-10 w-10" />
+              <span className="text-3xl">🌧️</span>
             </li>
             <li
               className="flex flex-row space-x-3 py-2 items-center justify-end"
@@ -257,7 +249,7 @@ export default function InvestmentSection() {
                 Przepuszczalne nawierzchnie – pomagają w naturalnej cyrkulacji
                 wody, eliminując w dużym stopniu problem zalegających kałuż.
               </p>
-              <FaDroplet className="h-10 w-10" />
+              <span className="text-3xl">💧</span>
             </li>
           </ul>
         </div>
@@ -271,14 +263,14 @@ export default function InvestmentSection() {
             IDEALNE MIEJSCE DLA CIEBIE
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[700px] text-right"
+            className="text-4xl font-semibold text-green-spring-900 max-w-[700px] text-right "
             data-aos="fade-left"
           >
             Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni i
             nowoczesnego komfortu, który pokochasz.
           </p>
         </div>
-        <div className="flex flex-row justify-between space-x-5">
+        <div className="flex flex-row justify-between space-x-5 mt-4">
           <div className="grid grid-cols-2 gap-5">
             <div
               className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 space-y-5 drop-shadow-lg"
