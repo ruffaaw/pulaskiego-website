@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const House360View = () => {
@@ -8,6 +8,13 @@ const House360View = () => {
   const isDragging = useRef(false);
   const lastX = useRef(0);
   const images = Array.from({ length: 36 }, (_, i) => `/${i + 1}-min.jpg`);
+
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     isDragging.current = true;
@@ -36,7 +43,7 @@ const House360View = () => {
   return (
     <section
       id="widok-360"
-      className="w-full min-h-screen flex flex-col items-center justify-center bg-green-spring-100 text-white py-16 px-8"
+      className="w-full min-h-screen flex flex-col items-center justify-center bg-green-spring-100 text-white py-8 px-[100px] scroll-mt-20"
     >
       <motion.p
         className="text-7xl font-bold uppercase tracking-wide bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent text-center"
