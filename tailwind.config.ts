@@ -24,6 +24,8 @@ export default {
           "900": "#33382f",
           "950": "#1a1c17",
         },
+        signature: "#555",
+        signature_text: "#aaa",
       },
     },
   },
