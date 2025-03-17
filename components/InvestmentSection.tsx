@@ -273,53 +273,57 @@ export default function InvestmentSection() {
         <div className="flex flex-row justify-between space-x-5 mt-4">
           <div className="grid grid-cols-2 gap-5">
             <div
-              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 space-y-5 drop-shadow-lg"
+              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 drop-shadow-lg"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <p className="text-4xl font-semibold text-green-spring-900">
+              <div className="text-6xl mb-4">🌿</div>
+              <p className="text-2xl font-bold normal-case text-green-spring-900 mb-4">
                 SPOKOJNA, ZIELONA OKOLICA
               </p>
-              <p className="text-2xl text-green-spring-900">
+              <p className="text-xl text-green-spring-900">
                 Żyj w otoczeniu natury, gdzie zieleń i cisza tworzą idealne
                 warunki do relaksu.
               </p>
             </div>
             <div
-              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 space-y-5 drop-shadow-lg"
+              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 drop-shadow-lg"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <p className="text-4xl font-semibold text-green-spring-900">
+              <div className="text-6xl mb-4">🚗</div>
+              <p className="text-2xl font-bold normal-case text-green-spring-900 mb-4">
                 DOSKONAŁY DOJAZD DO KRAKOWA I CENTRUM WIELICZKI
               </p>
-              <p className="text-2xl text-green-spring-900">
+              <p className="text-xl text-green-spring-900">
                 Szybki i wygodny dojazd do Krakowa oraz centrum Wieliczki bez
                 stresu i pośpiechu.
               </p>
             </div>
             <div
-              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 space-y-5 drop-shadow-lg"
+              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 drop-shadow-lg"
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <p className="text-4xl font-semibold text-green-spring-900">
+              <div className="text-6xl mb-4">🏗️</div>
+              <p className="text-2xl font-bold normal-case text-green-spring-900 mb-4">
                 WYSOKI STANDARD WYKOŃCZENIA I NOWOCZESNE TECHNOLOGIE
               </p>
-              <p className="text-2xl text-green-spring-900">
+              <p className="text-xl text-green-spring-900">
                 Nowoczesne technologie i eleganckie wykończenie gwarantują
                 komfort i oszczędność energii.
               </p>
             </div>
             <div
-              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 space-y-5 drop-shadow-lg"
+              className="flex flex-col h-80 bg-green-spring-100 rounded-3xl p-5 drop-shadow-lg"
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <p className="text-4xl font-semibold text-green-spring-900">
+              <div className="text-6xl mb-4">🏠</div>
+              <p className="text-2xl font-bold normal-case text-green-spring-900 mb-4">
                 PRZESTRONNE WNĘTRZA I FUNKCJONALNE UKŁADY MIESZKAŃ
               </p>
-              <p className="text-2xl text-green-spring-900">
+              <p className="text-xl text-green-spring-900">
                 Przestronne wnętrza, które dają swobodę i inspirację do
                 codziennego życia.
               </p>
