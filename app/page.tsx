@@ -1,4 +1,5 @@
 import AboutInvestorSection from "@/components/AboutInvestorSection";
+import Contact from "@/components/Contact";
 import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import HomeSection from "@/components/HomeSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <House360View />
       <HousesSection />
       <Gallery />
+      <Contact />
     </div>
   );
 }

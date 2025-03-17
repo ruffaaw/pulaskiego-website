@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const InteractiveOffersView = () => {
   const [selectedHouse, setSelectedHouse] = useState<number | null>(null);
@@ -9,6 +10,11 @@ const InteractiveOffersView = () => {
       name: "Dom 1",
       status: 1,
       price: "500 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="58"
@@ -32,6 +38,11 @@ const InteractiveOffersView = () => {
       name: "Dom 2",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="58"
@@ -55,6 +66,11 @@ const InteractiveOffersView = () => {
       name: "Dom 3",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="64"
@@ -78,6 +94,11 @@ const InteractiveOffersView = () => {
       name: "Dom 4",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="65"
@@ -101,6 +122,11 @@ const InteractiveOffersView = () => {
       name: "Dom 5",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="67"
@@ -124,6 +150,11 @@ const InteractiveOffersView = () => {
       name: "Dom 6",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="73"
@@ -147,6 +178,11 @@ const InteractiveOffersView = () => {
       name: "Dom 7",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="77"
@@ -170,6 +206,11 @@ const InteractiveOffersView = () => {
       name: "Dom 8",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="81"
@@ -193,6 +234,11 @@ const InteractiveOffersView = () => {
       name: "Dom 9",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="85"
@@ -216,6 +262,11 @@ const InteractiveOffersView = () => {
       name: "Dom 10",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="91"
@@ -239,6 +290,11 @@ const InteractiveOffersView = () => {
       name: "Dom 11",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="101"
@@ -262,6 +318,11 @@ const InteractiveOffersView = () => {
       name: "Dom 12",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="110"
@@ -285,6 +346,11 @@ const InteractiveOffersView = () => {
       name: "Dom 13",
       status: 0,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="122"
@@ -308,6 +374,11 @@ const InteractiveOffersView = () => {
       name: "Dom 14",
       status: 2,
       price: "550 000 zł",
+      pdf: "https://n20-storage.s3.eu-north-1.amazonaws.com/trabki/1.pdf",
+      dzialka: 4.5,
+      pokoje: 4,
+      metraz: 120.5,
+
       path: (
         <svg
           width="140"
@@ -350,7 +421,7 @@ const InteractiveOffersView = () => {
       id="domy"
       className="w-full min-h-screen flex flex-col items-center justify-center bg-green-spring-200 text-white py-8 px-[100px] scroll-mt-20"
     >
-      <h2 className="text-7xl font-bold uppercase tracking-wide bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent text-center">
+      <h2 className="text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center">
         Domy
       </h2>
 
@@ -359,7 +430,7 @@ const InteractiveOffersView = () => {
           <img
             src="/z_gory.png"
             alt="Widok z góry inwestycji"
-            className="w-full h-auto rounded-3xl border-4 border-green-spring-400"
+            className="w-full h-auto rounded-3xl"
           />
 
           {houses.map((house) => (
@@ -396,7 +467,6 @@ const InteractiveOffersView = () => {
             </div>
           ))}
         </div>
-
         {selectedHouse !== null && (
           <div className="absolute top-0 right-0 bg-white p-6 rounded-lg shadow-lg text-green-spring-900">
             <h3 className="text-2xl font-bold">
@@ -411,7 +481,6 @@ const InteractiveOffersView = () => {
                     : houses[selectedHouse - 1].status === 1
                     ? "text-green-500"
                     : "text-yellow-500"
-                }
                 }`}
               >
                 {getStatusText(houses[selectedHouse - 1].status)}
@@ -423,8 +492,31 @@ const InteractiveOffersView = () => {
                 {houses[selectedHouse - 1].price}
               </span>
             </p>
+            <p className="text-lg">
+              🏠 Powierzchnia:{" "}
+              <span className="font-semibold">
+                {houses[selectedHouse - 1].metraz} m²
+              </span>
+            </p>
+            <p className="text-lg">
+              🛏️ Pokoje:{" "}
+              <span className="font-semibold">
+                {houses[selectedHouse - 1].pokoje}
+              </span>
+            </p>
+            <p className="text-lg">
+              📄{" "}
+              <a
+                href={houses[selectedHouse - 1].pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+              >
+                Zobacz szczegóły (PDF)
+              </a>
+            </p>
           </div>
-        )}
+        )}{" "}
       </div>
     </section>
   );
