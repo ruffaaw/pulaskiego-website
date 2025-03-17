@@ -359,7 +359,7 @@ const InteractiveOffersView = () => {
           <img
             src="/z_gory.png"
             alt="Widok z góry inwestycji"
-            className="w-full h-auto rounded-3xl shadow-2xl border-4 border-green-spring-400"
+            className="w-full h-auto rounded-3xl border-4 border-green-spring-400"
           />
 
           {houses.map((house) => (
