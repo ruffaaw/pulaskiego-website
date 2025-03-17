@@ -11,9 +11,9 @@ const ContactSection = () => {
     privacyPolicy: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
-    null
-  );
+  //   const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
+  //     null
+  //   );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,34 +21,34 @@ const ContactSection = () => {
     if (isSubmitting) return;
     setIsSubmitting(true);
 
-    const now = Date.now();
-    if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
-      alert(
-        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
-      );
-      setIsSubmitting(false);
-      return;
-    }
+    // const now = Date.now();
+    // if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
+    //   alert(
+    //     "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
+    //   );
+    //   setIsSubmitting(false);
+    //   return;
+    // }
 
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.phone ||
-      !formData.message ||
-      !formData.privacyPolicy
-    ) {
-      alert(
-        "Proszę wypełnić wszystkie pola i zaakceptować politykę prywatności!"
-      );
-      setIsSubmitting(false);
-      return;
-    }
+    // if (
+    //   !formData.name ||
+    //   !formData.email ||
+    //   !formData.phone ||
+    //   !formData.message ||
+    //   !formData.privacyPolicy
+    // ) {
+    //   alert(
+    //     "Proszę wypełnić wszystkie pola i zaakceptować politykę prywatności!"
+    //   );
+    //   setIsSubmitting(false);
+    //   return;
+    // }
 
-    const body = {
-      email: "",
-      subject: `Pułaskiego - Wiadomość od: ${formData.name}`,
-      message: `Imię i nazwisko: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\n\n${formData.message}`,
-    };
+    // const body = {
+    //   email: "",
+    //   subject: `Pułaskiego - Wiadomość od: ${formData.name}`,
+    //   message: `Imię i nazwisko: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\n\n${formData.message}`,
+    // };
 
     // try {
     //   // Wysyłanie danych do API

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const InteractiveOffersView = () => {
   const [selectedHouse, setSelectedHouse] = useState<number | null>(null);
