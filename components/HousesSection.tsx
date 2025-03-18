@@ -418,7 +418,7 @@ const InteractiveOffersView = () => {
   return (
     <section
       id="domy"
-      className="w-full min-h-screen flex flex-col items-center justify-center bg-green-spring-200 text-white py-8 px-[100px] scroll-mt-20"
+      className="w-full min-h-screen flex flex-col items-center justify-center bg-green-spring-200 text-white py-8 px-[100px] scroll-mt-14"
     >
       <h2 className="text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center">
         Domy

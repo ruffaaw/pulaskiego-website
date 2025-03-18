@@ -105,7 +105,7 @@ const ContactSection = () => {
   return (
     <section
       id="kontakt"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-20 px-[100px] py-8"
+      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-[100px] py-8"
     >
       <p
         className="text-3xl font-bold text-green-spring-950"
