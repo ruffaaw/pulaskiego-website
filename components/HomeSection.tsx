@@ -32,8 +32,8 @@ export default function HomeSection() {
           Nowoczesne osiedle inspirowane harmonią natury i komfortem życia.
         </p>
         <Link
-          key={"about-investment"}
-          href={"#about-investment"}
+          key={"o-inwestycji"}
+          href={"#o-inwestycji"}
           className="hover:scale-125 transition-all drop-shadow-md border-2 border-green-spring-100 px-4 py-2 text-xl break-words max-w-full"
           data-aos="fade-up"
           data-aos-duration="1000"
