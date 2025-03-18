@@ -1,13 +1,35 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > 0) {
+        setIsScrolled(true);
+      } else if (scrollPosition === 0) {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="fixed w-full z-30 flex justify-between items-center transition-all duration-300 md:px-12 lg:px-[100px] ">
+    <header
+      className={`fixed w-full z-30 flex justify-between items-center transition-all duration-300 md:px-12 lg:px-[100px] ${
+        isScrolled ? "bg-green-spring-900" : "bg-transparent"
+      }`}
+    >
       <div
         className="flex items-center max-md:pl-6"
         data-aos="zoom-out"
