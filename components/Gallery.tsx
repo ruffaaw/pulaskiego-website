@@ -19,7 +19,7 @@ export default function Gallery() {
   return (
     <section
       id="galeria"
-      className="w-full h-full flex flex-col items-center bg-green-spring-100 relative scroll-mt-10 px-[100px] py-8 "
+      className="w-full h-full flex flex-col items-center bg-green-spring-100 relative scroll-mt-14 px-[100px] py-8 "
     >
       <div
         className="w-full lg:w-4/6"

@@ -1,15 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
-import AOS from "aos";
+import { useState } from "react";
 
 const TabsSection = () => {
   const [activeTab, setActiveTab] = useState("zakupy");
-
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  }, []);
 
   const tabs = [
     {
@@ -59,7 +52,7 @@ const TabsSection = () => {
   return (
     <section
       id="lokalizacja"
-      className="w-full h-full flex flex-col bg-green-spring-100 py-8 px-[100px] scroll-mt-20"
+      className="w-full h-full flex flex-col bg-green-spring-100 py-8 px-[100px] scroll-mt-14"
     >
       <h2
         className="text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center mb-8"
