@@ -1,6 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
+import { FaEnvelope, FaPhone, FaMobile } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -253,6 +256,41 @@ const ContactSection = () => {
             title="Mapa inwestycji"
           ></iframe>
         </motion.div>
+      </div>
+      <div className="flex flex-wrap justify-center items-center mt-8 gap-6">
+        <a
+          href="https://www.n20.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-center"
+        >
+          <Image src="/n20logoCzarne.png" alt="N20" width={255} height={160} />
+        </a>
+        <div className="text-left font-bold text-gray-800 max-w-md">
+          <h2 className="text-xl md:text-2xl mb-3">
+            Kontakt biura nieruchomości
+          </h2>
+          <p className="text-sm md:text-base flex items-center">
+            <FaEnvelope className="text-orange-500 mr-2" />
+            biuro@n20.pl
+          </p>
+          <p className="text-sm md:text-base flex items-center">
+            <FaPhone className="text-orange-500 mr-2" />
+            +48 12 433 38 78
+          </p>
+          <p className="text-sm md:text-base flex items-center">
+            <FaMobile className="text-orange-500 mr-2" />
+            +48 790 557 504
+          </p>
+          <p className="text-sm md:text-base flex items-center">
+            <FaMobile className="text-orange-500 mr-2" />
+            +48 790 557 057
+          </p>
+          <p className="text-sm md:text-base flex items-center">
+            <FaLocationDot className="text-orange-500 mr-2" />
+            Plac Wolnica 13/21, 31-060 Kraków
+          </p>
+        </div>
       </div>
     </section>
   );
