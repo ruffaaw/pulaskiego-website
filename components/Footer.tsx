@@ -4,8 +4,11 @@ function Footer() {
   return (
     <footer>
       <div className="w-full h-full flex flex-col">
-        <div className="flex flex-col lg:flex-row justify-between pb-5 pt-5 bg-green-spring-900 px-[100px]">
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col lg:flex-row justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px]">
+          <div
+            className="flex flex-col lg:flex-row justify-center items-center gap-4"
+            data-aos="fade-right"
+          >
             <Link
               href="https://www.n20.pl/"
               target="_blank"
@@ -35,7 +38,10 @@ function Footer() {
               />
             </Link> */}
           </div>
-          <div className="flex flex-col justify-center items-center mt-5 lg:mt-0">
+          <div
+            className="flex flex-col justify-center items-center mt-5 lg:mt-0"
+            data-aos="fade-left"
+          >
             <div className="flex flex-row gap-4">
               <Link
                 href="https://www.facebook.com/N20RealEstate"
@@ -68,8 +74,8 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-signature text-white px-[100px]">
-          <p className="my-2 text-center md:text-left">2024 Policrafts ©</p>
+        <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-signature text-white px-4 sm:px-8 md:px-12 lg:px-[100px]">
+          <p className="my-2 text-center md:text-left">2025 Policrafts ©</p>
           <div className="text-center md:text-right">
             <p className="text-signature_text p-0 m-0">
               Wizualizacje: Maciej Krzyszkowski

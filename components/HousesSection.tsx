@@ -38,12 +38,15 @@ const HousesSection = () => {
       id="domy"
       className="w-full flex flex-col items-center justify-center bg-green-spring-200 text-white py-8 px-4 sm:px-8 md:px-12 lg:px-[100px] scroll-mt-14"
     >
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center">
+      <h2
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center"
+        data-aos="fade-down"
+      >
         Domy
       </h2>
 
       <div className="w-full mt-8 relative flex flex-col lg:flex-row gap-8">
-        <div className="relative w-full lg:w-4/5">
+        <div className="relative w-full lg:w-4/5" data-aos="fade-right">
           <img
             src="/z_gory.png"
             alt="Widok z góry inwestycji"
@@ -75,6 +78,7 @@ const HousesSection = () => {
         <div
           ref={listContainerRef}
           className="overflow-y-auto max-h-[350px] lg:max-h-[660px] w-full lg:w-1/5"
+          data-aos="fade-left"
         >
           {houseCoordinates.map((house) => (
             <div
