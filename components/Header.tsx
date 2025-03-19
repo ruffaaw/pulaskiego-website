@@ -8,6 +8,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    console.log(isMenuOpen);
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
@@ -22,16 +23,20 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isMenuOpen]);
 
   return (
     <header
-      className={`fixed w-full z-30 flex justify-between items-center transition-all duration-300 md:px-12 lg:px-[100px] ${
-        isScrolled ? "bg-green-spring-900" : "bg-transparent"
+      className={`fixed w-full z-30 flex justify-between items-center md:px-12 lg:px-[100px] ${
+        isMenuOpen
+          ? "bg-green-spring-900"
+          : isScrolled
+          ? "bg-green-spring-900"
+          : "bg-transparent"
       }`}
     >
       <div
-        className="flex items-center max-md:pl-6"
+        className="flex items-center max-md:pl-6 "
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
@@ -96,7 +101,7 @@ export default function Header() {
         </svg>
       </button>
       {isMenuOpen && (
-        <div className="fixed flex flex-col items-center top-20 bg-green-spring-800 shadow-md z-30 w-screen h-auto ">
+        <div className="fixed flex flex-col items-center top-20 bg-green-spring-900 shadow-md z-30 w-screen h-auto ">
           <Link
             href="#o-inwestycji"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
