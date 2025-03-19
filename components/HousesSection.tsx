@@ -1,12 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useRef } from "react";
 import { houseCoordinates } from "@/app/data/houseCoordinates";
 
-const InteractiveOffersView = () => {
-  const [selectedHouse, setSelectedHouse] = useState<number | null>(null);
+const HousesSection = () => {
+  const houseRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const listContainerRef = useRef<HTMLDivElement | null>(null);
 
   const handleHouseClick = (id: number) => {
-    setSelectedHouse(id);
+    const houseRef = houseRefs.current[id];
+    const listContainer = listContainerRef.current;
+
+    if (houseRef && listContainer) {
+      const scrollOffset = houseRef.offsetTop - listContainer.offsetTop;
+
+      listContainer.scrollTo({
+        top: scrollOffset,
+        behavior: "smooth",
+      });
+    }
   };
 
   const getStatusText = (status: number) => {
@@ -31,12 +42,12 @@ const InteractiveOffersView = () => {
         Domy
       </h2>
 
-      <div className="w-full max-w-5xl mt-8 relative flex justify-start">
-        <div className="relative">
+      <div className="w-full mt-8 relative flex flex-col lg:flex-row gap-8">
+        <div className="relative w-full lg:w-4/5">
           <img
             src="/z_gory.png"
             alt="Widok z góry inwestycji"
-            className="w-full h-auto rounded-3xl"
+            className="w-full h-auto rounded-3xl max-h-[500px] lg:max-h-[660px]"
           />
 
           {houseCoordinates.map((house) => (
@@ -60,59 +71,63 @@ const InteractiveOffersView = () => {
             </button>
           ))}
         </div>
-        {selectedHouse !== null && (
-          <div className="absolute top-0 right-0 bg-white p-6 sm:p-6 rounded-lg shadow-lg text-green-spring-900 mt-4 sm:mt-0">
-            <h3 className="text-xl sm:text-2xl font-bold">
-              {houseCoordinates[selectedHouse - 1].name}
-            </h3>
-            <p className="text-sm sm:text-lg">
-              Status:{" "}
-              <span
-                className={`font-semibold ${
-                  houseCoordinates[selectedHouse - 1].status === 0
-                    ? "text-red-500"
-                    : houseCoordinates[selectedHouse - 1].status === 1
-                    ? "text-green-500"
-                    : "text-yellow-500"
-                }`}
-              >
-                {getStatusText(houseCoordinates[selectedHouse - 1].status)}
-              </span>
-            </p>
-            <p className="text-sm sm:text-lg">
-              Cena:{" "}
-              <span className="font-semibold">
-                {houseCoordinates[selectedHouse - 1].price}
-              </span>
-            </p>
-            <p className="text-sm sm:text-lg">
-              🏠 Powierzchnia:{" "}
-              <span className="font-semibold">
-                {houseCoordinates[selectedHouse - 1].metraz} m²
-              </span>
-            </p>
-            <p className="text-sm sm:text-lg">
-              🛏️ Pokoje:{" "}
-              <span className="font-semibold">
-                {houseCoordinates[selectedHouse - 1].pokoje}
-              </span>
-            </p>
-            <p className="text-sm sm:text-lg">
-              📄{" "}
-              <a
-                href={houseCoordinates[selectedHouse - 1].pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
-              >
-                Zobacz szczegóły (PDF)
-              </a>
-            </p>
-          </div>
-        )}{" "}
+
+        <div
+          ref={listContainerRef}
+          className="overflow-y-auto max-h-[350px] lg:max-h-[660px] w-full lg:w-1/5"
+        >
+          {houseCoordinates.map((house) => (
+            <div
+              key={house.id}
+              ref={(el) => {
+                houseRefs.current[house.id] = el;
+              }}
+              className="bg-green-spring-50 p-4 sm:p-6 mb-4 text-green-spring-900"
+            >
+              <h3 className="text-xl sm:text-2xl font-bold">{house.name}</h3>
+              <p className="mt-2 text-sm sm:text-base">
+                Status:{" "}
+                <span
+                  className={`font-semibold ${
+                    house.status === 0
+                      ? "text-red-500"
+                      : house.status === 1
+                      ? "text-green-500"
+                      : "text-yellow-500"
+                  }`}
+                >
+                  {house.status === 0 ? "🔴" : house.status === 1 ? "🟢" : "🟡"}{" "}
+                  {getStatusText(house.status)}
+                </span>
+              </p>
+              <p className="mt-2 text-sm sm:text-base">
+                💰 <span className="font-semibold">Cena: {house.price}</span>
+              </p>
+              <p className="mt-2 text-sm sm:text-base">
+                🌳{" "}
+                <span className="font-semibold">
+                  Działka: {house.dzialka} ha
+                </span>
+              </p>
+              <p className="mt-2 text-sm sm:text-base">
+                🛏️ <span className="font-semibold">Pokoje: {house.pokoje}</span>
+              </p>
+              <p className="mt-2 text-sm sm:text-base">
+                🏠{" "}
+                <span className="font-semibold">Metraż: {house.metraz} m²</span>
+              </p>
+              <p className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all">
+                📄
+                <a href={house.pdf} target="_blank" rel="noopener noreferrer">
+                  Pobierz PDF
+                </a>
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default InteractiveOffersView;
+export default HousesSection;
