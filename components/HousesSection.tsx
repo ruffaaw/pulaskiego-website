@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { houseCoordinates } from "@/app/data/houseCoordinates";
 
-const InteractiveOffersView = () => {
+const HousesSection = () => {
   const [selectedHouse, setSelectedHouse] = useState<number | null>(null);
 
   const handleHouseClick = (id: number) => {
@@ -115,4 +115,4 @@ const InteractiveOffersView = () => {
   );
 };
 
-export default InteractiveOffersView;
+export default HousesSection;
