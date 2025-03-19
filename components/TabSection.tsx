@@ -52,10 +52,10 @@ const TabsSection = () => {
   return (
     <section
       id="lokalizacja"
-      className="w-full h-full flex flex-col bg-green-spring-100 py-8 px-[100px] scroll-mt-14"
+      className="w-full h-full flex flex-col bg-green-spring-100 py-8 px-4 sm:px-8 md:px-12 lg:px-[100px] scroll-mt-14"
     >
       <h2
-        className="text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center mb-8"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center mb-8"
         data-aos="fade-down"
       >
         WSZYSTKO W ZASIĘGU RĘKI
@@ -67,7 +67,7 @@ const TabsSection = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex flex-col items-center p-4 rounded-lg transition-all ${
+              className={`flex flex-col items-center p-3 sm:p-4 rounded-lg transition-all ${
                 activeTab === tab.id
                   ? "bg-green-spring-900 text-white scale-110"
                   : "bg-white text-green-spring-900 hover:bg-green-spring-50"
@@ -75,14 +75,16 @@ const TabsSection = () => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <span className="text-3xl">{tab.icon}</span>
-              <span className="mt-2 text-lg font-semibold">{tab.label}</span>
+              <span className="text-2xl sm:text-3xl">{tab.icon}</span>
+              <span className="mt-2 text-sm sm:text-lg font-semibold">
+                {tab.label}
+              </span>
             </button>
           ))}
         </div>
         <div
           key={activeTab}
-          className="text-2xl text-green-spring-900 max-w-[1000px] text-center"
+          className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[800px] text-center"
           data-aos="fade-up"
         >
           {tabs.find((tab) => tab.id === activeTab)?.content}
