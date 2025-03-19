@@ -39,25 +39,25 @@ const AboutInvestorSection = () => {
   return (
     <section
       id="o-inwestorze"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-[100px] py-8"
+      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8"
     >
       <p
-        className="text-3xl font-bold text-green-spring-950 "
+        className="text-2xl sm:text-3xl font-bold text-green-spring-950 "
         data-aos="fade-down"
       >
         O INWESTORZE
       </p>
 
-      <div className="flex flex-row justify-between py-4">
-        <div className="w-1/2">
+      <div className="flex flex-col lg:flex-row justify-between py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-1/2">
           <p
-            className="text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg"
             data-aos="fade-right"
           >
             EL PROPERTIES
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -65,7 +65,7 @@ const AboutInvestorSection = () => {
             funkcjonalnością.
           </p>
           <p
-            className="text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
+            className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
             data-aos="fade-right"
             data-aos-delay="200"
           >
@@ -76,34 +76,35 @@ const AboutInvestorSection = () => {
             do życia.
           </p>
         </div>
-
-        <Image
-          src="/el_properties_group.png"
-          alt="EL PROPERTIES"
-          width={600}
-          height={504}
-          quality={100}
-          priority
-          className="rounded-3xl max-h-[320px] drop-shadow-xl text-right"
-          data-aos="fade-left"
-        />
+        <div className="w-full lg:w-1/2 flex justify-end">
+          <Image
+            src="/el_properties_group.png"
+            alt="EL PROPERTIES"
+            width={600}
+            height={504}
+            quality={100}
+            priority
+            className="rounded-3xl w-full lg:max-w-[600px] max-lg:h-[500px] h-auto drop-shadow-xl"
+            data-aos="fade-left"
+          />
+        </div>
       </div>
       <div className="flex flex-col gap-8 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cards.slice(0, 2).map((card, index) => (
             <motion.div
               key={index}
-              className="bg-green-spring-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-green-spring-50 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="text-6xl mb-4">{card.icon}</div>
-              <h3 className="text-2xl font-bold text-green-spring-900 mb-4">
+              <div className="text-5xl sm:text-6xl mb-4">{card.icon}</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-green-spring-900 mb-4">
                 {card.title}
               </h3>
-              <p className="text-lg text-green-spring-700">
+              <p className="text-base sm:text-lg text-green-spring-700">
                 {card.description}
               </p>
             </motion.div>
@@ -114,17 +115,17 @@ const AboutInvestorSection = () => {
           {cards.slice(2).map((card, index) => (
             <motion.div
               key={index + 2}
-              className="bg-green-spring-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-green-spring-50 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (index + 2) * 0.2 }}
             >
-              <div className="text-6xl mb-4">{card.icon}</div>
-              <h3 className="text-2xl font-bold text-green-spring-900 mb-4">
+              <div className="text-5xl sm:text-6xl mb-4">{card.icon}</div>
+              <h3 className="text-xl sm:text-2xl font-bold text-green-spring-900 mb-4">
                 {card.title}
               </h3>
-              <p className="text-lg text-green-spring-700">
+              <p className="text-base sm:text-lg text-green-spring-700">
                 {card.description}
               </p>
             </motion.div>
