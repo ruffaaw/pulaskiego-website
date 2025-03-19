@@ -19,7 +19,7 @@ export default function Gallery() {
   return (
     <section
       id="galeria"
-      className="w-full h-full flex flex-col items-center bg-green-spring-100 relative scroll-mt-14 px-[100px] py-8 "
+      className="w-full h-full flex flex-col items-center bg-green-spring-100 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8 "
     >
       <div
         className="w-full lg:w-4/6"
@@ -46,7 +46,7 @@ export default function Gallery() {
                 alt={`Galeria ${index + 1}`}
                 width={1200}
                 height={500}
-                className="rounded-lg shadow-lg object-cover"
+                className="rounded-lg shadow-lg object-cover w-full h-auto"
               />
             </SwiperSlide>
           ))}
