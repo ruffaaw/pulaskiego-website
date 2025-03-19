@@ -62,7 +62,7 @@ const TabsSection = () => {
       </h2>
       <div className="flex flex-col items-center">
         {/* Karty */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
