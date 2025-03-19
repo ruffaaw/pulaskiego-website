@@ -108,25 +108,25 @@ const ContactSection = () => {
   return (
     <section
       id="kontakt"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-[100px] py-8"
+      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8"
     >
       <p
-        className="text-3xl font-bold text-green-spring-950"
+        className="text-2xl sm:text-3xl font-bold text-green-spring-950"
         data-aos="fade-down"
       >
         KONTAKT
       </p>
 
-      <div className="flex flex-row justify-between gap-8">
-        <div className="w-full">
+      <div className="flex flex-col lg:flex-row justify-between gap-8">
+        <div className="w-full lg:w-1/2">
           <p
-            className="text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
             data-aos="fade-right"
           >
             SKONTAKTUJ SIĘ Z NAMI
           </p>
           <p
-            className="text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -134,7 +134,7 @@ const ContactSection = () => {
           </p>
 
           <motion.form
-            className="mt-6 "
+            className="mt-6"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -157,7 +157,7 @@ const ContactSection = () => {
               />
             </div>
 
-            <div className="flex flex-row gap-4 mb-2">
+            <div className="flex flex-col sm:flex-row gap-4 mb-2">
               <div className="w-full">
                 <label htmlFor="email" className="block text-lg font-medium">
                   Email
@@ -174,7 +174,7 @@ const ContactSection = () => {
                 />
               </div>
 
-              <div className="mb-2 w-full">
+              <div className="w-full">
                 <label htmlFor="phone" className="block text-lg font-medium">
                   Telefon
                 </label>
@@ -207,7 +207,7 @@ const ContactSection = () => {
               ></textarea>
             </div>
 
-            <div className="mb-2">
+            <div className="mb-4">
               <label className="flex items-center">
                 <input
                   type="checkbox"
@@ -240,7 +240,7 @@ const ContactSection = () => {
         </div>
 
         <motion.div
-          className="w-full h-[608px] rounded-3xl overflow-hidden shadow-lg"
+          className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[649px] xl:h-[609px] rounded-3xl overflow-hidden shadow-lg lg:mt-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
