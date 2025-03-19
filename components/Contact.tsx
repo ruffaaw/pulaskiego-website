@@ -240,7 +240,7 @@ const ContactSection = () => {
         </div>
 
         <motion.div
-          className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[649px] xl:h-[609px] rounded-3xl overflow-hidden shadow-lg mt-8 lg:mt-0"
+          className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[649px] xl:h-[609px] rounded-3xl overflow-hidden shadow-lg lg:mt-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
