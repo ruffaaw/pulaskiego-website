@@ -57,7 +57,7 @@ const House360View = () => {
 
       <motion.div
         ref={containerRef}
-        className="w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative cursor-grab select-none bg-black rounded-3xl shadow-2xl border-4 border-green-spring-400 overflow-hidden mt-8"
+        className="w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] relative cursor-grab select-none bg-black rounded-3xl shadow-2xl overflow-hidden mt-8"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
