@@ -35,14 +35,14 @@ const HousesSection = () => {
 
   return (
     <section
-      id="domy"
+      id="lokale"
       className="w-full flex flex-col items-center justify-center bg-green-spring-200 text-white py-8 px-4 sm:px-8 md:px-12 lg:px-[100px] scroll-mt-14"
     >
       <h2
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center"
         data-aos="fade-down"
       >
-        Domy
+        Lokale
       </h2>
 
       <div className="w-full mt-8 relative flex flex-col lg:flex-row gap-8">

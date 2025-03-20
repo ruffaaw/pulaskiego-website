@@ -17,7 +17,7 @@ export default function HomeSection() {
         data-aos="fade-in"
         data-aos-duration="2000"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-start text-white bg-black bg-opacity-50 text-center z-10 px-4 sm:px-8 md:px-12 lg:px-[100px] space-y-4">
+      <div className="absolute inset-0 flex flex-col justify-center items-start text-white text-center z-10 px-4 sm:px-8 md:px-12 lg:px-[100px] space-y-4">
         <p
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold drop-shadow-lg text-left transition break-words max-w-full"
           data-aos="fade-up"
