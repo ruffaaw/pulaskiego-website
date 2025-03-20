@@ -52,7 +52,7 @@ const House360View = () => {
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent text-center"
         data-aos="fade-down"
       >
-        Poznaj swój przyszły dom
+        Poznaj swoje przyszłe mieszkanie
       </motion.p>
 
       <motion.div
