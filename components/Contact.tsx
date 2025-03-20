@@ -247,7 +247,7 @@ const ContactSection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15626.70147718562!2d19.940635014135548!3d50.06241211212332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165bcb0775d95b%3A0x6c2b2c699b0abb2b!2sZamek%20Kr%C3%B3lewski%20na%20Wawelu!5e1!3m2!1spl!2spl!4v1742225976785!5m2!1spl!2spl"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3197.374299040016!2d20.072288559244605!3d49.975397581349306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU4JzMzLjIiTiAyMMKwMDQnMTguMiJF!5e1!3m2!1spl!2spl!4v1742513937797!5m2!1spl!2spl"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -257,8 +257,11 @@ const ContactSection = () => {
           ></iframe>
         </motion.div>
       </div>
-      <div className="flex justify-between items-center mt-8">
-        <div className="flex flex-wrap justify-center items-center gap-6">
+      <div className="flex flex-col lg:flex-row justify-between items-center mt-8 w-full space-y-4">
+        <div
+          className="flex flex-wrap justify-center items-center gap-6 w-1/2"
+          data-aos="fade-right"
+        >
           <a
             href="https://www.n20.pl/"
             target="_blank"
@@ -298,8 +301,13 @@ const ContactSection = () => {
             </p>
           </div>
         </div>
-        <div>
-          <Image src="/next.svg" alt="logo" width={255} height={160} />
+        <div className="w-1/2 flex justify-center" data-aos="fade-left">
+          <Image
+            src="/el_properties_group.png"
+            alt="logo"
+            width={255}
+            height={160}
+          />
         </div>
       </div>
     </section>

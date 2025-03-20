@@ -8,7 +8,6 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    console.log(isMenuOpen);
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
@@ -42,7 +41,7 @@ export default function Header() {
       >
         <Link href="#home">
           <Image
-            src="/next.svg"
+            src="/el_properties_group.png"
             alt="Logo"
             width={64}
             height={64}
