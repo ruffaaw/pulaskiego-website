@@ -60,7 +60,7 @@ export default function Header() {
           { href: "#lokalizacja", label: "Lokalizacja" },
           { href: "#o-inwestorze", label: "O inwestorze" },
           { href: "#widok-360", label: "Widok 360°" },
-          { href: "#domy", label: "Domy" },
+          { href: "#lokale", label: "Lokale" },
           { href: "#galeria", label: "Galeria" },
         ].map((item) => (
           <Link
@@ -132,11 +132,11 @@ export default function Header() {
             <p className="break-words max-w-full">Widok 360°</p>
           </Link>
           <Link
-            href="#domy"
+            href="#lokale"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
-            <p className="break-words max-w-full">Domy</p>
+            <p className="break-words max-w-full">Lokale</p>
           </Link>
           <Link
             href="#galeria"
