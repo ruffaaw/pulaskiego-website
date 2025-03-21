@@ -11,12 +11,19 @@ const HousesSection = () => {
     const listContainer = listContainerRef.current;
 
     if (houseRef && listContainer) {
-      const scrollOffset = houseRef.offsetTop - listContainer.offsetTop;
+      const houseRect = houseRef.getBoundingClientRect();
+      const containerRect = listContainer.getBoundingClientRect();
+      const scrollOffset =
+        houseRect.top - containerRect.top + listContainer.scrollTop;
 
-      listContainer.scrollTo({
-        top: scrollOffset,
-        behavior: "smooth",
-      });
+      if ("scrollBehavior" in document.documentElement.style) {
+        listContainer.scrollTo({
+          top: scrollOffset,
+          behavior: "smooth",
+        });
+      } else {
+        listContainer.scrollTop = scrollOffset;
+      }
     }
   };
 
@@ -45,12 +52,12 @@ const HousesSection = () => {
         Lokale
       </h2>
 
-      <div className="w-full mt-8 relative flex flex-col lg:flex-row gap-8">
-        <div className="relative w-full lg:w-4/5" data-aos="fade-right">
+      <div className="w-full mt-8 relative flex flex-col lg:flex-row justify-between gap-8">
+        <div className="relative w-full lg:w-[58%]" data-aos="fade-right">
           <img
             src="/z_gory.png"
             alt="Widok z góry inwestycji"
-            className="w-full h-auto rounded-3xl max-h-[500px] lg:max-h-[660px]"
+            className="w-full h-auto rounded-3xl "
           />
 
           {houseCoordinates.map((house) => (
@@ -62,7 +69,7 @@ const HousesSection = () => {
                   : house.status === 1
                   ? "bg-green-500"
                   : "bg-yellow-500"
-              } text-green-spring-900 rounded-full w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 flex items-center justify-center font-bold text-xs md:text-sm lg:text-base  cursor-pointer hover:bg-green-spring-900 hover:text-green-spring-50 transition-all`}
+              } text-green-spring-950 bg-opacity-75 hover:bg-opacity-100 rounded-full w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 flex items-center justify-center font-bold text-xs md:text-sm lg:text-base cursor-pointer hover:bg-green-spring-900 hover:text-green-spring-50 transition-all`}
               style={{
                 left: `${house.position.x}%`,
                 top: `${house.position.y}%`,
@@ -77,7 +84,7 @@ const HousesSection = () => {
 
         <div
           ref={listContainerRef}
-          className="overflow-y-auto max-h-[350px] lg:max-h-[660px] w-full lg:w-1/5"
+          className="overflow-y-auto max-h-[250px] lg:max-h-[741px] w-full lg:w-1/5 rounded-xl space-y-4"
           data-aos="fade-left"
         >
           {houseCoordinates.map((house) => (
@@ -86,7 +93,7 @@ const HousesSection = () => {
               ref={(el) => {
                 houseRefs.current[house.id] = el;
               }}
-              className="bg-green-spring-50 p-4 sm:p-6 mb-4 text-green-spring-900"
+              className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900"
             >
               <h3 className="text-xl sm:text-2xl font-bold">{house.name}</h3>
               <p className="mt-2 text-sm sm:text-base">
