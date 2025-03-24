@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-30 flex justify-between items-center md:px-12 lg:px-[100px] ${
+      className={`fixed w-full z-30 flex justify-between items-center ${
         isMenuOpen
           ? "bg-green-spring-900"
           : isScrolled
@@ -35,7 +35,7 @@ export default function Header() {
       }`}
     >
       <div
-        className="flex items-center max-md:pl-6 "
+        className="flex items-center max-md:pl-6 md:pl-12 lg:pl-[100px]"
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
@@ -50,7 +50,7 @@ export default function Header() {
         </Link>
       </div>
       <nav
-        className="hidden md:flex space-x-8 text-lg lg:text-xl items-center justify-center text-green-spring-100 font-bold "
+        className="hidden lg:flex ml-5 space-x-5 xl:space-x-8 text-lg lg:text-xl items-center justify-center text-green-spring-100 font-bold md:pr-12 lg:pr-[100px]"
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
@@ -79,7 +79,7 @@ export default function Header() {
         </Link>
       </nav>
       <button
-        className="md:hidden flex items-center text-white py-7 max-md:pr-6"
+        className="lg:hidden flex items-center text-white py-7 max-md:pr-6 md:pr-12 lg:pr-[100px]"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         data-aos="zoom-out"
         data-aos-duration="1000"

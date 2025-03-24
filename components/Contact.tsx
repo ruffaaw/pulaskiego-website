@@ -259,7 +259,7 @@ const ContactSection = () => {
       </div>
       <div className="flex flex-col lg:flex-row justify-between items-center mt-8 w-full space-y-4">
         <div
-          className="flex flex-wrap justify-center items-center gap-6 w-1/2"
+          className="flex flex-wrap justify-center items-center gap-6 w-full lg:w-1/2"
           data-aos="fade-right"
         >
           <a
@@ -275,7 +275,7 @@ const ContactSection = () => {
               height={160}
             />
           </a>
-          <div className="text-left font-bold text-gray-800 max-w-md">
+          <div className="flex max-lg:items-center flex-col text-center lg:text-left font-bold text-gray-800 max-w-md">
             <h2 className="text-xl md:text-2xl mb-3">
               Kontakt biura nieruchomości
             </h2>
