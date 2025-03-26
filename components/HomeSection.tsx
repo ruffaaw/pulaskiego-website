@@ -37,7 +37,7 @@ export default function HomeSection() {
         <Link
           key={"o-inwestycji"}
           href={"#o-inwestycji"}
-          className="hover:scale-125 transition-all drop-shadow-md border-2 border-green-spring-100 px-4 py-2 text-base sm:text-lg md:text-xl break-words max-w-full"
+          className="hover:scale-125 hover:bg-white hover:text-green-spring-900 transition-all drop-shadow-md border-2 border-green-spring-100 px-4 py-2 text-base sm:text-lg md:text-xl break-words max-w-full"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="900"
