@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-30 flex justify-between items-center ${
+      className={`fixed w-full z-30 h-16 flex justify-between items-center ${
         isMenuOpen
           ? "bg-green-spring-900"
           : isScrolled
@@ -41,11 +41,11 @@ export default function Header() {
       >
         <Link href="#home">
           <Image
-            src="/el_properties_group.png"
+            src="/elpropertieslogo.png"
             alt="Logo"
-            width={64}
-            height={64}
-            className="h-16 w-16 mr-2 drop-shadow-sm hover:scale-125"
+            width={116}
+            height={48}
+            className="mr-2 drop-shadow-sm hover:scale-125"
           />
         </Link>
       </div>
