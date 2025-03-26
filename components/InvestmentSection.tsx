@@ -74,10 +74,10 @@ export default function InvestmentSection() {
             data-aos="fade-right"
           />
         </div>
-        <div className="w-full lg:w-3/5">
+        <div className="w-full lg:w-3/5 flex flex-col items-end">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 max-w-[1000px] drop-shadow-lg text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
-            data-aos="fade-left"
+            // data-aos="fade-left"
           >
             ZDROWIE I EKOLOGIA W STANDARDZIE{" "}
           </p>
@@ -172,12 +172,12 @@ export default function InvestmentSection() {
             fill
             quality={100}
             priority
-            className="rounded-3xl max-w-full lg:max-w-[550px] drop-shadow-xl"
+            className="rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-4 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-2/5 flex justify-end relative h-[500px] lg:h-[600px] xl:h-[504px]">
           <Image
             src={"/0003przyciete.png"}
@@ -185,11 +185,11 @@ export default function InvestmentSection() {
             fill
             quality={100}
             priority
-            className="rounded-3xl max-w-full lg:max-w-[550px] drop-shadow-xl"
+            className="rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
           />
         </div>
-        <div className="w-full lg:w-3/5">
+        <div className="w-full lg:w-3/5 flex flex-col items-end">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
