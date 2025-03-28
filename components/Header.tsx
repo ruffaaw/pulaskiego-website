@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-30 h-16 flex justify-between items-center ${
+      className={`fixed w-full z-30 flex justify-between items-center ${
         isMenuOpen
           ? "bg-green-spring-900"
           : isScrolled
@@ -35,7 +35,7 @@ export default function Header() {
       }`}
     >
       <div
-        className="flex items-center max-md:pl-6 md:pl-12 lg:pl-[100px]"
+        className="flex items-center h-16 max-md:pl-6 md:pl-12 lg:pl-[100px]"
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
@@ -45,7 +45,7 @@ export default function Header() {
             alt="Logo"
             width={116}
             height={48}
-            className="mr-2 drop-shadow-sm hover:scale-125"
+            className="mr-2 drop-shadow-lg hover:scale-125"
           />
         </Link>
       </div>
@@ -100,7 +100,7 @@ export default function Header() {
         </svg>
       </button>
       {isMenuOpen && (
-        <div className="fixed flex flex-col items-center top-20 bg-green-spring-900 shadow-md z-30 w-screen h-auto ">
+        <div className="fixed flex flex-col items-center top-16 bg-green-spring-900 shadow-md z-30 w-screen h-auto ">
           <Link
             href="#o-inwestycji"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
