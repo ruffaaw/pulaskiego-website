@@ -24,7 +24,7 @@ export default function InvestmentSection() {
       <div className="flex flex-col lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-3/5">
           <p
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
             data-aos="fade-right"
           >
             KOMFORT I BEZPIECZEŃSTWO NA WYCIĄGNIĘCIE RĘKI
@@ -50,9 +50,9 @@ export default function InvestmentSection() {
             wygodę.
           </p>
         </div>
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[500px] lg:h-[600px] xl:h-[504px]">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
           <Image
-            src={"/0003.png"}
+            src={"/0004.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
@@ -63,9 +63,9 @@ export default function InvestmentSection() {
         </div>
       </div>
       <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[500px] lg:h-[600px] xl:h-[504px]">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
           <Image
-            src={"/0002.png"}
+            src={"/0003.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
@@ -74,7 +74,7 @@ export default function InvestmentSection() {
             data-aos="fade-right"
           />
         </div>
-        <div className="w-full lg:w-3/5">
+        <div className="w-full lg:w-3/5 flex flex-col items-end">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 max-w-[1000px] drop-shadow-lg text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
@@ -103,7 +103,7 @@ export default function InvestmentSection() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col lg:flex-row justify-between items-center py-4 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-3/5">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent"
@@ -165,31 +165,31 @@ export default function InvestmentSection() {
             </li>
           </ul>
         </div>
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[500px] lg:h-[600px] xl:h-[504px]">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
           <Image
-            src={"/0003przyciete.png"}
+            src={"/0001.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
             priority
-            className="rounded-3xl max-w-full lg:max-w-[550px] drop-shadow-xl"
+            className="rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[500px] lg:h-[600px] xl:h-[504px]">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
           <Image
-            src={"/0003przyciete.png"}
+            src={"/0002.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
             priority
-            className="rounded-3xl max-w-full lg:max-w-[550px] drop-shadow-xl"
+            className="rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
           />
         </div>
-        <div className="w-full lg:w-3/5">
+        <div className="w-full lg:w-3/5 flex flex-col items-end">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
@@ -309,9 +309,9 @@ export default function InvestmentSection() {
               </div>
             ))}
           </div>
-          <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[500px]">
+          <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[616px]">
             <Image
-              src={"/0003.png"}
+              src={"/0000.png"}
               alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
               fill
               quality={100}
