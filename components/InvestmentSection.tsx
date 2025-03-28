@@ -316,7 +316,7 @@ export default function InvestmentSection() {
               fill
               quality={100}
               priority
-              className="rounded-3xl drop-shadow-xl"
+              className="rounded-3xl object-cover drop-shadow-xl"
               data-aos="fade-left"
               data-aos-delay="100"
             />

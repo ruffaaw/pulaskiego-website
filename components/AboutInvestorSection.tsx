@@ -78,13 +78,13 @@ const AboutInvestorSection = () => {
         </div>
         <div className="w-full lg:w-1/2 flex justify-end">
           <Image
-            src="/el_properties_group.png"
+            src="/elpropertieslogo.png"
             alt="EL PROPERTIES"
-            width={600}
+            width={300}
             height={504}
             quality={100}
             priority
-            className="rounded-3xl w-full lg:max-w-[600px] h-auto drop-shadow-xl"
+            className="rounded-3xl w-full object-contain lg:max-w-[600px] h-auto drop-shadow-xl"
             data-aos="fade-left"
           />
         </div>

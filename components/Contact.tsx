@@ -303,9 +303,9 @@ const ContactSection = () => {
         </div>
         <div className="w-1/2 flex justify-center" data-aos="fade-left">
           <Image
-            src="/el_properties_group.png"
+            src="/elpropertieslogo.png"
             alt="logo"
-            width={255}
+            width={384}
             height={160}
           />
         </div>
