@@ -84,7 +84,7 @@ const AboutInvestorSection = () => {
             height={504}
             quality={100}
             priority
-            className="rounded-3xl w-full lg:max-w-[600px] max-lg:h-[500px] h-auto drop-shadow-xl"
+            className="rounded-3xl w-full lg:max-w-[600px] h-auto drop-shadow-xl"
             data-aos="fade-left"
           />
         </div>
