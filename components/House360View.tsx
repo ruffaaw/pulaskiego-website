@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Expand } from "lucide-react";
 
 const House360View = () => {
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -162,13 +163,19 @@ const House360View = () => {
       >
         Poznaj swoje przyszłe mieszkanie
       </motion.p>
-
+      <motion.p
+        className="mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-3xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        Kliknij przycisk w prawym górnym rogu, aby powiększyć widok lub użyj
+        strzałek pod obrazem, aby go obrócić
+      </motion.p>
       <div className="w-full flex flex-col lg:flex-row justify-between gap-5">
         <div>
           <motion.div
             ref={containerRef1}
-            className="w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] relative cursor-pointer select-none bg-black rounded-3xl shadow-2xl overflow-hidden mt-8"
-            onClick={handleZoom1}
+            className="w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] relative select-none bg-black rounded-3xl shadow-2xl overflow-hidden mt-8"
             onMouseDown={handleMouseDown1}
             onMouseMove={handleMouseMove1}
             onMouseUp={handleMouseUp1}
@@ -186,14 +193,75 @@ const House360View = () => {
               alt={`House view ${currentIndex1}`}
               className="w-full h-full object-cover pointer-events-none"
             />
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleZoom1();
+              }}
+              className="absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all z-10"
+              aria-label="Powiększ obraz"
+            >
+              <div className="p-4 bg-white border-2 border-green-spring-900 rounded-full hover:bg-green-spring-400 transition-all">
+                <Expand className="h-8 w-8 text-green-spring-900" />
+              </div>
+            </button>
           </motion.div>
+          <div className="flex justify-center items-center gap-8 mt-8">
+            <button
+              onClick={() => handleArrowClick1("left")}
+              onMouseDown={() => startContinuousScroll1("left")}
+              onMouseUp={stopContinuousScroll1}
+              onMouseLeave={stopContinuousScroll1}
+              onTouchStart={() => startContinuousScroll1("left")}
+              onTouchEnd={stopContinuousScroll1}
+              className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => handleArrowClick1("right")}
+              onMouseDown={() => startContinuousScroll1("right")}
+              onMouseUp={stopContinuousScroll1}
+              onMouseLeave={stopContinuousScroll1}
+              onTouchStart={() => startContinuousScroll1("right")}
+              onTouchEnd={stopContinuousScroll1}
+              className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div>
           <motion.div
             ref={containerRef2}
-            className="w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] relative cursor-pointer select-none bg-black rounded-3xl shadow-2xl overflow-hidden mt-8"
-            onClick={handleZoom2}
+            className="w-full max-w-5xl h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] relative select-none bg-black rounded-3xl shadow-2xl overflow-hidden mt-8"
             onMouseDown={handleMouseDown2}
             onMouseMove={handleMouseMove2}
             onMouseUp={handleMouseUp2}
@@ -211,7 +279,69 @@ const House360View = () => {
               alt={`House view ${currentIndex2}`}
               className="w-full h-full object-cover pointer-events-none"
             />
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleZoom2();
+              }}
+              className="absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all z-10"
+              aria-label="Powiększ obraz"
+            >
+              <div className="p-4 bg-white border-2 border-green-spring-900 rounded-full hover:bg-green-spring-400 transition-all">
+                <Expand className="h-8 w-8 text-green-spring-900" />
+              </div>
+            </button>
           </motion.div>
+          <div className="flex justify-center items-center gap-8 mt-8">
+            <button
+              onClick={() => handleArrowClick2("left")}
+              onMouseDown={() => startContinuousScroll2("left")}
+              onMouseUp={stopContinuousScroll2}
+              onMouseLeave={stopContinuousScroll2}
+              onTouchStart={() => startContinuousScroll2("left")}
+              onTouchEnd={stopContinuousScroll2}
+              className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => handleArrowClick2("right")}
+              onMouseDown={() => startContinuousScroll2("right")}
+              onMouseUp={stopContinuousScroll2}
+              onMouseLeave={stopContinuousScroll2}
+              onTouchStart={() => startContinuousScroll2("right")}
+              onTouchEnd={stopContinuousScroll2}
+              className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
