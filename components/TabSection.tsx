@@ -1,4 +1,12 @@
 "use client";
+import {
+  Briefcase,
+  Bus,
+  Clapperboard,
+  School,
+  ShoppingCart,
+  TreePalm,
+} from "lucide-react";
 import { useState } from "react";
 
 const TabsSection = () => {
@@ -7,42 +15,42 @@ const TabsSection = () => {
   const tabs = [
     {
       id: "zakupy",
-      icon: "🛒",
+      icon: <ShoppingCart className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Zakupy",
       content:
         "Codzienne zakupy zrobisz wygodnie w pobliskich sklepach i supermarketach, oddalonych tylko o kilka minut drogi od osiedla.",
     },
     {
       id: "edukacja",
-      icon: "🏫",
+      icon: <School className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Edukacja",
       content:
         "W okolicy znajdują się przedszkola, szkoły podstawowe oraz placówki edukacyjne, zapewniające komfortową naukę dla dzieci i młodzieży.",
     },
     {
       id: "transport",
-      icon: "🚌",
+      icon: <Bus className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Transport",
       content:
         "Przystanek autobusowy znajduje się 300 m od osiedla (ok. 4 min pieszo), a stacja kolejowa 2,3km, co pozwala na szybkie dotarcie do Krakowa i centrum Wieliczki.",
     },
     {
       id: "rozrywka",
-      icon: "🎬",
+      icon: <Clapperboard className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Rozrywka",
       content:
         "Restauracje, kawiarnie, kino oraz atrakcje kulturalne w pobliżu sprawią, że zawsze znajdziesz coś dla siebie.",
     },
     {
       id: "usługi",
-      icon: "💼",
+      icon: <Briefcase className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Usługi",
       content:
         "Apteki, przychodnie, banki i inne punkty usługowe w sąsiedztwie zapewniają wygodę w codziennych sprawach.",
     },
     {
       id: "rekreacja",
-      icon: "🌳",
+      icon: <TreePalm className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Rekreacja",
       content:
         "Plac zabaw i boiska sportowe znajdują się 800m od osiedla, park rekreacyjny w odległości 1,8 km. Dodatkowo spokojna, zielona okolica sprzyja aktywnemu wypoczynkowi na świeżym powietrzu.",
@@ -75,7 +83,13 @@ const TabsSection = () => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <span className="text-2xl sm:text-3xl">{tab.icon}</span>
+              <span
+                className={`w-8 h-8 sm:w-10 sm:h-10 text-green-spring-700 ${
+                  activeTab === tab.id ? "text-white" : "text-green-spring-700"
+                }`}
+              >
+                {tab.icon}
+              </span>
               <span className="mt-2 text-sm sm:text-lg font-semibold">
                 {tab.label}
               </span>

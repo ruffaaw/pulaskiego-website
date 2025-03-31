@@ -24,7 +24,8 @@ export default function HomeSection() {
           data-aos-duration="1000"
           data-aos-delay="500"
         >
-          Osiedle <br /> AquaHome
+          Osiedle <br />
+          Pułaskiego 32
         </p>
         <p
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-lg lg:max-w-[516px] text-left transition break-words max-w-full"

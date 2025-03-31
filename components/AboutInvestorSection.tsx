@@ -1,35 +1,46 @@
 "use client";
+import { Handshake, Lightbulb, Ruler, ShieldCheck, Home } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const AboutInvestorSection = () => {
   const cards = [
     {
-      icon: "🤝",
+      icon: (
+        <Handshake className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
+      ),
       title: "Relacje oparte na zaufaniu",
       description:
         "Dla nas najważniejsze są relacje, które budujemy na zaufaniu i szczerości. Staramy się, aby każda współpraca była wyjątkowa i opierała się na długofalowym porozumieniu.",
     },
     {
-      icon: "💡",
+      icon: (
+        <Lightbulb className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
+      ),
       title: "Wspólna wizja",
       description:
         "W każdej inwestycji traktujemy naszych klientów jako partnerów. Wspólnie tworzymy przestrzeń, która w pełni odzwierciedla ich oczekiwania i potrzeby. Uważamy, że sukces budowy to wynik dobrej współpracy i wzajemnego zrozumienia.",
     },
     {
-      icon: "📏",
+      icon: (
+        <Ruler className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
+      ),
       title: "Dokładność i zaangażowanie",
       description:
         "Nasze projekty realizujemy z pełnym profesjonalizmem, dbając o każdy detal. Angażujemy się w każdy etap inwestycji, zapewniając rzetelne wykonanie oraz dotrzymywanie uzgodnionych terminów, by dostarczyć najwyższą jakość.",
     },
     {
-      icon: "🛡️",
+      icon: (
+        <ShieldCheck className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
+      ),
       title: "Trwałość i komfort",
       description:
         "Dbamy o to, by nasze realizacje były bezpieczne i trwałe. Starannie wybieramy materiały i technologie, które zapewniają nie tylko estetykę, ale i bezpieczeństwo, gwarantując długotrwały komfort.",
     },
     {
-      icon: "🏠",
+      icon: (
+        <Home className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
+      ),
       title: "Miejsce do życia",
       description:
         "Naszym celem jest stworzenie przestrzeni, która będzie źródłem szczęścia i harmonii. Zależy nam, by każdy nasz projekt stał się miejscem, w którym ludzie odnajdują spokój, radość i przestrzeń do wspólnych chwil z bliskimi.",
@@ -100,7 +111,7 @@ const AboutInvestorSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="text-5xl sm:text-6xl mb-4">{card.icon}</div>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4">{card.icon}</div>
               <h3 className="text-xl sm:text-2xl font-bold text-green-spring-900 mb-4">
                 {card.title}
               </h3>
