@@ -1,4 +1,14 @@
 "use client";
+import {
+  Circle,
+  CheckCircle,
+  AlertCircle,
+  DollarSign,
+  TreePalm,
+  Bed,
+  Home,
+  FileText,
+} from "lucide-react";
 import { useRef } from "react";
 import { houseCoordinates } from "@/data/houseCoordinates";
 
@@ -37,6 +47,17 @@ const HousesSection = () => {
         return "Zarezerwowany";
       default:
         return "Nieznany";
+    }
+  };
+
+  const getStatusIcon = (status: number) => {
+    switch (status) {
+      case 0:
+        return <Circle className="text-red-500 w-5 h-5 inline-block" />;
+      case 1:
+        return <CheckCircle className="text-green-500 w-5 h-5 inline-block" />;
+      default:
+        return <AlertCircle className="text-yellow-500 w-5 h-5 inline-block" />;
     }
   };
 
@@ -109,28 +130,29 @@ const HousesSection = () => {
                       : "text-yellow-500"
                   }`}
                 >
-                  {house.status === 0 ? "🔴" : house.status === 1 ? "🟢" : "🟡"}{" "}
-                  {getStatusText(house.status)}
+                  {getStatusIcon(house.status)} {getStatusText(house.status)}
                 </span>
               </p>
               <p className="mt-2 text-sm sm:text-base">
-                💰 <span className="font-semibold">Cena: {house.price}</span>
+                <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                <span className="font-semibold">Cena: {house.price}</span>
               </p>
               <p className="mt-2 text-sm sm:text-base">
-                🌳{" "}
+                <TreePalm className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                 <span className="font-semibold">
                   Działka: {house.dzialka} ha
                 </span>
               </p>
               <p className="mt-2 text-sm sm:text-base">
-                🛏️ <span className="font-semibold">Pokoje: {house.pokoje}</span>
+                <Bed className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                <span className="font-semibold">Pokoje: {house.pokoje}</span>
               </p>
               <p className="mt-2 text-sm sm:text-base">
-                🏠{" "}
+                <Home className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                 <span className="font-semibold">Metraż: {house.metraz} m²</span>
               </p>
               <p className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all">
-                📄
+                <FileText className="inline-block w-5 h-5 mr-1" />
                 <a href={house.pdf} target="_blank" rel="noopener noreferrer">
                   Pobierz PDF
                 </a>
