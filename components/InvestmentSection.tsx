@@ -43,9 +43,9 @@ export default function InvestmentSection() {
             data-aos-delay="200"
           >
             Osiedle przy ulicy Pułaskiego w Wieliczce to idealne miejsce dla
-            osób ceniących spokój, bezpieczeństwo i nowoczesność. AquaDomus to
-            kameralne, zamknięte i oświetlone osiedle, oferujące 28 mieszkań o
-            powierzchni 60–70 m². Zamknięta przestrzeń zapewnia prywatność, a
+            osób ceniących spokój, bezpieczeństwo i nowoczesność. Pułaskiego 32
+            to kameralne, zamknięte i oświetlone osiedle, oferujące 28 mieszkań
+            o powierzchni 60–70 m². Zamknięta przestrzeń zapewnia prywatność, a
             oświetlone drogi i miejsca postojowe gwarantują bezpieczeństwo i
             wygodę.
           </p>
@@ -116,8 +116,8 @@ export default function InvestmentSection() {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            Każdy dzień w AquaDomus to bliskość wszystkiego, co ważne – z łatwym
-            dostępem do miasta i pełną wygodą.
+            Każdy dzień na Pułaskiego 32 to bliskość wszystkiego, co ważne – z
+            łatwym dostępem do miasta i pełną wygodą.
           </p>
           <p
             className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
@@ -329,7 +329,7 @@ export default function InvestmentSection() {
             className="lg:hidden text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
           >
-            ZAMIESZKAJ W AQUADOMUS!{" "}
+            ZAMIESZKAJ NA PUŁASKIEGO 32!{" "}
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[900px] text-left"
@@ -348,10 +348,10 @@ export default function InvestmentSection() {
           </Link>
         </div>
         <p
-          className="max-lg:hidden text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
+          className="max-lg:hidden text-4xl sm:text-5xl md:text-6xl uppercase lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
           data-aos="fade-left"
         >
-          ZAMIESZKAJ W AQUADOMUS!{" "}
+          ZAMIESZKAJ NA PUŁASKIEGO 32!{" "}
         </p>
       </div>
     </section>
