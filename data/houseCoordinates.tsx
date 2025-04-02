@@ -8,7 +8,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 3,
     metraz: 157,
-    position: { x: 9, y: 37 },
+    position: { x: 77, y: 59 }, // Pozycja 14a
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 162,
-    position: { x: 13, y: 25 },
+    position: { x: 83, y: 38 }, // Pozycja 14b
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 3,
     metraz: 133,
-    position: { x: 13, y: 39 },
+    position: { x: 69, y: 56 }, // Pozycja 13a
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 2,
     metraz: 122,
-    position: { x: 16, y: 25.5 },
+    position: { x: 74, y: 36 }, // Pozycja 13b
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 2,
     metraz: 151,
-    position: { x: 16, y: 40.5 },
+    position: { x: 60, y: 54 }, // Pozycja 12a
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 5,
     metraz: 187,
-    position: { x: 19.5, y: 26 },
+    position: { x: 66, y: 34.5 }, // Pozycja 12b
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 4,
     metraz: 155,
-    position: { x: 19, y: 42 },
+    position: { x: 53, y: 52 }, // Pozycja 11a
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 5,
     metraz: 197,
-    position: { x: 23.2, y: 26.5 },
+    position: { x: 59, y: 33.5 }, // Pozycja 11b
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 150,
-    position: { x: 23, y: 43 },
+    position: { x: 47, y: 49 }, // Pozycja 10a
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 3,
     metraz: 139,
-    position: { x: 27, y: 27.5 },
+    position: { x: 52.5, y: 32 }, // Pozycja 10b
   },
   {
     id: 11,
@@ -118,7 +118,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 3,
     metraz: 175,
-    position: { x: 27, y: 44 },
+    position: { x: 41, y: 48 }, // Pozycja 9a
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 4,
     metraz: 187,
-    position: { x: 31, y: 28.5 },
+    position: { x: 46, y: 31 }, // Pozycja 9b
   },
   {
     id: 13,
@@ -140,7 +140,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 2,
     metraz: 170,
-    position: { x: 31, y: 45 },
+    position: { x: 36, y: 46 }, // Pozycja 8a
   },
   {
     id: 14,
@@ -151,7 +151,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 5,
     metraz: 103,
-    position: { x: 35.5, y: 29.5 },
+    position: { x: 41, y: 30 }, // Pozycja 8b
   },
   {
     id: 15,
@@ -162,7 +162,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 4,
     metraz: 110,
-    position: { x: 36, y: 46 },
+    position: { x: 31, y: 45 }, // Pozycja 7a
   },
   {
     id: 16,
@@ -173,7 +173,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 145,
-    position: { x: 41, y: 30 },
+    position: { x: 35.5, y: 29.5 }, // Pozycja 7b
   },
   {
     id: 17,
@@ -184,7 +184,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 3,
     metraz: 140,
-    position: { x: 41, y: 48 },
+    position: { x: 27, y: 44 }, // Pozycja 6a
   },
   {
     id: 18,
@@ -195,7 +195,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 4,
     metraz: 171,
-    position: { x: 46, y: 31 },
+    position: { x: 31, y: 28.5 }, // Pozycja 6b
   },
   {
     id: 19,
@@ -206,7 +206,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 4,
     metraz: 133,
-    position: { x: 47, y: 49 },
+    position: { x: 23, y: 43 }, // Pozycja 5a
   },
   {
     id: 20,
@@ -217,7 +217,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 181,
-    position: { x: 52.5, y: 32 },
+    position: { x: 27, y: 27.5 }, // Pozycja 5b
   },
   {
     id: 21,
@@ -228,7 +228,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 2,
     metraz: 198,
-    position: { x: 53, y: 52 },
+    position: { x: 19, y: 42 }, // Pozycja 4a
   },
   {
     id: 22,
@@ -239,7 +239,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 5,
     metraz: 143,
-    position: { x: 59, y: 33.5 },
+    position: { x: 23.2, y: 26.5 }, // Pozycja 4b
   },
   {
     id: 23,
@@ -250,7 +250,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 111,
-    position: { x: 60, y: 54 },
+    position: { x: 16, y: 40.5 }, // Pozycja 3a
   },
   {
     id: 24,
@@ -261,7 +261,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 111,
-    position: { x: 66, y: 34.5 },
+    position: { x: 19.5, y: 26 }, // Pozycja 3b
   },
   {
     id: 25,
@@ -272,7 +272,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 169,
-    position: { x: 69, y: 56 },
+    position: { x: 13, y: 39 }, // Pozycja 2a
   },
   {
     id: 26,
@@ -283,7 +283,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 5,
     metraz: 114,
-    position: { x: 74, y: 36 },
+    position: { x: 16, y: 25.5 }, // Pozycja 2b
   },
   {
     id: 27,
@@ -294,7 +294,7 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 3,
     metraz: 163,
-    position: { x: 77, y: 59 },
+    position: { x: 9, y: 37 }, // Pozycja 1a
   },
   {
     id: 28,
@@ -305,6 +305,6 @@ export const houseCoordinates = [
     pokoje: 4,
     dzialka: 1,
     metraz: 162,
-    position: { x: 83, y: 38 },
+    position: { x: 13, y: 25 }, // Pozycja 1b
   },
 ];

@@ -307,6 +307,8 @@ const ContactSection = () => {
             alt="logo"
             width={384}
             height={160}
+            quality={100}
+            className="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
           />
         </div>
       </div>

@@ -41,10 +41,10 @@ export default function Header() {
       >
         <Link href="#home">
           <Image
-            src="/elpropertieslogo.png"
+            src="/logo_biale.png"
             alt="Logo"
-            width={116}
-            height={48}
+            width={150}
+            height={50}
             className="mr-2 drop-shadow-lg hover:scale-125"
           />
         </Link>

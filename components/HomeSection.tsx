@@ -19,7 +19,7 @@ export default function HomeSection() {
       />
       <div className="absolute inset-0 flex flex-col justify-center items-start text-white text-center z-10 px-4 sm:px-8 md:px-12 lg:px-[100px] space-y-4">
         <p
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold drop-shadow-lg text-left transition break-words max-w-full"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] text-left transition break-words max-w-full"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="500"
@@ -28,7 +28,7 @@ export default function HomeSection() {
           Pułaskiego 32
         </p>
         <p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-lg lg:max-w-[516px] text-left transition break-words max-w-full"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] lg:max-w-[516px] text-left transition break-words max-w-full"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="700"
@@ -38,8 +38,8 @@ export default function HomeSection() {
         <Link
           key={"o-inwestycji"}
           href={"#o-inwestycji"}
-          className="hover:scale-125 hover:bg-white hover:text-green-spring-900 transition-all drop-shadow-md border-2 border-green-spring-100 px-4 py-2 text-base sm:text-lg md:text-xl break-words max-w-full"
-          data-aos="fade-up"
+          className="hover:scale-125 hover:bg-white hover:text-green-spring-900 transition-all drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] border-2 border-green-spring-100 px-4 py-2 text-base sm:text-lg md:text-xl break-words max-w-full"
+          // data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="900"
         >
