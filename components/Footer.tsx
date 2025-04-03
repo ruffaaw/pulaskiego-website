@@ -78,7 +78,7 @@ function Footer() {
           <p className="my-2 text-center md:text-left">2025 Policrafts ©</p>
           <div className="text-center md:text-right">
             <p className="text-signature_text p-0 m-0">
-              Wizualizacje: Maciej Krzyszkowski
+              Wizualizacje: Maciej Krzyszkowski, Ala Janeczek
             </p>
             <p className="text-signature_text p-0 m-0">
               Realizacja witryny: Rafał Ciupek

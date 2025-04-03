@@ -39,7 +39,7 @@ export default function HomeSection() {
           key={"o-inwestycji"}
           href={"#o-inwestycji"}
           className="hover:scale-125 hover:bg-white hover:text-green-spring-900 transition-all drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] border-2 border-green-spring-100 px-4 py-2 text-base sm:text-lg md:text-xl break-words max-w-full"
-          // data-aos="fade-up"
+          data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="900"
         >
