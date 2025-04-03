@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Pułaskiego",
+  title: "Pułaskiego 32",
   description: "",
-  image: "/logo.png",
+  image: "/logo_biale_ikona.png",
 };
 
 export default function Head() {
