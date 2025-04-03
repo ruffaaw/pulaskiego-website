@@ -206,7 +206,11 @@ const House360View = () => {
               </div>
             </button>
           </motion.div>
-          <div className="flex justify-center items-center gap-8 mt-8">
+          <div
+            className="flex justify-center items-center gap-8 mt-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <button
               onClick={() => handleArrowClick1("left")}
               onMouseDown={() => startContinuousScroll1("left")}
@@ -292,7 +296,11 @@ const House360View = () => {
               </div>
             </button>
           </motion.div>
-          <div className="flex justify-center items-center gap-8 mt-8">
+          <div
+            className="flex justify-center items-center gap-8 mt-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <button
               onClick={() => handleArrowClick2("left")}
               onMouseDown={() => startContinuousScroll2("left")}
