@@ -21,6 +21,21 @@ export default function Gallery() {
       id="galeria"
       className="w-full h-full flex flex-col items-center bg-green-spring-100 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8 "
     >
+      <h2
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent text-center mb-4"
+        data-aos="fade-down"
+      >
+        Galeria
+      </h2>
+      <p
+        className="text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-6xl mb-8 mx-auto"
+        data-aos="fade-right"
+        data-aos-delay="200"
+      >
+        Zobacz, jak będzie wyglądał Twój LEPSZY adres. Odkryj pierwsze
+        wizualizacje osiedla Pułaskiego 32. Odwiedzaj naszą stronę, aby śledzić
+        postępy z&nbsp;kolejnych etapów budowy.
+      </p>
       <div
         className="w-full lg:w-4/6"
         data-aos="zoom-in"

@@ -61,6 +61,12 @@ const HousesSection = () => {
     }
   };
 
+  const formatPrice = (price: number | string): string => {
+    const priceStr = typeof price === "number" ? price.toString() : price;
+    const cleanPrice = priceStr.replace(/\s/g, "");
+    return cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  };
+
   return (
     <section
       id="lokale"
@@ -135,7 +141,9 @@ const HousesSection = () => {
               </p>
               <p className="mt-2 text-sm sm:text-base">
                 <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                <span className="font-semibold">Cena: {house.price}</span>
+                <span className="font-semibold">
+                  Cena: {formatPrice(house.price)} zł
+                </span>
               </p>
               <p className="mt-2 text-sm sm:text-base">
                 <TreePalm className="inline-block w-5 h-5 mr-1 text-green-spring-900" />

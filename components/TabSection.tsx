@@ -17,43 +17,37 @@ const TabsSection = () => {
       id: "zakupy",
       icon: <ShoppingCart className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Zakupy",
-      content:
-        "Codzienne zakupy zrobisz wygodnie w pobliskich sklepach i supermarketach, oddalonych tylko o kilka minut drogi od osiedla.",
+      content: `Codzienne zakupy zrobisz wygodnie w${"\u00A0"}pobliskich sklepach i${"\u00A0"}supermarketach, oddalonych tylko o${"\u00A0"}kilka minut drogi od osiedla.`,
     },
     {
       id: "edukacja",
       icon: <School className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Edukacja",
-      content:
-        "W okolicy znajdują się przedszkola, szkoły podstawowe oraz placówki edukacyjne, zapewniające komfortową naukę dla dzieci i młodzieży.",
+      content: `W${"\u00A0"}okolicy znajdują się przedszkola, szkoły podstawowe oraz placówki edukacyjne, zapewniające komfortową naukę dla dzieci i młodzieży.`,
     },
     {
       id: "transport",
       icon: <Bus className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Transport",
-      content:
-        "Przystanek autobusowy znajduje się 300 m od osiedla (ok. 4 min pieszo), a stacja kolejowa 2,3km, co pozwala na szybkie dotarcie do Krakowa i centrum Wieliczki.",
+      content: `Przystanek autobusowy znajduje się 300 m od osiedla (ok. 4 min pieszo), a${"\u00A0"}stacja kolejowa 2,3 km, co pozwala na szybkie dotarcie do Krakowa i${"\u00A0"}centrum Wieliczki.`,
     },
     {
       id: "rozrywka",
       icon: <Clapperboard className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Rozrywka",
-      content:
-        "Restauracje, kawiarnie, kino oraz atrakcje kulturalne w pobliżu sprawią, że zawsze znajdziesz coś dla siebie.",
+      content: `Restauracje, kawiarnie, kino oraz atrakcje kulturalne w${"\u00A0"}pobliżu sprawią, że zawsze znajdziesz coś dla siebie.`,
     },
     {
       id: "usługi",
       icon: <Briefcase className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Usługi",
-      content:
-        "Apteki, przychodnie, banki i inne punkty usługowe w sąsiedztwie zapewniają wygodę w codziennych sprawach.",
+      content: `Apteki, przychodnie, banki i${"\u00A0"}inne punkty usługowe w${"\u00A0"}sąsiedztwie zapewniają wygodę w${"\u00A0"}codziennych sprawach.`,
     },
     {
       id: "rekreacja",
       icon: <TreePalm className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Rekreacja",
-      content:
-        "Plac zabaw i boiska sportowe znajdują się 800m od osiedla, park rekreacyjny w odległości 1,8 km. Dodatkowo spokojna, zielona okolica sprzyja aktywnemu wypoczynkowi na świeżym powietrzu.",
+      content: `Plac zabaw i${"\u00A0"}boiska sportowe znajdują się 800 m od osiedla, park rekreacyjny w odległości 1,8 km. Dodatkowo spokojna, zielona okolica sprzyja aktywnemu wypoczynkowi na świeżym powietrzu.`,
     },
   ];
 
@@ -66,10 +60,9 @@ const TabsSection = () => {
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center mb-8"
         data-aos="fade-down"
       >
-        WSZYSTKO W ZASIĘGU RĘKI
+        WSZYSTKO W&nbsp;TWOJEJ OKOLICY
       </h2>
       <div className="flex flex-col items-center">
-        {/* Karty */}
         <div className="grid grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
           {tabs.map((tab, index) => (
             <button
