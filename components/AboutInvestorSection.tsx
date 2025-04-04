@@ -10,40 +10,35 @@ const AboutInvestorSection = () => {
         <Handshake className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
       title: "Relacje oparte na zaufaniu",
-      description:
-        "Dla nas najważniejsze są relacje, które budujemy na zaufaniu i szczerości. Staramy się, aby każda współpraca była wyjątkowa i opierała się na długofalowym porozumieniu.",
+      description: `Dla nas najważniejsze są relacje, które budujemy na zaufaniu i${"\u00A0"}szczerości. Staramy się, aby każda współpraca była wyjątkowa i${"\u00A0"}opierała się na długofalowym porozumieniu.`,
     },
     {
       icon: (
         <Lightbulb className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
       title: "Wspólna wizja",
-      description:
-        "W każdej inwestycji traktujemy naszych klientów jako partnerów. Wspólnie tworzymy przestrzeń, która w pełni odzwierciedla ich oczekiwania i potrzeby. Uważamy, że sukces budowy to wynik dobrej współpracy i wzajemnego zrozumienia.",
+      description: `W${"\u00A0"}każdej inwestycji traktujemy naszych klientów jako partnerów. Wspólnie tworzymy przestrzeń, która w pełni odzwierciedla ich oczekiwania i${"\u00A0"}potrzeby. Uważamy, że sukces budowy to wynik dobrej współpracy i${"\u00A0"}wzajemnego zrozumienia.`,
     },
     {
       icon: (
         <Ruler className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
-      title: "Dokładność i zaangażowanie",
-      description:
-        "Nasze projekty realizujemy z pełnym profesjonalizmem, dbając o każdy detal. Angażujemy się w każdy etap inwestycji, zapewniając rzetelne wykonanie oraz dotrzymywanie uzgodnionych terminów, by dostarczyć najwyższą jakość.",
+      title: `Dokładność i${"\u00A0"}zaangażowanie`,
+      description: `Nasze projekty realizujemy z${"\u00A0"}pełnym profesjonalizmem, dbając o każdy detal. Angażujemy się we wszystkie etapy inwestycji, zapewniamy rzetelne wykonanie oraz dotrzymywanie uzgodnionych terminów, po to aby dostarczać najwyższą jakość.`,
     },
     {
       icon: (
         <ShieldCheck className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
-      title: "Trwałość i komfort",
-      description:
-        "Dbamy o to, by nasze realizacje były bezpieczne i trwałe. Starannie wybieramy materiały i technologie, które zapewniają nie tylko estetykę, ale i bezpieczeństwo, gwarantując długotrwały komfort.",
+      title: `Trwałość i${"\u00A0"}komfort`,
+      description: `Dbamy o to, by nasze realizacje były bezpieczne i${"\u00A0"}trwałe. Starannie wybieramy materiały i${"\u00A0"}technologie, które zapewniają nie tylko estetykę, ale i${"\u00A0"}bezpieczeństwo, gwarantując długotrwały komfort.`,
     },
     {
       icon: (
         <Home className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
       title: "Miejsce do życia",
-      description:
-        "Naszym celem jest stworzenie przestrzeni, która będzie źródłem szczęścia i harmonii. Zależy nam, by każdy nasz projekt stał się miejscem, w którym ludzie odnajdują spokój, radość i przestrzeń do wspólnych chwil z bliskimi.",
+      description: `Naszym celem jest stworzenie przestrzeni, która będzie źródłem szczęścia i${"\u00A0"}harmonii. Zależy nam, by każdy nasz projekt stał się miejscem, w${"\u00A0"}którym mieszkańcy odnajdują spokój, radość i${"\u00A0"}przestrzeń do wspólnych chwil z${"\u00A0"}bliskimi.`,
     },
   ];
 
@@ -72,19 +67,19 @@ const AboutInvestorSection = () => {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            Tworzymy przestrzenie, które łączą nowoczesny design z
-            funkcjonalnością.
+            Tworzymy przestrzenie, które łączą nowoczesny design
+            z&nbsp;funkcjonalnością.
           </p>
           <p
             className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
             data-aos="fade-right"
             data-aos-delay="200"
           >
-            EL PROPERTIES to firma, która od lat z powodzeniem realizuje
+            EL PROPERTIES to firma, która od lat z&nbsp;powodzeniem realizuje
             inwestycje deweloperskie, tworząc przestrzenie, które łączą
-            nowoczesny design z funkcjonalnością. Z pasją podchodzimy do każdego
-            projektu, dbając o to, aby każdy nasz klient znalazł idealne miejsce
-            do życia.
+            nowoczesny design z&nbsp;funkcjonalnością. Z pasją podchodzimy do
+            wszystkich projektów, dbając o&nbsp;to, aby każdy nasz klient
+            znalazł idealne miejsce do życia.
           </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-end">
@@ -100,7 +95,7 @@ const AboutInvestorSection = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-8 mt-12">
+      <div className="flex flex-col gap-8 mt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cards.slice(0, 2).map((card, index) => (
             <motion.div

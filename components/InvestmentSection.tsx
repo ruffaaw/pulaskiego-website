@@ -33,33 +33,34 @@ export default function InvestmentSection() {
       >
         O INWESTYCJI
       </p>
-      <div className="flex flex-col lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col lg:flex-row justify-between items-start pt-4 pb-8 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-3/5">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
             data-aos="fade-right"
           >
-            KOMFORT I BEZPIECZEŃSTWO NA WYCIĄGNIĘCIE RĘKI
+            KOMFORT I&nbsp;BEZPIECZEŃSTWO NA WYCIĄGNIĘCIE RĘKI
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            Twoje miejsce w spokojnym sercu Wieliczki – tu życie toczy się w
-            rytmie relaksu.
+            Twoje miejsce w&nbsp;spokojnym sercu Wieliczki, gdzie życie toczy
+            się w rytmie relaksu.
           </p>
           <p
             className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
             data-aos="fade-right"
             data-aos-delay="200"
           >
-            Osiedle przy ulicy Pułaskiego w Wieliczce to idealne miejsce dla
-            osób ceniących spokój, bezpieczeństwo i nowoczesność. Pułaskiego 32
-            to kameralne, zamknięte i oświetlone osiedle, oferujące 28 mieszkań
-            o powierzchni 60–70 m². Zamknięta przestrzeń zapewnia prywatność, a
-            oświetlone drogi i miejsca postojowe gwarantują bezpieczeństwo i
-            wygodę.
+            Osiedle przy ulicy Pułaskiego w&nbsp;Wieliczce to idealne miejsce
+            dla osób ceniących spokój, bezpieczeństwo i&nbsp;nowoczesne
+            rozwiązania. Kameralne osiedle obejmuje tylko 28 mieszkań
+            o&nbsp;powierzchni od 60 do 70 m². Zamknięta przestrzeń zapewnia
+            mieszkańcom komfort i&nbsp;prywatność, a&nbsp;oświetlone drogi
+            wewnętrzne i miejsca postojowe gwarantują bezpieczne i&nbsp;wygodne
+            powroty do domu.
           </p>
         </div>
         <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
@@ -74,8 +75,8 @@ export default function InvestmentSection() {
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-4 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-8 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
           <Image
             src={"/0003.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
@@ -91,45 +92,47 @@ export default function InvestmentSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 max-w-[1000px] drop-shadow-lg text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
           >
-            ZDROWIE I EKOLOGIA W STANDARDZIE{" "}
+            ZDROWIE I&nbsp;EKOLOGIA W&nbsp;STANDARDZIE{" "}
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right mt-4"
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            Zielona przestrzeń, która koi zmysły – zadbaj o siebie i swoją
-            rodzinę, żyjąc w harmonii z naturą.
+            Zielona przestrzeń, która koi zmysły – zadbaj o siebie i&nbsp;swoją
+            rodzinę, żyjąc w&nbsp;harmonii z&nbsp;naturą.
           </p>
           <p
             className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-right mt-6"
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            Inwestycja została zaprojektowana z myślą o komforcie i zdrowiu
-            mieszkańców. Każde mieszkanie oferuje dobrze doświetlone wnętrza
-            oraz przestrzeń do relaksu – zarówno wewnątrz, jak i na zewnątrz.
-            Przydomowe ogródki i bliskość terenów zielonych zachęcają do
-            aktywności na świeżym powietrzu, dbając o samopoczucie i zdrowie
-            całej rodziny.
+            Inwestycja została zaprojektowana z&nbsp;myślą o&nbsp;komforcie
+            i&nbsp;zdrowiu mieszkańców. Każde mieszkanie oferuje dobrze
+            doświetlone wnętrza oraz przestrzeń do relaksu – zarówno wewnątrz,
+            jak i&nbsp;na zewnątrz. Przydomowe ogródki pozwalają cieszyć się
+            własnym zielonym zakątkiem, idealnym do odpoczynku po pracy lub
+            spędzania czasu z&nbsp;rodziną. Bliskość licznych terenów zielonych
+            wokół osiedla zachęca do aktywności fizycznej na świeżym powietrzu,
+            co pozytywnie wpływa na samopoczucie i&nbsp;zdrowie całej rodziny.
           </p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col lg:flex-row justify-between items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-3/5">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-right"
           >
-            WYGODNE ŻYCIE W NOWOCZESNYM OTOCZENIU{" "}
+            WYGODNE ŻYCIE W&nbsp;NOWOCZESNYM OTOCZENIU{" "}
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            Każdy dzień na Pułaskiego 32 to bliskość wszystkiego, co ważne – z
-            łatwym dostępem do miasta i pełną wygodą.
+            Każdy dzień na Pułaskiego 32 to bliskość wszystkiego, co ważne –
+            z&nbsp;łatwym dostępem do miasta i&nbsp;pełną wygodą.
           </p>
           <p
             className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
@@ -139,7 +142,7 @@ export default function InvestmentSection() {
             Mieszkania wyróżniają się funkcjonalnym układem, który zapewnia
             wygodę codziennego użytkowania. Każde wnętrze zostało zaprojektowane
             tak, by maksymalnie wykorzystać przestrzeń, tworząc idealne miejsce
-            do relaksu, pracy i spotkań z bliskimi.
+            do relaksu, pracy i&nbsp;spotkań z&nbsp;bliskimi.
           </p>
           <ul className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left">
             <li
@@ -151,7 +154,7 @@ export default function InvestmentSection() {
                 <MapPin className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
               <p>
-                Doskonała lokalizacja - Sklepy, restauracje i placówki
+                Doskonała lokalizacja - sklepy, restauracje i placówki
                 edukacyjne w zasięgu ręki.
               </p>
             </li>
@@ -164,8 +167,8 @@ export default function InvestmentSection() {
                 <TreePalm className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
               <p>
-                Nowoczesny park - 3 km alejek, siłownia plenerowa, place zabaw i
-                strefa wypoczynkowa.
+                Nowoczesny park - 3 km alejek, siłownia plenerowa, place zabaw
+                i&nbsp;strefa wypoczynkowa.
               </p>
             </li>
             <li
@@ -177,7 +180,7 @@ export default function InvestmentSection() {
                 <Bus className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
               <p>
-                Doskonała komunikacja - Szybki dojazd do Krakowa i łatwe
+                Doskonała komunikacja - szybki dojazd do Krakowa i&nbsp;łatwe
                 przemieszczanie się po Wieliczce.
               </p>
             </li>
@@ -195,8 +198,8 @@ export default function InvestmentSection() {
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-4 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
           <Image
             src={"/0002.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
@@ -212,14 +215,14 @@ export default function InvestmentSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
           >
-            NOWOCZESNE TECHNOLOGIE I OSZCZĘDNOŚĆ{" "}
+            NOWOCZESNE TECHNOLOGIE I&nbsp;OSZCZĘDNOŚĆ{" "}
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right mt-4"
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            Nowoczesność, która dba o Twój komfort i planetę – ekologiczne
+            Nowoczesność, która dba o Twój komfort i&nbsp;planetę – ekologiczne
             rozwiązania, które sprawiają, że życie jest łatwiejsze
           </p>
           <p
@@ -227,8 +230,8 @@ export default function InvestmentSection() {
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            Mieszkania zostały wybudowane z najwyższej jakości materiałów, z
-            zastosowaniem nowoczesnych i ekologicznych technologii.
+            Mieszkania zostały wybudowane z&nbsp;najwyższej jakości materiałów,
+            z&nbsp;zastosowaniem nowoczesnych i&nbsp;ekologicznych technologii.
           </p>
           <ul className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-right">
             <li
@@ -237,8 +240,8 @@ export default function InvestmentSection() {
               data-aos-delay="300"
             >
               <p>
-                Doskonała izolacja termiczna – gwarantuje oszczędność energii i
-                wysoki komfort cieplny.
+                Doskonała izolacja termiczna – gwarantuje oszczędność energii
+                i&nbsp;wysoki komfort cieplny.
               </p>
               <div className="w-8 h-8 sm:w-10 sm:h-10">
                 <ThermometerSnowflake className="w-8 h-8 sm:w-10 sm:h-10" />
@@ -264,7 +267,8 @@ export default function InvestmentSection() {
             >
               <p>
                 Przepuszczalne nawierzchnie – pomagają w naturalnej cyrkulacji
-                wody, eliminując w dużym stopniu problem zalegających kałuż.
+                wody, co przekłada się na suchą i&nbsp;estetyczną przestrzeń
+                wokół budynków.
               </p>
               <div className="w-8 h-8 sm:w-10 sm:h-10">
                 <Droplets className="w-8 h-8 sm:w-10 sm:h-10" />
@@ -273,8 +277,8 @@ export default function InvestmentSection() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col py-4">
-        <div className="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col py-8">
+        <div className="flex flex-col lg:flex-row justify-between lg:space-y-0 lg:space-x-8">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent drop-shadow-lg"
             data-aos="fade-right"
@@ -282,39 +286,35 @@ export default function InvestmentSection() {
             IDEALNE MIEJSCE DLA CIEBIE
           </p>
           <p
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 lg:text-right"
+            className="text-xl  sm:text-2xl md:text-3xl lg:text-4xl font-semibold max-lg:mt-4 text-green-spring-900 lg:text-right "
             data-aos="fade-left"
           >
-            Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni i
-            nowoczesnego komfortu, który pokochasz.
+            Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni
+            i&nbsp;nowoczesnego komfortu, który pokochasz.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 mt-4">
+        <div className="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 mt-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full lg:w-2/3">
             {[
               {
                 icon: <Leaf className="w-12 h-12 sm:w-14 sm:h-14" />,
-                title: "SPOKOJNA, ZIELONA OKOLICA",
-                description:
-                  "Żyj w otoczeniu natury, gdzie zieleń i cisza tworzą idealne warunki do relaksu.",
+                title: `SPOKOJNA, ZIELONA OKOLICA`,
+                description: `Żyj w${"\u00A0"}otoczeniu natury, gdzie zieleń i&nbsp;cisza tworzą idealne warunki do&nbsp;relaksu.`,
               },
               {
                 icon: <Car className="w-12 h-12 sm:w-14 sm:h-14" />,
-                title: "DOSKONAŁY DOJAZD DO KRAKOWA I CENTRUM WIELICZKI",
-                description:
-                  "Szybki i wygodny dojazd do Krakowa oraz centrum Wieliczki bez stresu i pośpiechu.",
+                title: `DOSKONAŁY DOJAZD DO KRAKOWA I${"\u00A0"}CENTRUM WIELICZKI`,
+                description: `Szybki i${"\u00A0"}wygodny dojazd do Krakowa oraz centrum Wieliczki bez stresu i${"\u00A0"}pośpiechu.`,
               },
               {
                 icon: <Building2 className="w-12 h-12 sm:w-14 sm:h-14" />,
-                title: "WYSOKI STANDARD WYKOŃCZENIA I NOWOCZESNE TECHNOLOGIE",
-                description:
-                  "Nowoczesne technologie i eleganckie wykończenie gwarantują komfort i oszczędność energii.",
+                title: `WYSOKI STANDARD WYKOŃCZENIA I${"\u00A0"}NOWOCZESNE TECHNOLOGIE`,
+                description: `Najnowsze technologie i${"\u00A0"}eleganckie wykończenie gwarantują komfort i${"\u00A0"}oszczędność energii.`,
               },
               {
                 icon: <Home className="w-12 h-12 sm:w-14 sm:h-14" />,
-                title: "PRZESTRONNE WNĘTRZA I FUNKCJONALNE UKŁADY MIESZKAŃ",
-                description:
-                  "Przestronne wnętrza, które dają swobodę i inspirację do codziennego życia.",
+                title: `PRZESTRONNE WNĘTRZA I${"\u00A0"}FUNKCJONALNE UKŁADY MIESZKAŃ`,
+                description: `Inspirujące wnętrza, które zapewniają swobodę i${"\u00A0"}wygodę codziennego życia.`,
               },
             ].map((item, index) => (
               <div
@@ -335,7 +335,7 @@ export default function InvestmentSection() {
               </div>
             ))}
           </div>
-          <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[616px]">
+          <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[616px] max-lg:mt-8">
             <Image
               src={"/0000.png"}
               alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
@@ -349,7 +349,7 @@ export default function InvestmentSection() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between py-4 space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col lg:flex-row justify-between pt-8 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="flex flex-col space-y-3">
           <p
             className="lg:hidden text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
@@ -361,8 +361,8 @@ export default function InvestmentSection() {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[900px] text-left"
             data-aos="fade-right"
           >
-            Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni i
-            nowoczesnego komfortu.
+            Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni
+            i&nbsp;nowoczesnego komfortu.
           </p>
           <Link
             href={"#kontakt"}
@@ -370,7 +370,7 @@ export default function InvestmentSection() {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            Skontaktuj się z nami
+            Skontaktuj się z&nbsp;nami
           </Link>
         </div>
         <p

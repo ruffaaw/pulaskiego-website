@@ -4,43 +4,10 @@ function Footer() {
   return (
     <footer>
       <div className="w-full h-full flex flex-col">
-        <div className="flex flex-col lg:flex-row justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px]">
+        <div className="flex flex-col-reverse lg:flex-row justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px]">
           <div
-            className="flex flex-col lg:flex-row justify-center items-center gap-4"
+            className="flex flex-col justify-center items-center mt-5 lg:mt-0 lg:w-1/2 xl:-ml-[170px]"
             data-aos="fade-right"
-          >
-            <Link
-              href="https://www.n20.pl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2"
-            >
-              <Image
-                src="/n20logo.png"
-                alt="N20"
-                width={212}
-                height={144}
-                className="p-2"
-              />
-            </Link>
-            {/* <Link
-              href="https://www.n20.pl/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2"
-            >
-              <Image
-                src="/logo_kwadratowe.png"
-                alt="N20"
-                width={212}
-                height={144}
-                className="p-2"
-              />
-            </Link> */}
-          </div>
-          <div
-            className="flex flex-col justify-center items-center mt-5 lg:mt-0"
-            data-aos="fade-left"
           >
             <div className="flex flex-row gap-4">
               <Link
@@ -72,6 +39,25 @@ function Footer() {
                 />
               </Link>
             </div>
+          </div>
+          <div
+            className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:w-1/2"
+            data-aos="fade-left"
+          >
+            <Link
+              href="https://www.n20.pl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2"
+            >
+              <Image
+                src="/n20logo.png"
+                alt="N20"
+                width={212}
+                height={144}
+                className="p-2"
+              />
+            </Link>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-signature text-white px-4 sm:px-8 md:px-12 lg:px-[100px]">

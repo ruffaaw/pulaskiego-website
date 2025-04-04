@@ -168,8 +168,8 @@ const House360View = () => {
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        Kliknij przycisk w prawym górnym rogu, aby powiększyć widok lub użyj
-        strzałek pod obrazem, aby go obrócić
+        Kliknij przycisk w&nbsp;prawym górnym rogu, aby powiększyć widok lub
+        użyj strzałek pod obrazem, aby go obrócić.
       </motion.p>
       <div className="w-full flex flex-col lg:flex-row justify-between gap-5">
         <div>

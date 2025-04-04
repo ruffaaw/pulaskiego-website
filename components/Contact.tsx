@@ -123,7 +123,7 @@ const ContactSection = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
             data-aos="fade-right"
           >
-            SKONTAKTUJ SIĘ Z NAMI
+            SKONTAKTUJ SIĘ Z&nbsp;NAMI
           </p>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
@@ -160,13 +160,13 @@ const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-2">
               <div className="w-full">
                 <label htmlFor="email" className="block text-lg font-medium">
-                  Email
+                  Adres e-mail
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Wpisz swój email"
+                  placeholder="Wpisz swój e-mail"
                   className="w-full px-4 py-2 rounded-lg border border-green-spring-300 focus:outline-none focus:ring-2 focus:ring-green-spring-500"
                   value={formData.email}
                   onChange={handleChange}
@@ -240,7 +240,7 @@ const ContactSection = () => {
         </div>
 
         <motion.div
-          className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[649px] xl:h-[609px] rounded-3xl overflow-hidden shadow-lg lg:mt-0"
+          className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-auto rounded-3xl overflow-hidden shadow-lg lg:mt-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
