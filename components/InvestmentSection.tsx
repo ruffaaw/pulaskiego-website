@@ -299,7 +299,7 @@ export default function InvestmentSection() {
               {
                 icon: <Leaf className="w-12 h-12 sm:w-14 sm:h-14" />,
                 title: `SPOKOJNA, ZIELONA OKOLICA`,
-                description: `Żyj w${"\u00A0"}otoczeniu natury, gdzie zieleń i&nbsp;cisza tworzą idealne warunki do&nbsp;relaksu.`,
+                description: `Żyj w${"\u00A0"}otoczeniu natury, gdzie zieleń i${"\u00A0"}cisza tworzą idealne warunki do relaksu.`,
               },
               {
                 icon: <Car className="w-12 h-12 sm:w-14 sm:h-14" />,
