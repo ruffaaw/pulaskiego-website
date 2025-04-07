@@ -164,12 +164,20 @@ const House360View = () => {
         Poznaj swoje przyszłe mieszkanie
       </motion.p>
       <motion.p
-        className="mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-3xl mx-auto"
+        className="hidden lg:flex mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-4xl mx-auto"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        Kliknij przycisk w&nbsp;prawym górnym rogu, aby powiększyć widok lub
-        użyj strzałek pod obrazem, aby go obrócić.
+        Przeciągnij myszką na obrazie lub użyj strzałek pod obrazem, aby obrócić
+        widok. Kliknij przycisk w prawym górnym rogu, aby powiększyć widok.
+      </motion.p>
+      <motion.p
+        className="flex lg:hidden mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-3xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        Przeciągnij palcem na obrazie lub użyj strzałek pod obrazem, aby
+        obrócić.
       </motion.p>
       <div className="w-full flex flex-col lg:flex-row justify-between gap-5">
         <div>
@@ -198,7 +206,7 @@ const House360View = () => {
                 e.stopPropagation();
                 handleZoom1();
               }}
-              className="absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all z-10"
+              className="max-lg:hidden absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all z-10"
               aria-label="Powiększ obraz"
             >
               <div className="p-4 bg-white border-2 border-green-spring-900 rounded-full hover:bg-green-spring-400 transition-all">
@@ -288,7 +296,7 @@ const House360View = () => {
                 e.stopPropagation();
                 handleZoom2();
               }}
-              className="absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all z-10"
+              className="max-lg:hidden absolute top-2 right-2 p-2 bg-white bg-opacity-80 rounded-full hover:bg-opacity-100 transition-all z-10"
               aria-label="Powiększ obraz"
             >
               <div className="p-4 bg-white border-2 border-green-spring-900 rounded-full hover:bg-green-spring-400 transition-all">
