@@ -17,21 +17,21 @@ const AboutInvestorSection = () => {
         <Lightbulb className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
       title: "Wspólna wizja",
-      description: `W${"\u00A0"}każdej inwestycji traktujemy naszych klientów jako partnerów. Wspólnie tworzymy przestrzeń, która w pełni odzwierciedla ich oczekiwania i${"\u00A0"}potrzeby. Uważamy, że sukces budowy to wynik dobrej współpracy i${"\u00A0"}wzajemnego zrozumienia.`,
+      description: `W${"\u00A0"}każdej inwestycji traktujemy naszych klientów jako partnerów. Wspólnie tworzymy przestrzeń, która w${"\u00A0"}pełni odzwierciedla ich oczekiwania i${"\u00A0"}potrzeby. Uważamy, że sukces budowy to wynik dobrej współpracy i${"\u00A0"}wzajemnego zrozumienia.`,
     },
     {
       icon: (
         <Ruler className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
       title: `Dokładność i${"\u00A0"}zaangażowanie`,
-      description: `Nasze projekty realizujemy z${"\u00A0"}pełnym profesjonalizmem, dbając o każdy detal. Angażujemy się we wszystkie etapy inwestycji, zapewniamy rzetelne wykonanie oraz dotrzymywanie uzgodnionych terminów, po to aby dostarczać najwyższą jakość.`,
+      description: `Nasze projekty realizujemy z${"\u00A0"}pełnym profesjonalizmem, dbając o${"\u00A0"}każdy detal. Angażujemy się we wszystkie etapy inwestycji, zapewniamy rzetelne wykonanie oraz dotrzymywanie uzgodnionych terminów, po to aby dostarczać najwyższą jakość.`,
     },
     {
       icon: (
         <ShieldCheck className="w-12 h-12 sm:w-14 sm:h-14 text-green-spring-700" />
       ),
       title: `Trwałość i${"\u00A0"}komfort`,
-      description: `Dbamy o to, by nasze realizacje były bezpieczne i${"\u00A0"}trwałe. Starannie wybieramy materiały i${"\u00A0"}technologie, które zapewniają nie tylko estetykę, ale i${"\u00A0"}bezpieczeństwo, gwarantując długotrwały komfort.`,
+      description: `Dbamy o${"\u00A0"}to, by nasze realizacje były bezpieczne i${"\u00A0"}trwałe. Starannie wybieramy materiały i${"\u00A0"}technologie, które zapewniają nie tylko estetykę, ale i${"\u00A0"}bezpieczeństwo, gwarantując długotrwały komfort.`,
     },
     {
       icon: (
@@ -51,7 +51,7 @@ const AboutInvestorSection = () => {
         className="text-2xl sm:text-3xl font-bold text-green-spring-950 "
         data-aos="fade-down"
       >
-        O INWESTORZE
+        O&nbsp;INWESTORZE
       </p>
 
       <div className="flex flex-col lg:flex-row justify-between py-4 space-y-8 lg:space-y-0 lg:space-x-8">
@@ -77,8 +77,8 @@ const AboutInvestorSection = () => {
           >
             EL PROPERTIES to firma, która od lat z&nbsp;powodzeniem realizuje
             inwestycje deweloperskie, tworząc przestrzenie, które łączą
-            nowoczesny design z&nbsp;funkcjonalnością. Z pasją podchodzimy do
-            wszystkich projektów, dbając o&nbsp;to, aby każdy nasz klient
+            nowoczesny design z&nbsp;funkcjonalnością. Z&nbsp;pasją podchodzimy
+            do wszystkich projektów, dbając o&nbsp;to, aby każdy nasz klient
             znalazł idealne miejsce do życia.
           </p>
         </div>

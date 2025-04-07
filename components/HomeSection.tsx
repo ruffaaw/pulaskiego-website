@@ -33,7 +33,7 @@ export default function HomeSection() {
           data-aos-duration="1000"
           data-aos-delay="700"
         >
-          Nowoczesne osiedle inspirowane harmonią natury i komfortem życia.
+          Nowoczesne osiedle inspirowane harmonią natury i&nbsp;komfortem życia.
         </p>
         <Link
           key={"o-inwestycji"}

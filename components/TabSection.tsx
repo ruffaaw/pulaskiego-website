@@ -23,13 +23,13 @@ const TabsSection = () => {
       id: "edukacja",
       icon: <School className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Edukacja",
-      content: `W${"\u00A0"}okolicy znajdują się przedszkola, szkoły podstawowe oraz placówki edukacyjne, zapewniające komfortową naukę dla dzieci i młodzieży.`,
+      content: `W${"\u00A0"}okolicy znajdują się przedszkola, szkoły podstawowe oraz placówki edukacyjne, zapewniające komfortową naukę dla dzieci i${"\u00A0"}młodzieży.`,
     },
     {
       id: "transport",
       icon: <Bus className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Transport",
-      content: `Przystanek autobusowy znajduje się 300 m od osiedla (ok. 4 min pieszo), a${"\u00A0"}stacja kolejowa 2,3 km, co pozwala na szybkie dotarcie do Krakowa i${"\u00A0"}centrum Wieliczki.`,
+      content: `Przystanek autobusowy znajduje się 300${"\u00A0"}m${"\u00A0"}od osiedla (ok. 4 min pieszo), a${"\u00A0"}stacja kolejowa 2,3 km, co pozwala na szybkie dotarcie do Krakowa i${"\u00A0"}centrum Wieliczki.`,
     },
     {
       id: "rozrywka",
@@ -47,7 +47,7 @@ const TabsSection = () => {
       id: "rekreacja",
       icon: <TreePalm className="w-8 h-8 sm:w-10 sm:h-10" />,
       label: "Rekreacja",
-      content: `Plac zabaw i${"\u00A0"}boiska sportowe znajdują się 800 m od osiedla, park rekreacyjny w odległości 1,8 km. Dodatkowo spokojna, zielona okolica sprzyja aktywnemu wypoczynkowi na świeżym powietrzu.`,
+      content: `Plac zabaw i${"\u00A0"}boiska sportowe znajdują się 800 m od osiedla, park rekreacyjny w${"\u00A0"}odległości 1,8 km. Dodatkowo spokojna, zielona okolica sprzyja aktywnemu wypoczynkowi na świeżym powietrzu.`,
     },
   ];
 

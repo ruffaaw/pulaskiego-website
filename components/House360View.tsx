@@ -169,7 +169,7 @@ const House360View = () => {
         data-aos-delay="300"
       >
         Przeciągnij myszką na obrazie lub użyj strzałek pod obrazem, aby obrócić
-        widok. Kliknij przycisk w prawym górnym rogu, aby powiększyć widok.
+        widok. Kliknij przycisk w&nbsp;prawym górnym rogu, aby powiększyć widok.
       </motion.p>
       <motion.p
         className="flex lg:hidden mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-3xl mx-auto"

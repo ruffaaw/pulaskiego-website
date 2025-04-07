@@ -47,7 +47,7 @@ export default function InvestmentSection() {
             data-aos-delay="100"
           >
             Twoje miejsce w&nbsp;spokojnym sercu Wieliczki, gdzie życie toczy
-            się w rytmie relaksu.
+            się w&nbsp;rytmie relaksu.
           </p>
           <p
             className="text-lg sm:text-xl md:text-2xl text-green-spring-900 max-w-[1000px] text-left mt-6"
@@ -59,8 +59,8 @@ export default function InvestmentSection() {
             rozwiązania. Kameralne osiedle obejmuje tylko 28 mieszkań
             o&nbsp;powierzchni od 60 do 70 m². Zamknięta przestrzeń zapewnia
             mieszkańcom komfort i&nbsp;prywatność, a&nbsp;oświetlone drogi
-            wewnętrzne i miejsca postojowe gwarantują bezpieczne i&nbsp;wygodne
-            powroty do domu.
+            wewnętrzne i&nbsp;miejsca postojowe gwarantują bezpieczne
+            i&nbsp;wygodne powroty do domu.
           </p>
         </div>
         <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
@@ -79,7 +79,7 @@ export default function InvestmentSection() {
         <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
           <Image
             src={"/0003.png"}
-            alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
+            alt="Zdrowie i ekologia w standardzie"
             fill
             quality={100}
             priority
@@ -154,8 +154,8 @@ export default function InvestmentSection() {
                 <MapPin className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
               <p>
-                Doskonała lokalizacja - sklepy, restauracje i placówki
-                edukacyjne w zasięgu ręki.
+                Doskonała lokalizacja - sklepy, restauracje i&nbsp;placówki
+                edukacyjne w&nbsp;zasięgu ręki.
               </p>
             </li>
             <li
@@ -189,7 +189,7 @@ export default function InvestmentSection() {
         <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
           <Image
             src={"/0001.png"}
-            alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
+            alt="Wygodne życie w nowoczesnym otoczeniu"
             fill
             quality={100}
             priority
@@ -202,7 +202,7 @@ export default function InvestmentSection() {
         <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
           <Image
             src={"/0002.png"}
-            alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
+            alt="Nowoczesne technologie i oszczędność"
             fill
             quality={100}
             priority
@@ -266,9 +266,9 @@ export default function InvestmentSection() {
               data-aos-delay="500"
             >
               <p>
-                Przepuszczalne nawierzchnie – pomagają w naturalnej cyrkulacji
-                wody, co przekłada się na suchą i&nbsp;estetyczną przestrzeń
-                wokół budynków.
+                Przepuszczalne nawierzchnie – pomagają w&nbsp;naturalnej
+                cyrkulacji wody, co przekłada się na suchą i&nbsp;estetyczną
+                przestrzeń wokół budynków.
               </p>
               <div className="w-8 h-8 sm:w-10 sm:h-10">
                 <Droplets className="w-8 h-8 sm:w-10 sm:h-10" />
@@ -289,7 +289,7 @@ export default function InvestmentSection() {
             className="text-xl  sm:text-2xl md:text-3xl lg:text-4xl font-semibold max-lg:mt-4 text-green-spring-900 lg:text-right "
             data-aos="fade-left"
           >
-            Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni
+            Twój nowy dom w&nbsp;Wieliczce – połączenie spokoju, przestrzeni
             i&nbsp;nowoczesnego komfortu, który pokochasz.
           </p>
         </div>
@@ -338,7 +338,7 @@ export default function InvestmentSection() {
           <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[616px] max-lg:mt-8">
             <Image
               src={"/0000.png"}
-              alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
+              alt="Idealne miejsce dla Ciebie"
               fill
               quality={100}
               priority
@@ -361,7 +361,7 @@ export default function InvestmentSection() {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[900px] text-left"
             data-aos="fade-right"
           >
-            Twój nowy dom w Wieliczce – połączenie spokoju, przestrzeni
+            Twój nowy dom w&nbsp;Wieliczce – połączenie spokoju, przestrzeni
             i&nbsp;nowoczesnego komfortu.
           </p>
           <Link
