@@ -32,9 +32,7 @@ export default function Gallery() {
         data-aos="fade-right"
         data-aos-delay="200"
       >
-        Zobacz, jak będzie wyglądał Twój LEPSZY adres. Odkryj pierwsze
-        wizualizacje osiedla Pułaskiego 32. Odwiedzaj naszą stronę, aby śledzić
-        postępy z&nbsp;kolejnych etapów budowy.
+        Zobacz, jak będzie wyglądał Twój LEPSZY adres.
       </p>
       <div
         className="w-full lg:w-4/6"
