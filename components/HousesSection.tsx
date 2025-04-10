@@ -4,10 +4,11 @@ import {
   CheckCircle,
   AlertCircle,
   DollarSign,
-  TreePalm,
   Bed,
   Home,
   FileText,
+  Sprout,
+  Fence,
 } from "lucide-react";
 import { useRef } from "react";
 import { houseCoordinates } from "@/data/houseCoordinates";
@@ -146,12 +147,22 @@ const HousesSection = () => {
                   Cena: {formatPrice(house.price)} zł
                 </span>
               </p>
-              <p className="mt-2 text-sm sm:text-base">
-                <TreePalm className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                <span className="font-semibold">
-                  Działka: {house.dzialka} ha
-                </span>
-              </p>
+              {house.ogrodek && (
+                <p className="mt-2 text-sm sm:text-base">
+                  <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <span className="font-semibold">
+                    Ogródek: {house.ogrodek} ar
+                  </span>
+                </p>
+              )}
+              {house.balkon && (
+                <p className="mt-2 text-sm sm:text-base">
+                  <Fence className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <span className="font-semibold">
+                    Balkon: {house.balkon} m²
+                  </span>
+                </p>
+              )}
               <p className="mt-2 text-sm sm:text-base">
                 <Bed className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                 <span className="font-semibold">Pokoje: {house.pokoje}</span>
