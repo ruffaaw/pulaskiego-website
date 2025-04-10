@@ -12,7 +12,6 @@ const galleryImages = [
   "/0002.png",
   "/0003.png",
   "/0004.png",
-  "/z_gory.png",
 ];
 
 export default function Gallery() {
@@ -32,9 +31,7 @@ export default function Gallery() {
         data-aos="fade-right"
         data-aos-delay="200"
       >
-        Zobacz, jak będzie wyglądał Twój LEPSZY adres. Odkryj pierwsze
-        wizualizacje osiedla Pułaskiego 32. Odwiedzaj naszą stronę, aby śledzić
-        postępy z&nbsp;kolejnych etapów budowy.
+        Zobacz, jak będzie wyglądał Twój LEPSZY adres.
       </p>
       <div
         className="w-full lg:w-4/6"
@@ -48,7 +45,7 @@ export default function Gallery() {
           spaceBetween={30}
           slidesPerView={1}
           autoplay={{
-            delay: 3000,
+            delay: 10000,
             disableOnInteraction: false,
           }}
           loop={true}

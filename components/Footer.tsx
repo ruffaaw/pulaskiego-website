@@ -4,9 +4,9 @@ function Footer() {
   return (
     <footer>
       <div className="w-full h-full flex flex-col">
-        <div className="flex flex-col-reverse lg:flex-row justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px]">
+        <div className="flex flex-row justify-center lg:justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px] max-lg:gap-4">
           <div
-            className="flex flex-col justify-center items-center mt-5 lg:mt-0 lg:w-1/2 xl:-ml-[170px]"
+            className="flex flex-col justify-center items-center lg:mt-0 lg:w-1/2 xl:-ml-[170px]"
             data-aos="fade-right"
           >
             <div className="flex flex-row gap-4">
@@ -50,13 +50,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="p-2"
             >
-              <Image
-                src="/n20logo.png"
-                alt="N20"
-                width={212}
-                height={144}
-                className="p-2"
-              />
+              <Image src="/n20logo.png" alt="N20" width={128} height={80} />
             </Link>
           </div>
         </div>
@@ -64,7 +58,7 @@ function Footer() {
           <p className="my-2 text-center md:text-left">2025 Policrafts ©</p>
           <div className="text-center md:text-right">
             <p className="text-signature_text p-0 m-0">
-              Wizualizacje: Maciej Krzyszkowski, Ala Janeczek
+              Wizualizacje: Maciej Krzyszkowski, Alicja Janeczek
             </p>
             <p className="text-signature_text p-0 m-0">
               Realizacja witryny: Rafał Ciupek

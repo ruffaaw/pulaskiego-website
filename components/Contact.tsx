@@ -257,7 +257,7 @@ const ContactSection = () => {
           ></iframe>
         </motion.div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center mt-8 w-full space-y-4">
+      <div className="flex flex-col lg:flex-row justify-between items-center mt-8 w-full max-lg:space-y-4">
         <div
           className="flex flex-wrap justify-center items-center gap-6 w-full lg:w-1/2"
           data-aos="fade-right"
@@ -301,11 +301,14 @@ const ContactSection = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center" data-aos="fade-left">
+        <div
+          className="w-full lg:w-1/2 flex justify-center"
+          data-aos="fade-left"
+        >
           <Image
             src="/elpropertieslogo.png"
             alt="logo"
-            width={384}
+            width={400}
             height={160}
             quality={100}
             className="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
