@@ -25,16 +25,16 @@ export default function InvestmentSection() {
   return (
     <section
       id="o-inwestycji"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8"
+      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 lg:px-[100px] py-8"
     >
       <p
-        className="text-2xl sm:text-3xl font-bold text-green-spring-950 "
+        className="text-2xl sm:text-3xl font-bold text-green-spring-950 px-4 sm:px-8 md:px-12 lg:px-0"
         data-aos="fade-down"
       >
         O INWESTYCJI
       </p>
-      <div className="flex flex-col lg:flex-row justify-between items-start pt-4 pb-8 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-3/5">
+      <div className="flex flex-col lg:flex-row justify-between items-start pt-4 pb-5 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-3/5 px-4 sm:px-8 md:px-12 lg:px-0">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
             data-aos="fade-right"
@@ -63,31 +63,31 @@ export default function InvestmentSection() {
             i&nbsp;wygodne powroty do domu.
           </p>
         </div>
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px]">
           <Image
             src={"/0004.png"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
             priority
-            className="rounded-3xl object-cover drop-shadow-xl"
+            className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-8 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-5 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px] max-lg:mt-8 ">
           <Image
             src={"/0003.png"}
             alt="Zdrowie i ekologia w standardzie"
             fill
             quality={100}
             priority
-            className="rounded-3xl object-cover drop-shadow-xl"
+            className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
           />
         </div>
-        <div className="w-full lg:w-3/5 flex flex-col items-end">
+        <div className="w-full lg:w-3/5 flex flex-col items-end px-4 sm:px-8 md:px-12 lg:px-0">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 max-w-[1000px] drop-shadow-lg text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
@@ -118,8 +118,8 @@ export default function InvestmentSection() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-3/5">
+      <div className="flex flex-col lg:flex-row justify-between items-center py-5 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-3/5 px-4 sm:px-8 md:px-12 lg:px-0">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-right"
@@ -186,31 +186,31 @@ export default function InvestmentSection() {
             </li>
           </ul>
         </div>
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px]">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px]">
           <Image
             src={"/0001.png"}
             alt="Wygodne życie w nowoczesnym otoczeniu"
             fill
             quality={100}
             priority
-            className="rounded-3xl object-cover drop-shadow-xl"
+            className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-8 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="w-full lg:w-2/5 flex justify-end relative h-[616px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-5 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
           <Image
             src={"/0002.png"}
             alt="Nowoczesne technologie i oszczędność"
             fill
             quality={100}
             priority
-            className="rounded-3xl object-cover drop-shadow-xl"
+            className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
           />
         </div>
-        <div className="w-full lg:w-3/5 flex flex-col items-end">
+        <div className="w-full lg:w-3/5 flex flex-col items-end px-4 sm:px-8 md:px-12 lg:px-0">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
@@ -277,8 +277,8 @@ export default function InvestmentSection() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col py-8">
-        <div className="flex flex-col lg:flex-row justify-between lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col py-5">
+        <div className="flex flex-col lg:flex-row justify-between lg:space-y-0 lg:space-x-8 px-4 sm:px-8 md:px-12 lg:px-0">
           <p
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent drop-shadow-lg"
             data-aos="fade-right"
@@ -293,8 +293,8 @@ export default function InvestmentSection() {
             i&nbsp;nowoczesnego komfortu, który pokochasz.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 mt-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full lg:w-2/3">
+        <div className="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-8 mt-6 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full lg:w-2/3 px-4 sm:px-8 md:px-12 lg:px-0">
             {[
               {
                 icon: <Leaf className="w-12 h-12 sm:w-14 sm:h-14" />,
@@ -335,22 +335,22 @@ export default function InvestmentSection() {
               </div>
             ))}
           </div>
-          <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[616px] max-lg:mt-8">
+          <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[350px] md:h-[500px] max-lg:mt-8">
             <Image
               src={"/0000.png"}
               alt="Idealne miejsce dla Ciebie"
               fill
               quality={100}
               priority
-              className="rounded-3xl object-cover drop-shadow-xl"
+              className="lg:rounded-3xl object-cover drop-shadow-xl"
               data-aos="fade-left"
               data-aos-delay="100"
             />
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between pt-8 space-y-8 lg:space-y-0 lg:space-x-8">
-        <div className="flex flex-col space-y-3">
+      <div className="flex flex-col lg:flex-row justify-between pt-5 space-y-8 lg:space-y-0 lg:space-x-8">
+        <div className="flex flex-col space-y-3 px-4 sm:px-8 md:px-12 lg:px-0">
           <p
             className="lg:hidden text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
