@@ -12,7 +12,6 @@ const galleryImages = [
   "/0002.png",
   "/0003.png",
   "/0004.png",
-  "/z_gory.png",
 ];
 
 export default function Gallery() {
