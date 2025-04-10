@@ -123,7 +123,8 @@ const HousesSection = () => {
               className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900"
             >
               <h3 className="text-xl sm:text-2xl font-bold">
-                Mieszkanie {house.name}
+                Mieszkanie {house.name} -{" "}
+                {house.name.endsWith("a") ? "parter" : "piętro"}
               </h3>
               <p className="mt-2 text-sm sm:text-base">
                 Status:{" "}
