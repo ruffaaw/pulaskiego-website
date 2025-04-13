@@ -188,7 +188,7 @@ export default function InvestmentSection() {
         </div>
         <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px]">
           <Image
-            src={"/0001.png"}
+            src={"/0001.webp"}
             alt="Wygodne życie w nowoczesnym otoczeniu"
             fill
             quality={100}

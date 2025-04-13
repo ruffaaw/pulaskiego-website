@@ -8,7 +8,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const galleryImages = [
   "/0000.png",
-  "/0001.png",
+  "/0001.webp",
   "/0002.png",
   "/0003.png",
   "/0004.png",
