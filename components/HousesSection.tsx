@@ -11,6 +11,7 @@ import {
   Fence,
 } from "lucide-react";
 import { useRef } from "react";
+import Image from "next/image";
 import { houseCoordinates } from "@/data/houseCoordinates";
 
 const HousesSection = () => {
@@ -121,62 +122,79 @@ const HousesSection = () => {
               ref={(el) => {
                 houseRefs.current[house.id] = el;
               }}
-              className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900"
+              className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900 flex flex-row"
             >
-              <h3 className="text-xl sm:text-2xl font-bold">
-                Mieszkanie {house.name} -{" "}
-                {house.name.endsWith("a") ? "parter" : "piętro"}
-              </h3>
-              <p className="mt-2 text-sm sm:text-base">
-                Status:{" "}
-                <span
-                  className={`font-semibold ${
-                    house.status === 0
-                      ? "text-red-500"
-                      : house.status === 1
-                      ? "text-green-500"
-                      : "text-yellow-500"
-                  }`}
-                >
-                  {getStatusIcon(house.status)} {getStatusText(house.status)}
-                </span>
-              </p>
-              <p className="mt-2 text-sm sm:text-base">
-                <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                <span className="font-semibold">
-                  Cena: {formatPrice(house.price)} zł
-                </span>
-              </p>
-              {house.ogrodek && (
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold">
+                  Mieszkanie {house.name} -{" "}
+                  {house.name.endsWith("a") ? "parter" : "piętro"}
+                </h3>
                 <p className="mt-2 text-sm sm:text-base">
-                  <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                  <span className="font-semibold">
-                    Ogródek: {house.ogrodek} ar
+                  Status:{" "}
+                  <span
+                    className={`font-semibold ${
+                      house.status === 0
+                        ? "text-red-500"
+                        : house.status === 1
+                        ? "text-green-500"
+                        : "text-yellow-500"
+                    }`}
+                  >
+                    {getStatusIcon(house.status)} {getStatusText(house.status)}
                   </span>
                 </p>
-              )}
-              {house.balkon && (
                 <p className="mt-2 text-sm sm:text-base">
-                  <Fence className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                   <span className="font-semibold">
-                    Balkon: {house.balkon} m²
+                    Cena: {formatPrice(house.price)} zł
                   </span>
                 </p>
-              )}
-              <p className="mt-2 text-sm sm:text-base">
-                <Bed className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                <span className="font-semibold">Pokoje: {house.pokoje}</span>
-              </p>
-              <p className="mt-2 text-sm sm:text-base">
-                <Home className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                <span className="font-semibold">Metraż: {house.metraz} m²</span>
-              </p>
-              <p className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all">
-                <FileText className="inline-block w-5 h-5 mr-1" />
-                <a href={house.pdf} target="_blank" rel="noopener noreferrer">
-                  Pobierz PDF
-                </a>
-              </p>
+                {house.ogrodek && (
+                  <p className="mt-2 text-sm sm:text-base">
+                    <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                    <span className="font-semibold">
+                      Ogródek: {house.ogrodek} ar
+                    </span>
+                  </p>
+                )}
+                {house.balkon && (
+                  <p className="mt-2 text-sm sm:text-base">
+                    <Fence className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                    <span className="font-semibold">
+                      Balkon: {house.balkon} m²
+                    </span>
+                  </p>
+                )}
+                <p className="mt-2 text-sm sm:text-base">
+                  <Bed className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <span className="font-semibold">Pokoje: {house.pokoje}</span>
+                </p>
+                <p className="mt-2 text-sm sm:text-base">
+                  <Home className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <span className="font-semibold">
+                    Metraż: {house.metraz} m²
+                  </span>
+                </p>
+                <p className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all">
+                  <FileText className="inline-block w-5 h-5 mr-1" />
+                  <a href={house.pdf} target="_blank" rel="noopener noreferrer">
+                    Pobierz PDF
+                  </a>
+                </p>
+              </div>
+              <div className="mt-4 sm:mt-0 ml-auto sm:w-[60%] flex justify-center sm:justify-end">
+                <Image
+                  src={
+                    house.name.endsWith("a")
+                      ? "/parter_2D.png"
+                      : "/pietro_2D.png"
+                  }
+                  alt={`Plan 2D mieszkania ${house.name}`}
+                  width={300}
+                  height={500}
+                  className="object-contain w-full h-auto max-h-[200px] sm:max-h-[300px]"
+                />
+              </div>
             </div>
           ))}
         </div>
