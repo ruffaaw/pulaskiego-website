@@ -69,7 +69,6 @@ export default function InvestmentSection() {
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
-            priority
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
           />
@@ -82,7 +81,6 @@ export default function InvestmentSection() {
             alt="Zdrowie i ekologia w standardzie"
             fill
             quality={100}
-            priority
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
           />
@@ -192,7 +190,6 @@ export default function InvestmentSection() {
             alt="Wygodne życie w nowoczesnym otoczeniu"
             fill
             quality={100}
-            priority
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
           />
@@ -205,7 +202,6 @@ export default function InvestmentSection() {
             alt="Nowoczesne technologie i oszczędność"
             fill
             quality={100}
-            priority
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
           />
@@ -341,7 +337,6 @@ export default function InvestmentSection() {
               alt="Idealne miejsce dla Ciebie"
               fill
               quality={100}
-              priority
               className="lg:rounded-3xl object-cover drop-shadow-xl"
               data-aos="fade-left"
               data-aos-delay="100"
