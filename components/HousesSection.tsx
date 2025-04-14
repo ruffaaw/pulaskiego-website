@@ -182,7 +182,7 @@ const HousesSection = () => {
                   </a>
                 </p>
               </div>
-              <div className="mt-4 sm:mt-0 ml-auto sm:w-[60%] flex justify-center sm:justify-end">
+              <div className="mt-4 sm:mt-0 ml-auto w-[36%] sm:w-[50%] flex justify-center sm:justify-end">
                 <Image
                   src={
                     house.name.endsWith("a")
