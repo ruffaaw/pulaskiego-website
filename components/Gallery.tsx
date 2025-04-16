@@ -7,11 +7,11 @@ import Image from "next/image";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const galleryImages = [
-  "/0000.png",
+  "/0000.webp",
   "/0001.webp",
-  "/0002.png",
-  "/0003.png",
-  "/0004.png",
+  "/0002.webp",
+  "/0003.webp",
+  "/0004.webp",
 ];
 
 export default function Gallery() {
@@ -59,6 +59,7 @@ export default function Gallery() {
                 width={1200}
                 height={500}
                 className="rounded-lg shadow-lg object-cover w-full h-auto"
+                unoptimized
               />
             </SwiperSlide>
           ))}
