@@ -85,7 +85,7 @@ const HousesSection = () => {
         <div className="relative w-full lg:w-[58%]" data-aos="fade-right">
           <div className="relative pb-[75%]">
             <img
-              src="/z_gory.png"
+              src="/z_gory.webp"
               alt="Widok z góry inwestycji"
               className="absolute w-full h-full object-cover rounded-3xl"
             />

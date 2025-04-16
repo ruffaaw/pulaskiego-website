@@ -65,24 +65,26 @@ export default function InvestmentSection() {
         </div>
         <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px]">
           <Image
-            src={"/0004.png"}
+            src={"/0004.webp"}
             alt="Komfort i bezpieczeństwo na wyciągnięcie ręki"
             fill
             quality={100}
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
+            unoptimized
           />
         </div>
       </div>
       <div className="flex flex-col-reverse lg:flex-row justify-between items-start py-5 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px] max-lg:mt-8 ">
           <Image
-            src={"/0003.png"}
+            src={"/0003.webp"}
             alt="Zdrowie i ekologia w standardzie"
             fill
             quality={100}
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
+            unoptimized
           />
         </div>
         <div className="w-full lg:w-3/5 flex flex-col items-end px-4 sm:px-8 md:px-12 lg:px-0">
@@ -192,18 +194,20 @@ export default function InvestmentSection() {
             quality={100}
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-left"
+            unoptimized
           />
         </div>
       </div>
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-5 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-2/5 flex justify-end relative h-[350px] md:h-[500px] lg:h-[600px] xl:h-[504px] max-lg:mt-8">
           <Image
-            src={"/0002.png"}
+            src={"/0002.webp"}
             alt="Nowoczesne technologie i oszczędność"
             fill
             quality={100}
             className="lg:rounded-3xl object-cover drop-shadow-xl"
             data-aos="fade-right"
+            unoptimized
           />
         </div>
         <div className="w-full lg:w-3/5 flex flex-col items-end px-4 sm:px-8 md:px-12 lg:px-0">
@@ -333,13 +337,14 @@ export default function InvestmentSection() {
           </div>
           <div className="w-full lg:w-1/3 flex justify-end relative max-lg:h-[350px] md:h-[500px] max-lg:mt-8">
             <Image
-              src={"/0000.png"}
+              src={"/0000.webp"}
               alt="Idealne miejsce dla Ciebie"
               fill
               quality={100}
               className="lg:rounded-3xl object-cover drop-shadow-xl"
               data-aos="fade-left"
               data-aos-delay="100"
+              unoptimized
             />
           </div>
         </div>
