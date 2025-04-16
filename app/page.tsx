@@ -1,4 +1,5 @@
 import AboutInvestorSection from "@/components/AboutInvestorSection";
+import Arrangement from "@/components/Arrangement";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
@@ -19,6 +20,7 @@ export default function Home() {
       <AboutInvestorSection />
       <House360View />
       <HousesSection />
+      <Arrangement />
       <Gallery />
       <Contact />
       <Footer />
