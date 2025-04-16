@@ -50,7 +50,7 @@ export default function Header() {
         </Link>
       </div>
       <nav
-        className="hidden lg:flex ml-5 space-x-5 xl:space-x-8 text-lg lg:text-xl items-center justify-center text-green-spring-100 font-bold md:pr-12 lg:pr-[100px]"
+        className="hidden xl:flex ml-5 space-x-5 xl:space-x-8 text-lg lg:text-xl items-center justify-center text-green-spring-100 font-bold md:pr-12 lg:pr-[100px]"
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
@@ -60,6 +60,7 @@ export default function Header() {
           { href: "#o-inwestorze", label: "O inwestorze" },
           { href: "#widok-360", label: "Widok 360°" },
           { href: "#lokale", label: "Lokale" },
+          { href: "#aranzacje", label: "Aranżacje" },
           { href: "#galeria", label: "Galeria" },
         ].map((item) => (
           <Link
@@ -79,7 +80,7 @@ export default function Header() {
         </Link>
       </nav>
       <button
-        className="lg:hidden flex items-center text-white py-7 max-md:pr-6 md:pr-12 lg:pr-[100px]"
+        className="xl:hidden flex items-center text-white py-7 max-md:pr-6 md:pr-12 lg:pr-[100px]"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         data-aos="zoom-out"
         data-aos-duration="1000"
@@ -136,6 +137,13 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Lokale</p>
+          </Link>
+          <Link
+            href="#aranzacje"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <p className="break-words max-w-full">Aranżacje</p>
           </Link>
           <Link
             href="#galeria"

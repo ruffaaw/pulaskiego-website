@@ -108,7 +108,7 @@ const ContactSection = () => {
   return (
     <section
       id="kontakt"
-      className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8"
+      className="w-full h-full flex flex-col bg-green-spring-100 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8"
     >
       <p
         className="text-2xl sm:text-3xl font-bold text-green-spring-950"
@@ -221,7 +221,7 @@ const ContactSection = () => {
                   Zgadzam się z{" "}
                   <a
                     href="https://www.n20.pl/polityka-prywatnosci"
-                    className="text-green-spring-500 hover:text-green-spring-700 underline"
+                    className="text-green-spring-700 hover:text-green-spring-800 underline"
                   >
                     polityką prywatności
                   </a>
