@@ -19,7 +19,14 @@ const House360View = () => {
   const lastX1 = useRef(0);
   const lastX2 = useRef(0);
 
-  const images = Array.from({ length: 36 }, (_, i) => `/${i + 1}-min.jpg`);
+  const images = Array.from(
+    { length: 37 },
+    (_, i) => `/3D/PARTER_${i + 1} - Zdjęcie-min.jpg`
+  );
+  const images2 = Array.from(
+    { length: 37 },
+    (_, i) => `/3D/PIĘTRO_${i + 1} - Zdjęcie-min.jpg`
+  );
 
   const intervalRef1 = useRef<NodeJS.Timeout | null>(null);
   const intervalRef2 = useRef<NodeJS.Timeout | null>(null);
@@ -29,7 +36,11 @@ const House360View = () => {
       const img = new Image();
       img.src = src;
     });
-  }, [images]);
+    images2.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [images, images2]);
 
   const handleMouseDown1 = (e: React.MouseEvent | React.TouchEvent) => {
     isDragging1.current = true;
@@ -75,7 +86,7 @@ const House360View = () => {
     if (Math.abs(deltaX) > sensitivity) {
       setCurrentIndex2(
         (prevIndex) =>
-          (prevIndex + (deltaX > 0 ? 1 : -1) + images.length) % images.length
+          (prevIndex + (deltaX > 0 ? 1 : -1) + images2.length) % images2.length
       );
       lastX2.current = clientX;
     }
@@ -115,8 +126,8 @@ const House360View = () => {
   const handleArrowClick2 = (direction: "left" | "right") => {
     setCurrentIndex2(
       (prevIndex) =>
-        (prevIndex + (direction === "left" ? -1 : 1) + images.length) %
-        images.length
+        (prevIndex + (direction === "left" ? -1 : 1) + images2.length) %
+        images2.length
     );
   };
 
@@ -126,8 +137,8 @@ const House360View = () => {
     intervalRef2.current = setInterval(() => {
       setCurrentIndex2(
         (prevIndex) =>
-          (prevIndex + (direction === "left" ? -1 : 1) + images.length) %
-          images.length
+          (prevIndex + (direction === "left" ? -1 : 1) + images2.length) %
+          images2.length
       );
     }, 100);
   };
@@ -287,7 +298,7 @@ const House360View = () => {
             transition={{ duration: 0.5 }}
           >
             <img
-              src={images[currentIndex2]}
+              src={images2[currentIndex2]}
               alt={`House view ${currentIndex2}`}
               className="w-full h-full object-cover pointer-events-none"
             />
@@ -484,7 +495,7 @@ const House360View = () => {
               onTouchEnd={handleMouseUp2}
             >
               <img
-                src={images[currentIndex2]}
+                src={images2[currentIndex2]}
                 alt={`House view ${currentIndex2}`}
                 className="max-w-[85vw] max-h-[85vh] object-contain pointer-events-none"
               />
