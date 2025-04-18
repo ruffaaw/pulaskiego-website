@@ -177,8 +177,12 @@ const HousesSection = () => {
                 </p>
                 <p className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all">
                   <FileText className="inline-block w-5 h-5 mr-1" />
-                  <a href={house.pdf} target="_blank" rel="noopener noreferrer">
-                    Pobierz PDF
+                  <a
+                    href={`${house.image}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Szczegóły
                   </a>
                 </p>
               </div>
