@@ -14,10 +14,26 @@ import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { houseCoordinates } from "@/data/houseCoordinates";
 
+type House = {
+  Id: string;
+  id: number;
+  name: string;
+  status: number;
+  price: number | string;
+  image: string;
+  pokoje: number;
+  ogrodek?: number;
+  balkon?: number;
+  metraz: number;
+  position: {
+    x: number;
+    y: number;
+  };
+};
 const HousesSection = () => {
   const houseRefs = useRef<(HTMLDivElement | null)[]>([]);
   const listContainerRef = useRef<HTMLDivElement | null>(null);
-  const [houseOffers, setHouseOffers] = useState<any[]>([]);
+  const [houseOffers, setHouseOffers] = useState<House[]>([]);
 
   const handleHouseClick = (id: number) => {
     const houseRef = houseRefs.current[id];
@@ -77,17 +93,18 @@ const HousesSection = () => {
           "https://0cm30gr8l5.execute-api.eu-north-1.amazonaws.com/prd/get-items"
         );
         const data = await response.json();
-        const sortedData = data.body.sort((a: any, b: any) => {
+        const sortedData = data.body.sort((a: House, b: House) => {
           const numA = parseInt(a.Id.replace("dom", ""), 10);
           const numB = parseInt(b.Id.replace("dom", ""), 10);
           return numA - numB;
         });
-        const combinedData = sortedData.map((house: any) => {
+        const combinedData = sortedData.map((house: House) => {
           const coords = houseCoordinates.find(
             (coord) => coord.id === parseInt(house.Id)
           );
           return {
             ...house,
+            id: parseInt(house.Id),
             position: {
               x: coords?.position.x || 0,
               y: coords?.position.y || 0,
@@ -125,7 +142,7 @@ const HousesSection = () => {
             />
             {houseOffers.map((house) => (
               <button
-                key={house.Id}
+                key={house.id}
                 className={`absolute ${
                   house.status === 0
                     ? "bg-red-500"
@@ -138,7 +155,7 @@ const HousesSection = () => {
                   top: `${house.position.y}%`,
                   transform: "translate(-50%, -50%)",
                 }}
-                onClick={() => handleHouseClick(house.Id)}
+                onClick={() => handleHouseClick(house.id)}
               >
                 {house.name}
               </button>
@@ -152,9 +169,9 @@ const HousesSection = () => {
         >
           {houseOffers.map((house) => (
             <div
-              key={house.Id}
+              key={house.id}
               ref={(el) => {
-                houseRefs.current[house.Id] = el;
+                houseRefs.current[house.id] = el;
               }}
               className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900 flex flex-row"
             >
