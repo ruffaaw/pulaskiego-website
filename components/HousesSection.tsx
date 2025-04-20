@@ -10,13 +10,14 @@ import {
   Sprout,
   Fence,
 } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { houseCoordinates } from "@/data/houseCoordinates";
 
 const HousesSection = () => {
   const houseRefs = useRef<(HTMLDivElement | null)[]>([]);
   const listContainerRef = useRef<HTMLDivElement | null>(null);
+  const [houseOffers, setHouseOffers] = useState<any[]>([]);
 
   const handleHouseClick = (id: number) => {
     const houseRef = houseRefs.current[id];
@@ -69,6 +70,39 @@ const HousesSection = () => {
     return cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
 
+  useEffect(() => {
+    const fetchHouseOffers = async () => {
+      try {
+        const response = await fetch(
+          "https://0cm30gr8l5.execute-api.eu-north-1.amazonaws.com/prd/get-items"
+        );
+        const data = await response.json();
+        const sortedData = data.body.sort((a: any, b: any) => {
+          const numA = parseInt(a.Id.replace("dom", ""), 10);
+          const numB = parseInt(b.Id.replace("dom", ""), 10);
+          return numA - numB;
+        });
+        const combinedData = sortedData.map((house: any) => {
+          const coords = houseCoordinates.find(
+            (coord) => coord.id === parseInt(house.Id)
+          );
+          return {
+            ...house,
+            position: {
+              x: coords?.position.x || 0,
+              y: coords?.position.y || 0,
+            },
+          };
+        });
+        setHouseOffers(combinedData);
+      } catch (error) {
+        alert("Błąd podczas pobierania danych");
+        console.log("Błąd podczas pobierania danych: ", error);
+      }
+    };
+    fetchHouseOffers();
+  }, []);
+
   return (
     <section
       id="lokale"
@@ -89,9 +123,9 @@ const HousesSection = () => {
               alt="Widok z góry inwestycji"
               className="absolute w-full h-full object-cover rounded-3xl"
             />
-            {houseCoordinates.map((house) => (
+            {houseOffers.map((house) => (
               <button
-                key={house.id}
+                key={house.Id}
                 className={`absolute ${
                   house.status === 0
                     ? "bg-red-500"
@@ -104,7 +138,7 @@ const HousesSection = () => {
                   top: `${house.position.y}%`,
                   transform: "translate(-50%, -50%)",
                 }}
-                onClick={() => handleHouseClick(house.id)}
+                onClick={() => handleHouseClick(house.Id)}
               >
                 {house.name}
               </button>
@@ -116,11 +150,11 @@ const HousesSection = () => {
           className="overflow-y-auto max-h-[250px] lg:max-h-[741px] w-full lg:w-[42%] rounded-3xl space-y-4"
           data-aos="fade-left"
         >
-          {houseCoordinates.map((house) => (
+          {houseOffers.map((house) => (
             <div
-              key={house.id}
+              key={house.Id}
               ref={(el) => {
-                houseRefs.current[house.id] = el;
+                houseRefs.current[house.Id] = el;
               }}
               className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900 flex flex-row"
             >
