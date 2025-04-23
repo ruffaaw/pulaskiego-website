@@ -31,17 +31,6 @@ const House360View = () => {
   const intervalRef1 = useRef<NodeJS.Timeout | null>(null);
   const intervalRef2 = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-    images2.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [images, images2]);
-
   const handleMouseDown1 = (e: React.MouseEvent | React.TouchEvent) => {
     isDragging1.current = true;
     lastX1.current =
@@ -152,16 +141,33 @@ const House360View = () => {
 
   const handleZoom1 = () => {
     setIsZoomed1(true);
+    document.body.style.overflow = "hidden";
   };
 
   const handleZoom2 = () => {
     setIsZoomed2(true);
+    document.body.style.overflow = "hidden";
   };
 
   const handleCloseZoom = () => {
     setIsZoomed1(false);
     setIsZoomed2(false);
+    document.body.style.overflow = "auto";
   };
+
+  useEffect(() => {
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+    images2.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [images, images2]);
 
   return (
     <section
@@ -170,22 +176,29 @@ const House360View = () => {
     >
       <motion.p
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent text-center"
-        data-aos="fade-down"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         Poznaj swoje przyszłe mieszkanie
       </motion.p>
       <motion.p
         className="hidden lg:flex mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-4xl mx-auto"
-        data-aos="fade-up"
-        data-aos-delay="300"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >
         Przeciągnij myszką na obrazie lub użyj strzałek pod obrazem, aby obrócić
         widok. Kliknij przycisk w&nbsp;prawym górnym rogu, aby powiększyć widok.
       </motion.p>
       <motion.p
         className="flex lg:hidden mt-4 text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-3xl mx-auto"
-        data-aos="fade-up"
-        data-aos-delay="300"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >
         Przeciągnij palcem na obrazie lub użyj strzałek pod obrazem, aby
         obrócić.
@@ -205,7 +218,7 @@ const House360View = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, ease: "linear" }}
           >
             <img
               src={images[currentIndex1]}
@@ -225,10 +238,12 @@ const House360View = () => {
               </div>
             </button>
           </motion.div>
-          <div
+          <motion.div
             className="flex justify-center items-center gap-8 mt-8"
-            data-aos="fade-up"
-            data-aos-delay="100"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <button
               onClick={() => handleArrowClick1("left")}
@@ -278,7 +293,7 @@ const House360View = () => {
                 />
               </svg>
             </button>
-          </div>
+          </motion.div>
         </div>
 
         <div>
@@ -295,7 +310,7 @@ const House360View = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, ease: "linear" }}
           >
             <img
               src={images2[currentIndex2]}
@@ -315,10 +330,12 @@ const House360View = () => {
               </div>
             </button>
           </motion.div>
-          <div
+          <motion.div
             className="flex justify-center items-center gap-8 mt-8"
-            data-aos="fade-up"
-            data-aos-delay="100"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <button
               onClick={() => handleArrowClick2("left")}
@@ -368,12 +385,17 @@ const House360View = () => {
                 />
               </svg>
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {isZoomed1 && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000]">
+        <motion.div
+          className="fixed inset-0 bg-black/75 backdrop-blur-sm flex justify-center items-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           <button
             onClick={handleCloseZoom}
             className="absolute top-4 right-4 p-2 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
@@ -393,7 +415,7 @@ const House360View = () => {
               />
             </svg>
           </button>
-          <div className="relative">
+          <div className="relative z-10 w-full h-[90vh] max-w-[90vw] flex items-center justify-center">
             <motion.div
               onMouseDown={handleMouseDown1}
               onMouseMove={handleMouseMove1}
@@ -409,8 +431,7 @@ const House360View = () => {
                 className="max-w-[85vw] max-h-[85vh] object-contain pointer-events-none"
               />
             </motion.div>
-
-            <div className="flex justify-center items-center gap-8 mt-8">
+            <div className="absolute flex w-full justify-between gap-8 mt-8 px-10">
               <button
                 onClick={() => handleArrowClick1("left")}
                 onMouseDown={() => startContinuousScroll1("left")}
@@ -461,10 +482,15 @@ const House360View = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
       {isZoomed2 && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <motion.div
+          className="fixed inset-0 bg-black/75 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
           <button
             onClick={handleCloseZoom}
             className="absolute top-4 right-4 p-2 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
@@ -484,7 +510,7 @@ const House360View = () => {
               />
             </svg>
           </button>
-          <div className="relative">
+          <div className="relative z-10 w-full h-[90vh] max-w-[90vw] flex items-center justify-center">
             <motion.div
               onMouseDown={handleMouseDown2}
               onMouseMove={handleMouseMove2}
@@ -501,7 +527,7 @@ const House360View = () => {
               />
             </motion.div>
 
-            <div className="flex justify-center items-center gap-8 mt-8">
+            <div className="absolute flex w-full justify-between gap-8 mt-8 px-10">
               <button
                 onClick={() => handleArrowClick2("left")}
                 onMouseDown={() => startContinuousScroll2("left")}
@@ -552,7 +578,7 @@ const House360View = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </section>
   );
