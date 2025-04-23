@@ -91,6 +91,7 @@ const AboutInvestorSection = () => {
             quality={100}
             className="w-full object-contain lg:max-w-[600px] h-auto drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
             data-aos="fade-left"
+            unoptimized
           />
         </div>
       </div>
