@@ -11,6 +11,7 @@ import {
   Fence,
 } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { houseCoordinates } from "@/data/houseCoordinates";
 
@@ -30,6 +31,54 @@ type House = {
     y: number;
   };
 };
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "linear",
+    },
+  },
+};
+
+const slideInFromLeft = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "linear",
+    },
+  },
+};
+
+const slideInFromRight = {
+  hidden: { opacity: 0, x: 50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "linear",
+    },
+  },
+};
+
 const HousesSection = () => {
   const houseRefs = useRef<(HTMLDivElement | null)[]>([]);
   const listContainerRef = useRef<HTMLDivElement | null>(null);
@@ -121,19 +170,29 @@ const HousesSection = () => {
   }, []);
 
   return (
-    <section
+    <motion.section
       id="lokale"
       className="w-full flex flex-col items-center justify-center bg-green-spring-200 text-white py-8 px-4 sm:px-8 md:px-12 lg:px-[100px] scroll-mt-14"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+      variants={containerVariants}
     >
-      <h2
+      <motion.h1
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center"
-        data-aos="fade-down"
+        variants={itemVariants}
       >
         Lokale
-      </h2>
+      </motion.h1>
 
-      <div className="w-full mt-8 relative flex flex-col lg:flex-row justify-between gap-8">
-        <div className="relative w-full lg:w-[58%]" data-aos="fade-right">
+      <motion.div
+        className="w-full mt-8 relative flex flex-col lg:flex-row justify-between gap-8"
+        variants={containerVariants}
+      >
+        <motion.div
+          className="relative w-full lg:w-[58%]"
+          variants={slideInFromLeft}
+        >
           <div className="relative pb-[75%]">
             <img
               src="/z_gory.webp"
@@ -161,19 +220,25 @@ const HousesSection = () => {
               </button>
             ))}
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           ref={listContainerRef}
           className="overflow-y-auto max-h-[250px] lg:max-h-[741px] w-full lg:w-[42%] rounded-3xl space-y-4"
-          data-aos="fade-left"
+          variants={slideInFromRight}
         >
-          {houseOffers.map((house) => (
-            <div
+          {houseOffers.map((house, index) => (
+            <motion.div
               key={house.id}
               ref={(el) => {
                 houseRefs.current[house.id] = el;
               }}
               className="bg-green-spring-50 p-4 sm:p-6 text-green-spring-900 flex flex-row"
+              variants={itemVariants}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+              transition={{ delay: index * 0.1 }}
             >
               <div>
                 <h3 className="text-xl sm:text-2xl font-bold">
@@ -226,7 +291,11 @@ const HousesSection = () => {
                     Metraż: {house.metraz} m²
                   </span>
                 </p>
-                <p className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all">
+                <motion.p
+                  className="text-sm sm:text-base mt-4 inline-block bg-green-spring-900 text-green-spring-50 px-4 py-2 rounded-full hover:bg-green-spring-700 transition-all"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <FileText className="inline-block w-5 h-5 mr-1" />
                   <a
                     href={`${house.image}`}
@@ -235,7 +304,7 @@ const HousesSection = () => {
                   >
                     Szczegóły
                   </a>
-                </p>
+                </motion.p>
               </div>
               <div className="mt-4 sm:mt-0 ml-auto w-[36%] sm:w-[50%] flex justify-center sm:justify-end">
                 <Image
@@ -250,11 +319,11 @@ const HousesSection = () => {
                   className="object-contain w-full h-auto max-h-[200px] sm:max-h-[300px]"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

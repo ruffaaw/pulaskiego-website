@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 const galleryImages = [
   "/0000.webp",
@@ -20,23 +21,30 @@ export default function Gallery() {
       id="galeria"
       className="w-full h-full flex flex-col items-center bg-green-spring-200 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8 "
     >
-      <h1
+      <motion.h1
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent text-center mb-4"
-        data-aos="fade-down"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         Galeria
-      </h1>
-      <p
+      </motion.h1>
+      <motion.h2
         className="text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-6xl mb-8 mx-auto"
-        data-aos="fade-right"
-        data-aos-delay="200"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
       >
         Zobacz, jak będzie wyglądał Twój LEPSZY adres.
-      </p>
-      <div
+      </motion.h2>
+      <motion.div
         className="w-full lg:w-4/6"
-        data-aos="zoom-in"
-        data-aos-duration="1000"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
       >
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -64,7 +72,7 @@ export default function Gallery() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </section>
   );
 }

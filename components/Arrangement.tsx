@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type GalleryImage = {
   src: string;
@@ -81,30 +82,48 @@ export default function Arrangement() {
       id="aranzacje"
       className="relative w-full h-full py-8 px-4 sm:px-8 md:px-12 lg:px-[100px] scroll-mt-14 bg-green-spring-100 "
     >
-      <h1
+      <motion.h1
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent text-center mb-4"
-        data-aos="fade-down"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+        transition={{ duration: 0.5, ease: "linear" }}
       >
         Aranżacje
-      </h1>
-      <h2
+      </motion.h1>
+      <motion.h2
         className="text-lg sm:text-xl md:text-2xl text-green-spring-700 text-center max-w-6xl mb-8 mx-auto"
-        data-aos="fade-right"
-        data-aos-delay="200"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+        transition={{ duration: 0.5, ease: "linear", delay: 0.2 }}
       >
         Odkryj przestrzenie zaprojektowane z&nbsp;myślą o&nbsp;Twoim komforcie.
-      </h2>
-      <div className="grid grid-cols-5 grid-rows-3 gap-3 h-[40vh] lg:h-[80vh] w-full">
+      </motion.h2>
+      <motion.div
+        className="grid grid-cols-5 grid-rows-3 gap-3 h-[40vh] lg:h-[80vh] w-full"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.1,
+              delayChildren: 0.3,
+            },
+          },
+        }}
+      >
         {images.map((image, index) => {
           const tileClasses = image.tile.split(" ");
           const sizeClass = tileClasses[0];
           const cornerClass = tileClasses[1] || "";
 
           return (
-            <div
+            <motion.div
               key={index}
-              data-aos="zoom-in"
-              data-aos-duration="1000"
               className={`
                   relative overflow-hidden rounded-2xl shadow-lg
                   transition-all duration-300 hover:scale-105 cursor-pointer
@@ -118,29 +137,54 @@ export default function Arrangement() {
                   ${cornerClass === "bottom-right" ? "rounded-br-none" : ""}
                 `}
               onClick={() => openModal(index)}
+              variants={{
+                hidden: { opacity: 0, scale: 0.9 },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  transition: {
+                    duration: 0.6,
+                    ease: "linear",
+                  },
+                },
+              }}
             >
               <Image
                 src={image.src}
                 alt={`Gallery image ${index + 1}`}
                 fill
                 quality={100}
-                className="object-cover hover:scale-110 transition-transform duration-300 rounded-2xl"
+                className="object-cover hover:scale-95 lg:hover:scale-110 transition-transform duration-300 rounded-2xl"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 unoptimized
               />
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
       {isModalOpen && selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
             className="absolute inset-0 bg-black/75 backdrop-blur-sm"
             onClick={closeModal}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           />
 
-          <div className="relative z-10 w-full h-[90vh] max-w-[90vw] flex items-center justify-center">
+          <motion.div
+            className="relative z-10 w-full h-[90vh] max-w-[90vw] flex items-center justify-center"
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 z-20 p-2 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
@@ -162,23 +206,33 @@ export default function Arrangement() {
             </button>
 
             <div className="relative w-full h-full flex items-center justify-center">
-              <Image
-                src={images[selectedIndex].src}
-                alt={`Selected image ${selectedIndex + 1}`}
-                fill
-                quality={100}
-                className="object-contain rounded-xl"
-                unoptimized
-              />
+              <motion.div
+                key={selectedIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Image
+                  src={images[selectedIndex].src}
+                  alt={`Selected image ${selectedIndex + 1}`}
+                  fill
+                  quality={100}
+                  className="object-contain rounded-xl"
+                  unoptimized
+                />
+              </motion.div>
             </div>
 
             <div className="absolute z-20 w-full px-4 flex justify-between">
-              <button
+              <motion.button
                 onClick={(e) => {
                   e.stopPropagation();
                   prevImage();
                 }}
                 className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,13 +248,15 @@ export default function Arrangement() {
                     d="M15 19l-7-7 7-7"
                   />
                 </svg>
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 onClick={(e) => {
                   e.stopPropagation();
                   nextImage();
                 }}
                 className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -216,10 +272,10 @@ export default function Arrangement() {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </button>
+              </motion.button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </section>
   );
