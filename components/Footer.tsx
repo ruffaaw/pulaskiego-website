@@ -57,12 +57,10 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-signature text-white px-4 sm:px-8 md:px-12 lg:px-[100px]">
           <p className="my-2 text-center md:text-left">2025 Policrafts ©</p>
           <div className="text-center md:text-right">
-            <p className="text-signature_text p-0 m-0">
+            <p className="p-0 m-0">
               Wizualizacje: Maciej Krzyszkowski, Alicja Janeczek
             </p>
-            <p className="text-signature_text p-0 m-0">
-              Realizacja witryny: Rafał Ciupek
-            </p>
+            <p className="p-0 m-0">Realizacja witryny: Rafał Ciupek</p>
           </div>
         </div>
       </div>

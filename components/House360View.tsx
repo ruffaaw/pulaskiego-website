@@ -253,6 +253,7 @@ const House360View = () => {
               onTouchStart={() => startContinuousScroll1("left")}
               onTouchEnd={stopContinuousScroll1}
               className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+              aria-label="Przesuń w lewo"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -277,6 +278,7 @@ const House360View = () => {
               onTouchStart={() => startContinuousScroll1("right")}
               onTouchEnd={stopContinuousScroll1}
               className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+              aria-label="Przesuń w prawo"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -345,6 +347,7 @@ const House360View = () => {
               onTouchStart={() => startContinuousScroll2("left")}
               onTouchEnd={stopContinuousScroll2}
               className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+              aria-label="Przesuń w lewo"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -369,6 +372,7 @@ const House360View = () => {
               onTouchStart={() => startContinuousScroll2("right")}
               onTouchEnd={stopContinuousScroll2}
               className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+              aria-label="Przesuń w lewo"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -399,6 +403,7 @@ const House360View = () => {
           <button
             onClick={handleCloseZoom}
             className="absolute top-4 right-4 p-2 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+            aria-label="Wyłącz powiększenie"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -440,6 +445,7 @@ const House360View = () => {
                 onTouchStart={() => startContinuousScroll1("left")}
                 onTouchEnd={stopContinuousScroll1}
                 className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+                aria-label="Przesuń w lewo"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -464,6 +470,7 @@ const House360View = () => {
                 onTouchStart={() => startContinuousScroll1("right")}
                 onTouchEnd={stopContinuousScroll1}
                 className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+                aria-label="Przesuń w prawo"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -494,6 +501,7 @@ const House360View = () => {
           <button
             onClick={handleCloseZoom}
             className="absolute top-4 right-4 p-2 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+            aria-label="Wyłącz powiększenie"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -536,6 +544,7 @@ const House360View = () => {
                 onTouchStart={() => startContinuousScroll2("left")}
                 onTouchEnd={stopContinuousScroll2}
                 className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+                aria-label="Przesuń w lewo"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -560,6 +569,7 @@ const House360View = () => {
                 onTouchStart={() => startContinuousScroll2("right")}
                 onTouchEnd={stopContinuousScroll2}
                 className="p-4 bg-green-spring-900 rounded-full hover:bg-green-spring-700 transition-all"
+                aria-label="Przesuń w prawo"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

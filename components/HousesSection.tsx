@@ -241,10 +241,10 @@ const HousesSection = () => {
               transition={{ delay: index * 0.1 }}
             >
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold">
+                <h2 className="text-xl sm:text-2xl font-bold">
                   Mieszkanie {house.name} -{" "}
                   {house.name.endsWith("a") ? "parter" : "piętro"}
-                </h3>
+                </h2>
                 <p className="mt-2 text-sm sm:text-base">
                   Status:{" "}
                   <span
