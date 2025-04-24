@@ -11,6 +11,7 @@ export default function Head() {
       <title>{metadata.title}</title>
       <meta name="description" content={metadata.description} />
       <link rel="icon" href={metadata.image} />
+      <link rel="preload" href="/0001.webp" as="image" />
     </head>
   );
 }
