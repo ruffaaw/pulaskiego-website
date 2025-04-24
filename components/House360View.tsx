@@ -156,18 +156,10 @@ const House360View = () => {
   };
 
   useEffect(() => {
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-    images2.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [images, images2]);
+  }, []);
 
   return (
     <section
@@ -224,6 +216,7 @@ const House360View = () => {
               src={images[currentIndex1]}
               alt={`House view ${currentIndex1}`}
               className="w-full h-full object-cover pointer-events-none"
+              loading="lazy"
             />
             <button
               onClick={(e) => {
@@ -318,6 +311,7 @@ const House360View = () => {
               src={images2[currentIndex2]}
               alt={`House view ${currentIndex2}`}
               className="w-full h-full object-cover pointer-events-none"
+              loading="lazy"
             />
             <button
               onClick={(e) => {
@@ -434,6 +428,7 @@ const House360View = () => {
                 src={images[currentIndex1]}
                 alt={`House view ${currentIndex1}`}
                 className="max-w-[85vw] max-h-[85vh] object-contain pointer-events-none"
+                loading="lazy"
               />
             </motion.div>
             <div className="absolute flex w-full justify-between gap-8 mt-8 px-10">
@@ -532,6 +527,7 @@ const House360View = () => {
                 src={images2[currentIndex2]}
                 alt={`House view ${currentIndex2}`}
                 className="max-w-[85vw] max-h-[85vh] object-contain pointer-events-none"
+                loading="lazy"
               />
             </motion.div>
 

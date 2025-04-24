@@ -198,6 +198,7 @@ const HousesSection = () => {
               src="/z_gory.webp"
               alt="Widok z góry inwestycji"
               className="absolute w-full h-full object-cover rounded-3xl"
+              loading="lazy"
             />
             {houseOffers.map((house) => (
               <button
