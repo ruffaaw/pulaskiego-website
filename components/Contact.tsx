@@ -14,9 +14,9 @@ const ContactSection = () => {
     privacyPolicy: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  //   const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
-  //     null
-  //   );
+  const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
+    null
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,68 +24,71 @@ const ContactSection = () => {
     if (isSubmitting) return;
     setIsSubmitting(true);
 
-    // const now = Date.now();
-    // if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
-    //   alert(
-    //     "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
-    //   );
-    //   setIsSubmitting(false);
-    //   return;
-    // }
+    const now = Date.now();
+    if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
+      alert(
+        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
+      );
+      setIsSubmitting(false);
+      return;
+    }
+    console.log(formData);
 
-    // if (
-    //   !formData.name ||
-    //   !formData.email ||
-    //   !formData.phone ||
-    //   !formData.message ||
-    //   !formData.privacyPolicy
-    // ) {
-    //   alert(
-    //     "Proszę wypełnić wszystkie pola i zaakceptować politykę prywatności!"
-    //   );
-    //   setIsSubmitting(false);
-    //   return;
-    // }
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message ||
+      !formData.privacyPolicy
+    ) {
+      alert(
+        "Proszę wypełnić wszystkie pola i zaakceptować politykę prywatności!"
+      );
+      setIsSubmitting(false);
+      return;
+    }
 
-    // const body = {
-    //   email: "",
-    //   subject: `Pułaskiego - Wiadomość od: ${formData.name}`,
-    //   message: `Imię i nazwisko: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\n\n${formData.message}`,
-    // };
+    const body = {
+      email: "",
+      subject: `Pułaskiego 32 - Wiadomość od: ${formData.name}`,
+      message: `Imię i nazwisko: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\n\n${formData.message}`,
+    };
 
-    // try {
-    //   // Wysyłanie danych do API
-    //   const response = await fetch(
-    //     "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         "x-api-key": "_just-a'test\"key,or>is<it?",
-    //       },
-    //       body: JSON.stringify(body),
-    //     }
-    //   );
+    try {
+      // Wysyłanie danych do API
+      const response = await fetch(
+        "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "_just-a'test\"key,or>is<it?",
+          },
+          body: JSON.stringify(body),
+        }
+      );
+      console.log(response);
 
-    //   if (response.ok) {
-    //     alert("Wiadomość została wysłana pomyślnie!");
-    //     // Resetowanie formularza po wysłaniu
-    //     setFormData({
-    //       name: "",
-    //       email: "",
-    //       phone: "",
-    //       message: "",
-    //       privacyPolicy: false,
-    //     });
-    //     setLastSubmissionTime(now); // Zapisywanie czasu ostatniego wysłania
-    //   } else {
-    //     throw new Error("Błąd podczas wysyłania wiadomości");
-    //   }
-    // } catch (error) {
-    //   alert("Nie udało się wysłać wiadomości. Spróbuj ponownie.");
-    // } finally {
-    //   setIsSubmitting(false); // Zakończenie procesu wysyłania
-    // }
+      if (response.ok) {
+        alert("Wiadomość została wysłana pomyślnie!");
+        // Resetowanie formularza po wysłaniu
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          privacyPolicy: false,
+        });
+        setLastSubmissionTime(now); // Zapisywanie czasu ostatniego wysłania
+      } else {
+        throw new Error("Błąd podczas wysyłania wiadomości");
+      }
+    } catch (error) {
+      alert("Nie udało się wysłać wiadomości. Spróbuj ponownie.");
+      console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false); // Zakończenie procesu wysyłania
+    }
   };
 
   const handleChange = (
@@ -110,28 +113,36 @@ const ContactSection = () => {
       id="kontakt"
       className="w-full h-full flex flex-col bg-green-spring-100 relative scroll-mt-14 px-4 sm:px-8 md:px-12 lg:px-[100px] py-8"
     >
-      <p
+      <motion.h1
         className="text-2xl sm:text-3xl font-bold text-green-spring-950"
-        data-aos="fade-down"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "linear" }}
       >
         KONTAKT
-      </p>
+      </motion.h1>
 
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-1/2">
-          <p
+          <motion.h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
-            data-aos="fade-right"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
             SKONTAKTUJ SIĘ Z&nbsp;NAMI
-          </p>
-          <p
+          </motion.h2>
+          <motion.h3
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
-            data-aos="fade-right"
-            data-aos-delay="100"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             Masz pytania? Chętnie na nie odpowiemy!
-          </p>
+          </motion.h3>
 
           <motion.form
             className="mt-6"
@@ -139,7 +150,10 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(e);
+            }}
           >
             <div className="mb-2">
               <label htmlFor="name" className="block text-lg font-medium">
@@ -241,10 +255,10 @@ const ContactSection = () => {
 
         <motion.div
           className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-auto rounded-3xl overflow-hidden shadow-lg lg:mt-0"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3197.374299040016!2d20.072288559244605!3d49.975397581349306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDnCsDU4JzMzLjIiTiAyMMKwMDQnMTguMiJF!5e1!3m2!1spl!2spl!4v1742513937797!5m2!1spl!2spl"
@@ -257,10 +271,19 @@ const ContactSection = () => {
           ></iframe>
         </motion.div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between items-center mt-8 w-full max-lg:space-y-4">
-        <div
+      <motion.div
+        className="flex flex-col lg:flex-row justify-between items-center mt-8 w-full max-lg:space-y-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, staggerChildren: 0.2 }}
+      >
+        <motion.div
           className="flex flex-wrap justify-center items-center gap-6 w-full lg:w-1/2"
-          data-aos="fade-right"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
           <a
             href="https://www.n20.pl/"
@@ -275,7 +298,13 @@ const ContactSection = () => {
               height={160}
             />
           </a>
-          <div className="flex max-lg:items-center flex-col text-center lg:text-left font-bold text-gray-800 max-w-md">
+          <motion.div
+            className="flex max-lg:items-center flex-col text-center lg:text-left font-bold text-gray-800 max-w-md"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h2 className="text-xl md:text-2xl mb-3">
               Kontakt biura nieruchomości
             </h2>
@@ -299,11 +328,14 @@ const ContactSection = () => {
               <FaLocationDot className="text-orange-500 mr-2" />
               Plac Wolnica 13/21, 31-060 Kraków
             </p>
-          </div>
-        </div>
-        <div
+          </motion.div>
+        </motion.div>
+        <motion.div
           className="w-full lg:w-1/2 flex justify-center"
-          data-aos="fade-left"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Image
             src="/elpropertieslogo.png"
@@ -312,9 +344,10 @@ const ContactSection = () => {
             height={160}
             quality={100}
             className="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+            unoptimized
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
