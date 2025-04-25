@@ -5,10 +5,7 @@ function Footer() {
     <footer>
       <div className="w-full h-full flex flex-col">
         <div className="flex flex-row justify-center lg:justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px] max-lg:gap-4">
-          <div
-            className="flex flex-col justify-center items-center lg:mt-0 lg:w-1/2 xl:-ml-[170px]"
-            data-aos="fade-right"
-          >
+          <div className="flex flex-col justify-center items-center lg:mt-0 lg:w-1/2 xl:-ml-[170px]">
             <div className="flex flex-row gap-4">
               <Link
                 href="https://www.facebook.com/N20RealEstate"
@@ -40,10 +37,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div
-            className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:w-1/2"
-            data-aos="fade-left"
-          >
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:w-1/2">
             <Link
               href="https://www.n20.pl/"
               target="_blank"
