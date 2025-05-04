@@ -21,11 +21,11 @@ const House360View = () => {
 
   const images = Array.from(
     { length: 37 },
-    (_, i) => `/3D/PARTER_${i + 1} - Zdjęcie-min.jpg`
+    (_, i) => `/3D/PARTER3D-02.05_${i + 1} - Zdjęcie.jpg`
   );
   const images2 = Array.from(
     { length: 37 },
-    (_, i) => `/3D/PIĘTRO_${i + 1} - Zdjęcie-min.jpg`
+    (_, i) => `/3D/PIĘTRO3D-02.05_${i + 1} - Zdjęcie.jpg`
   );
 
   const intervalRef1 = useRef<NodeJS.Timeout | null>(null);
