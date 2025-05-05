@@ -17,7 +17,7 @@ export default function WebsiteUnderConstruction() {
         className="object-cover object-center blur-md"
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center z-10 px-4 sm:px-8 md:px-12 lg:px-[100px]  space-y-12">
-        <h1 className="text-7xl xl:text-8xl font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] text-center transition break-words max-w-full">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] text-center transition break-words max-w-full">
           Strona w&nbsp;budowie
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-6 w-full ">
@@ -32,7 +32,7 @@ export default function WebsiteUnderConstruction() {
               alt="N20"
               width={255}
               height={160}
-              className="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+              className="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] object-contain max-lg:max-w-[200px]"
             />
           </a>
           <div className="flex max-lg:items-center flex-col text-center lg:text-left font-bold text-white max-w-md drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
