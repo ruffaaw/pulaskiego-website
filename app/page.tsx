@@ -9,11 +9,13 @@ import House360View from "@/components/House360View";
 import HousesSection from "@/components/HousesSection";
 import InvestmentSection from "@/components/InvestmentSection";
 import TabsSection from "@/components/TabSection";
+import WebsiteUnderConstruction from "@/components/WebsiteUnderConstruction";
 
 export default function Home() {
   return (
     <div className="h-full w-full overflow-hidden">
-      <Header />
+      <WebsiteUnderConstruction />
+      {/* <Header />
       <HomeSection />
       <InvestmentSection />
       <TabsSection />
@@ -23,7 +25,7 @@ export default function Home() {
       <Arrangement />
       <Gallery />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
