@@ -270,7 +270,7 @@ const HousesSection = () => {
                   <p className="mt-2 text-sm sm:text-base">
                     <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                     <span className="font-semibold">
-                      Ogródek: {house.ogrodek} ar
+                      Ogródek: {house.ogrodek} m²
                     </span>
                   </p>
                 )}
