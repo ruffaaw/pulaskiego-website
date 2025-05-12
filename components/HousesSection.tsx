@@ -134,6 +134,11 @@ const HousesSection = () => {
     const cleanPrice = priceStr.replace(/\s/g, "");
     return cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
+  const formatUnit = (value: number | string): string => {
+    const valueStr = typeof value === "number" ? value.toString() : value;
+    const cleanValue = valueStr.replace(/\s/g, "");
+    return cleanValue.replace(".", ",");
+  };
 
   useEffect(() => {
     const fetchHouseOffers = async () => {
@@ -270,7 +275,7 @@ const HousesSection = () => {
                   <p className="mt-2 text-sm sm:text-base">
                     <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                     <span className="font-semibold">
-                      Ogródek: {house.ogrodek} m²
+                      Ogródek: {formatUnit(house.ogrodek)} m²
                     </span>
                   </p>
                 )}
@@ -278,7 +283,7 @@ const HousesSection = () => {
                   <p className="mt-2 text-sm sm:text-base">
                     <Fence className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                     <span className="font-semibold">
-                      Balkon: {house.balkon} m²
+                      Balkon: {formatUnit(house.balkon)} m²
                     </span>
                   </p>
                 )}
@@ -289,7 +294,7 @@ const HousesSection = () => {
                 <p className="mt-2 text-sm sm:text-base">
                   <Home className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                   <span className="font-semibold">
-                    Metraż: {house.metraz} m²
+                    Metraż: {formatUnit(house.metraz)} m²
                   </span>
                 </p>
                 <motion.p
