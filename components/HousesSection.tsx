@@ -315,9 +315,19 @@ const HousesSection = () => {
               <div className="mt-4 sm:mt-0 ml-auto w-[36%] sm:w-[50%] flex justify-center sm:justify-end">
                 <Image
                   src={
-                    house.name.endsWith("a")
-                      ? "/parter_2D.png"
-                      : "/pietro_2D.png"
+                    house.id === 1
+                      ? "/2Dparter1.jpg"
+                      : house.id >= 2 &&
+                        house.id <= 19 &&
+                        house.name.endsWith("a")
+                      ? "/2Dparter2-10.jpg"
+                      : house.id > 19 && house.name.endsWith("a")
+                      ? "/2Dparter11-14.jpg"
+                      : house.id >= 1 &&
+                        house.id <= 20 &&
+                        house.name.endsWith("b")
+                      ? "/2Dpietro1-10.jpg"
+                      : "/2Dpietro11-14.jpg"
                   }
                   alt={`Plan 2D mieszkania ${house.name}`}
                   width={300}
