@@ -27,20 +27,20 @@ export default function InvestmentSection() {
       id="o-inwestycji"
       className="w-full h-full flex flex-col bg-green-spring-200 relative scroll-mt-14 lg:px-[100px] py-8"
     >
-      <p
+      <h1
         className="text-2xl sm:text-3xl font-bold text-green-spring-950 px-4 sm:px-8 md:px-12 lg:px-0"
         data-aos="fade-down"
       >
         O INWESTYCJI
-      </p>
+      </h1>
       <div className="flex flex-col lg:flex-row justify-between items-start pt-4 pb-5 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-3/5 px-4 sm:px-8 md:px-12 lg:px-0">
-          <p
+          <h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent max-w-[1000px] text-left drop-shadow-lg break-words"
             data-aos="fade-right"
           >
             KOMFORT I&nbsp;BEZPIECZEŃSTWO NA WYCIĄGNIĘCIE RĘKI
-          </p>
+          </h2>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
@@ -88,12 +88,12 @@ export default function InvestmentSection() {
           />
         </div>
         <div className="w-full lg:w-3/5 flex flex-col items-end px-4 sm:px-8 md:px-12 lg:px-0">
-          <p
+          <h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 max-w-[1000px] drop-shadow-lg text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
           >
             ZDROWIE I&nbsp;EKOLOGIA W&nbsp;STANDARDZIE{" "}
-          </p>
+          </h2>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right mt-4"
             data-aos="fade-left"
@@ -120,12 +120,12 @@ export default function InvestmentSection() {
       </div>
       <div className="flex flex-col lg:flex-row justify-between items-center py-5 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="w-full lg:w-3/5 px-4 sm:px-8 md:px-12 lg:px-0">
-          <p
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent"
-            data-aos="fade-right"
+          <h2
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent pt-2 "
+            // data-aos="fade-right"
           >
-            WYGODNE ŻYCIE W&nbsp;NOWOCZESNYM OTOCZENIU{" "}
-          </p>
+            WYGODNE ŻYCIE W NOWOCZESNYM OTOCZENIU{" "}
+          </h2>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-left mt-4"
             data-aos="fade-right"
@@ -211,12 +211,12 @@ export default function InvestmentSection() {
           />
         </div>
         <div className="w-full lg:w-3/5 flex flex-col items-end px-4 sm:px-8 md:px-12 lg:px-0">
-          <p
+          <h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] text-right bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
           >
             NOWOCZESNE TECHNOLOGIE I&nbsp;OSZCZĘDNOŚĆ{" "}
-          </p>
+          </h2>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[1000px] text-right mt-4"
             data-aos="fade-left"
@@ -279,12 +279,12 @@ export default function InvestmentSection() {
       </div>
       <div className="flex flex-col py-5">
         <div className="flex flex-col lg:flex-row justify-between lg:space-y-0 lg:space-x-8 px-4 sm:px-8 md:px-12 lg:px-0">
-          <p
+          <h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-green-spring-900 text-left bg-gradient-to-r from-green-spring-900 to-green-spring-400 bg-clip-text text-transparent drop-shadow-lg"
             data-aos="fade-right"
           >
             IDEALNE MIEJSCE DLA CIEBIE
-          </p>
+          </h2>
           <p
             className="text-xl  sm:text-2xl md:text-3xl lg:text-4xl font-semibold max-lg:mt-4 text-green-spring-900 lg:text-right "
             data-aos="fade-left"
@@ -351,12 +351,12 @@ export default function InvestmentSection() {
       </div>
       <div className="flex flex-col lg:flex-row justify-between pt-5 space-y-8 lg:space-y-0 lg:space-x-8">
         <div className="flex flex-col space-y-3 px-4 sm:px-8 md:px-12 lg:px-0">
-          <p
+          <h2
             className="lg:hidden text-4xl sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-lg font-bold text-green-spring-900 max-w-[1000px] bg-gradient-to-r to-green-spring-900 from-green-spring-400 bg-clip-text text-transparent"
             data-aos="fade-left"
           >
             ZAMIESZKAJ NA PUŁASKIEGO 32!{" "}
-          </p>
+          </h2>
           <p
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-green-spring-900 max-w-[900px] text-left"
             data-aos="fade-right"
