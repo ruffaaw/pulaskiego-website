@@ -49,7 +49,7 @@ const ContactSection = () => {
     }
 
     const body = {
-      email: "",
+      email: "biuro@n20.pl",
       subject: `Pułaskiego 32 - Wiadomość od: ${formData.name}`,
       message: `Imię i nazwisko: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\n\n${formData.message}`,
     };
