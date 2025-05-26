@@ -265,12 +265,14 @@ const HousesSection = () => {
                     {getStatusIcon(house.status)} {getStatusText(house.status)}
                   </span>
                 </p>
-                <p className="mt-2 text-sm sm:text-base">
-                  <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                  <span className="font-semibold">
-                    Cena: {formatPrice(house.price)} zł
-                  </span>
-                </p>
+                {house.status !== 0 && (
+                  <p className="mt-2 text-sm sm:text-base">
+                    <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                    <span className="font-semibold">
+                      Cena: {formatPrice(house.price)} zł
+                    </span>
+                  </p>
+                )}
                 {house.ogrodek && (
                   <p className="mt-2 text-sm sm:text-base">
                     <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
