@@ -134,6 +134,11 @@ const HousesSection = () => {
     const cleanPrice = priceStr.replace(/\s/g, "");
     return cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
+  const formatUnit = (value: number | string): string => {
+    const valueStr = typeof value === "number" ? value.toString() : value;
+    const cleanValue = valueStr.replace(/\s/g, "");
+    return cleanValue.replace(".", ",");
+  };
 
   useEffect(() => {
     const fetchHouseOffers = async () => {
@@ -260,17 +265,19 @@ const HousesSection = () => {
                     {getStatusIcon(house.status)} {getStatusText(house.status)}
                   </span>
                 </p>
-                <p className="mt-2 text-sm sm:text-base">
-                  <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                  <span className="font-semibold">
-                    Cena: {formatPrice(house.price)} zł
-                  </span>
-                </p>
+                {house.status !== 0 && (
+                  <p className="mt-2 text-sm sm:text-base">
+                    <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                    <span className="font-semibold">
+                      Cena: {formatPrice(house.price)} zł
+                    </span>
+                  </p>
+                )}
                 {house.ogrodek && (
                   <p className="mt-2 text-sm sm:text-base">
                     <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                     <span className="font-semibold">
-                      Ogródek: {house.ogrodek} ar
+                      Ogródek: {formatUnit(house.ogrodek)} m²
                     </span>
                   </p>
                 )}
@@ -278,7 +285,7 @@ const HousesSection = () => {
                   <p className="mt-2 text-sm sm:text-base">
                     <Fence className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                     <span className="font-semibold">
-                      Balkon: {house.balkon} m²
+                      Balkon: {formatUnit(house.balkon)} m²
                     </span>
                   </p>
                 )}
@@ -289,7 +296,7 @@ const HousesSection = () => {
                 <p className="mt-2 text-sm sm:text-base">
                   <Home className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                   <span className="font-semibold">
-                    Metraż: {house.metraz} m²
+                    Metraż: {formatUnit(house.metraz)} m²
                   </span>
                 </p>
                 <motion.p
@@ -310,9 +317,19 @@ const HousesSection = () => {
               <div className="mt-4 sm:mt-0 ml-auto w-[36%] sm:w-[50%] flex justify-center sm:justify-end">
                 <Image
                   src={
-                    house.name.endsWith("a")
-                      ? "/parter_2D.png"
-                      : "/pietro_2D.png"
+                    house.id === 1
+                      ? "/2Dparter1.jpg"
+                      : house.id >= 2 &&
+                        house.id <= 19 &&
+                        house.name.endsWith("a")
+                      ? "/2Dparter2-10.jpg"
+                      : house.id > 19 && house.name.endsWith("a")
+                      ? "/2Dparter11-14.jpg"
+                      : house.id >= 1 &&
+                        house.id <= 20 &&
+                        house.name.endsWith("b")
+                      ? "/2Dpietro1-10.jpg"
+                      : "/2Dpietro11-14.jpg"
                   }
                   alt={`Plan 2D mieszkania ${house.name}`}
                   width={300}
