@@ -108,7 +108,7 @@ const HousesSection = () => {
   const getStatusText = (status: number) => {
     switch (status) {
       case 0:
-        return "Niedostępny";
+        return "Sprzedany";
       case 1:
         return "Dostępny";
       case 2:
