@@ -9,6 +9,7 @@ import {
   FileText,
   Sprout,
   Fence,
+  Info,
 } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -21,6 +22,7 @@ type House = {
   name: string;
   status: number;
   price: number | string;
+  price30: number | string;
   image: string;
   pokoje: number;
   ogrodek?: number;
@@ -30,6 +32,7 @@ type House = {
     x: number;
     y: number;
   };
+  cenaZaMetrKwadratowy?: number;
 };
 
 const containerVariants = {
@@ -83,6 +86,11 @@ const HousesSection = () => {
   const houseRefs = useRef<(HTMLDivElement | null)[]>([]);
   const listContainerRef = useRef<HTMLDivElement | null>(null);
   const [houseOffers, setHouseOffers] = useState<House[]>([]);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleOpen = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const handleHouseClick = (id: number) => {
     const houseRef = houseRefs.current[id];
@@ -156,6 +164,7 @@ const HousesSection = () => {
           const coords = houseCoordinates.find(
             (coord) => coord.id === parseInt(house.Id)
           );
+
           return {
             ...house,
             id: parseInt(house.Id),
@@ -163,6 +172,11 @@ const HousesSection = () => {
               x: coords?.position.x || 0,
               y: coords?.position.y || 0,
             },
+            cenaZaMetrKwadratowy: formatPrice(
+              formatUnit(
+                Number(Number(house.price) / Number(house.metraz)).toFixed(2)
+              )
+            ),
           };
         });
         setHouseOffers(combinedData);
@@ -265,14 +279,45 @@ const HousesSection = () => {
                     {getStatusIcon(house.status)} {getStatusText(house.status)}
                   </span>
                 </p>
-                {house.status !== 0 && (
-                  <p className="mt-2 text-sm sm:text-base">
-                    <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
-                    <span className="font-semibold">
-                      Cena: {formatPrice(house.price)} zł
-                    </span>
-                  </p>
-                )}
+                {/* <p className="mt-2 text-sm sm:text-base">
+                  <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <span className="font-semibold">
+                    Cena: {formatPrice(house.price)} zł
+                  </span>
+                </p> */}
+                <div className="text-gray-600 font-bold relative">
+                  <div className="flex items-center space-x-2">
+                    <p className="mt-2 text-sm sm:text-base">
+                      <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                      <span className="font-semibold">
+                        Cena: {formatPrice(house.price)} zł
+                      </span>
+                    </p>{" "}
+                    <button
+                      onClick={() => toggleOpen(index)}
+                      className="mt-2 p-1 rounded-full hover:bg-gray-200 transition"
+                    >
+                      <Info size={18} className="text-gray-500" />
+                    </button>
+                  </div>
+
+                  {openIndex === index && (
+                    <div
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 ml-5 
+                        bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 flex items-center
+                        border w-max z-10"
+                    >
+                      Najniższa cena z ostatnich 30 dni:{" "}
+                      {formatPrice(house.price30)} zł
+                    </div>
+                  )}
+                </div>
+                <p className="mt-2 text-sm sm:text-base">
+                  <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
+                  <span className="font-semibold">
+                    Cena za metr: {house.cenaZaMetrKwadratowy} zł
+                  </span>
+                </p>
                 {house.ogrodek && (
                   <p className="mt-2 text-sm sm:text-base">
                     <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />

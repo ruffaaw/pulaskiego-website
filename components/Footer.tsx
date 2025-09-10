@@ -49,7 +49,14 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-signature text-white px-4 sm:px-8 md:px-12 lg:px-[100px]">
-          <p className="my-2 text-center md:text-left">2025 Policrafts ©</p>
+          <a
+            href="https://policrafts.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="my-2 text-center md:text-left"
+          >
+            2025 Policrafts ©
+          </a>
           <div className="text-center md:text-right">
             <p className="p-0 m-0">
               Wizualizacje: Maciej Krzyszkowski, Alicja Janeczek
