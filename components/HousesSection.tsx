@@ -10,6 +10,7 @@ import {
   Sprout,
   Fence,
   Info,
+  Clock,
 } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -33,6 +34,7 @@ type House = {
     y: number;
   };
   cenaZaMetrKwadratowy?: number;
+  price_history?: { date: string; price: number | string }[];
 };
 
 const containerVariants = {
@@ -87,6 +89,11 @@ const HousesSection = () => {
   const listContainerRef = useRef<HTMLDivElement | null>(null);
   const [houseOffers, setHouseOffers] = useState<House[]>([]);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [historyIndex, setHistoryIndex] = useState<number | null>(null);
+
+  const toggleHistory = (i: number) => {
+    setHistoryIndex(historyIndex === i ? null : i);
+  };
 
   const toggleOpen = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -292,32 +299,85 @@ const HousesSection = () => {
                       <span className="font-semibold">
                         Cena: {formatPrice(house.price)} zł
                       </span>
-                    </p>{" "}
+                    </p>
                     <button
                       onClick={() => toggleOpen(index)}
                       className="mt-2 p-1 rounded-full hover:bg-gray-200 transition"
                     >
                       <Info size={18} className="text-gray-500" />
                     </button>
+
+                    {house.price_history && house.price_history.length > 0 && (
+                      <button
+                        onClick={() => toggleHistory(index)}
+                        className="mt-2 p-1 rounded-full hover:bg-gray-200 transition"
+                      >
+                        <Clock size={18} className="text-gray-500" />
+                      </button>
+                    )}
                   </div>
 
+                  {/* Popup dla Najniższej ceny (już masz) */}
                   {openIndex === index && (
                     <div
                       className="absolute top-full left-1/2 -translate-x-1/2 mt-2 ml-5 
-                        bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 flex items-center
-                        border w-max z-10"
+        bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 flex items-center
+        border w-max z-10"
                     >
                       Najniższa cena z ostatnich 30 dni:{" "}
                       {formatPrice(house.price30)} zł
                     </div>
                   )}
+
+                  {/* Popup dla Historii cen */}
+                  {historyIndex === index && (
+                    <div
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 ml-5 
+        bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 
+        border w-max z-10 max-h-48 overflow-y-auto"
+                    >
+                      <h3 className="font-semibold mb-2">Historia cen:</h3>
+                      <ul className="space-y-1">
+                        {house.price_history &&
+                          house.price_history.map((entry, i) => (
+                            <li key={i} className="text-gray-700">
+                              {new Date(entry.date).toLocaleDateString("pl-PL")}{" "}
+                              –{" "}
+                              <span className="font-semibold">
+                                {formatPrice(entry.price)} zł
+                              </span>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
+
                 <p className="mt-2 text-sm sm:text-base">
                   <DollarSign className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
                   <span className="font-semibold">
                     Cena za metr: {house.cenaZaMetrKwadratowy} zł
                   </span>
                 </p>
+
+                {house.price_history && house.price_history.length > 0 && (
+                  <div className="mt-4 text-sm sm:text-base">
+                    <h3 className="font-semibold text-green-spring-900">
+                      Historia cen:
+                    </h3>
+                    <ul className="list-disc ml-5 mt-2 space-y-1">
+                      {house.price_history.map((entry, i) => (
+                        <li key={i} className="text-gray-700">
+                          {new Date(entry.date).toLocaleDateString("pl-PL")} –{" "}
+                          <span className="font-semibold">
+                            {formatPrice(entry.price)} zł
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {house.ogrodek && (
                   <p className="mt-2 text-sm sm:text-base">
                     <Sprout className="inline-block w-5 h-5 mr-1 text-green-spring-900" />
