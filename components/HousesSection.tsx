@@ -247,7 +247,13 @@ const HousesSection = () => {
               </button>
             ))}
           </div>
+          <p className="mt-4 text-sm sm:text-base text-green-spring-900 bg-green-spring-50 px-4 py-3 rounded-2xl">
+            Cena lokalu uwzględnia zakup udziałów w&nbsp;drodze, częściach
+            wspólnych, parkingach i&nbsp;terenie zielonym w&nbsp;wysokości{" "}
+            <strong>15&nbsp;000&nbsp;zł</strong>.
+          </p>
         </motion.div>
+
         <motion.div
           ref={listContainerRef}
           className="overflow-y-auto max-h-[250px] lg:max-h-[741px] w-full lg:w-[42%] rounded-3xl space-y-4"
