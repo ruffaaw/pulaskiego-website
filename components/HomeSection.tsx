@@ -61,6 +61,25 @@ export default function HomeSection() {
               Nowoczesne osiedle inspirowane harmonią natury i&nbsp;komfortem
               życia.
             </h2>
+            <div
+              className="flex flex-col gap-1 text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] text-left"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="800"
+            >
+              <a
+                href="tel:785006635"
+                className="text-base sm:text-lg md:text-xl font-semibold hover:underline"
+              >
+                785 006 635
+              </a>
+              <a
+                href="mailto:biuro@elproperties.pl"
+                className="text-base sm:text-lg md:text-xl font-semibold hover:underline"
+              >
+                biuro@elproperties.pl
+              </a>
+            </div>
             <Link
               key={"o-inwestycji"}
               href={"#o-inwestycji"}

@@ -331,7 +331,7 @@ const ContactSection = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          className="w-full lg:w-1/2 flex justify-center"
+          className="w-full lg:w-1/2 flex flex-col justify-center items-center gap-3"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -346,6 +346,22 @@ const ContactSection = () => {
             className="drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
             unoptimized
           />
+          <div className="flex flex-col items-center gap-1 font-bold text-gray-800">
+            <a
+              href="tel:785006635"
+              className="text-sm md:text-base flex items-center hover:underline"
+            >
+              <FaPhone className="text-orange-500 mr-2" />
+              785 006 635
+            </a>
+            <a
+              href="mailto:biuro@elproperties.pl"
+              className="text-sm md:text-base flex items-center hover:underline"
+            >
+              <FaEnvelope className="text-orange-500 mr-2" />
+              biuro@elproperties.pl
+            </a>
+          </div>
         </motion.div>
       </motion.div>
     </section>
