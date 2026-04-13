@@ -56,10 +56,10 @@ export default function Header() {
       >
         {[
           { href: "#o-inwestycji", label: "O inwestycji" },
+          { href: "#lokale", label: "Lokale" },
           { href: "#lokalizacja", label: "Lokalizacja" },
           { href: "#o-inwestorze", label: "O inwestorze" },
           { href: "#widok-360", label: "Widok 360°" },
-          { href: "#lokale", label: "Lokale" },
           { href: "#aranzacje", label: "Aranżacje" },
           { href: "#galeria", label: "Galeria" },
         ].map((item) => (
@@ -111,6 +111,14 @@ export default function Header() {
           </Link>
 
           <Link
+            href="#lokale"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <p className="break-words max-w-full">Lokale</p>
+          </Link>
+
+          <Link
             href="#lokalizacja"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
             onClick={() => setIsMenuOpen(false)}
@@ -130,13 +138,6 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Widok 360°</p>
-          </Link>
-          <Link
-            href="#lokale"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <p className="break-words max-w-full">Lokale</p>
           </Link>
           <Link
             href="#aranzacje"

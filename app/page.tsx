@@ -16,10 +16,10 @@ export default function Home() {
       <Header />
       <HomeSection />
       <InvestmentSection />
-      <TabsSection />
-      <AboutInvestorSection />
-      <House360View />
       <HousesSection />
+      <AboutInvestorSection />
+      <TabsSection />
+      <House360View />
       <Arrangement />
       <Gallery />
       <Contact />
