@@ -15,7 +15,7 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
-    null
+    null,
   );
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -27,7 +27,7 @@ const ContactSection = () => {
     const now = Date.now();
     if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
       alert(
-        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej."
+        "Wiadomość została już wysłana. Poczekaj chwilę przed wysłaniem kolejnej.",
       );
       setIsSubmitting(false);
       return;
@@ -42,7 +42,7 @@ const ContactSection = () => {
       !formData.privacyPolicy
     ) {
       alert(
-        "Proszę wypełnić wszystkie pola i zaakceptować politykę prywatności!"
+        "Proszę wypełnić wszystkie pola i zaakceptować politykę prywatności!",
       );
       setIsSubmitting(false);
       return;
@@ -65,7 +65,7 @@ const ContactSection = () => {
             "x-api-key": "_just-a'test\"key,or>is<it?",
           },
           body: JSON.stringify(body),
-        }
+        },
       );
       console.log(response);
 
@@ -92,7 +92,7 @@ const ContactSection = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value, type } = e.target;
     if (type === "checkbox") {
@@ -308,22 +308,34 @@ const ContactSection = () => {
             <h2 className="text-xl md:text-2xl mb-3">
               Kontakt biura nieruchomości
             </h2>
-            <p className="text-sm md:text-base flex items-center">
+            <a
+              href="mailto:biuro@n20.pl"
+              className="text-sm md:text-base flex items-center hover:underline"
+            >
               <FaEnvelope className="text-orange-500 mr-2" />
               biuro@n20.pl
-            </p>
-            <p className="text-sm md:text-base flex items-center">
+            </a>
+            <a
+              href="tel:+48124333878"
+              className="text-sm md:text-base flex items-center hover:underline"
+            >
               <FaPhone className="text-orange-500 mr-2" />
               +48 12 433 38 78
-            </p>
-            <p className="text-sm md:text-base flex items-center">
+            </a>
+            <a
+              href="tel:+48790557504"
+              className="text-sm md:text-base flex items-center hover:underline"
+            >
               <FaMobile className="text-orange-500 mr-2" />
               +48 790 557 504
-            </p>
-            <p className="text-sm md:text-base flex items-center">
+            </a>
+            <a
+              href="tel:+48790557057"
+              className="text-sm md:text-base flex items-center hover:underline"
+            >
               <FaMobile className="text-orange-500 mr-2" />
               +48 790 557 057
-            </p>
+            </a>
             <p className="text-sm md:text-base flex items-center">
               <FaLocationDot className="text-orange-500 mr-2" />
               Plac Wolnica 13/21, 31-060 Kraków
