@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaLongArrowAltDown } from "react-icons/fa";
 function Footer() {
   return (
     <footer>
       <div className="w-full h-full flex flex-col">
-        <div className="flex flex-row justify-center lg:justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px] max-lg:gap-4">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between pb-5 pt-5 bg-green-spring-900 px-4 sm:px-8 md:px-12 lg:px-[100px] max-lg:gap-4">
           <div className="flex flex-col justify-center items-center lg:mt-0 lg:w-1/2 xl:-ml-[170px]">
             <div className="flex flex-row gap-4">
               <Link
@@ -37,6 +38,29 @@ function Footer() {
               </Link>
             </div>
           </div>
+
+          <div className="flex justify-center items-center my-5 lg:my-0">
+            <Link
+              href="/prospektInformacyjny/PROSPEKT_INFORMACYJNY_pulaskiego.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Pobierz prospekt informacyjny w formacie PDF"
+              className="group inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/20"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-xl transition group-hover:bg-white/25">
+                <FaLongArrowAltDown />
+              </span>
+              <span className="text-left">
+                <span className="block text-xs uppercase tracking-[0.2em] text-white/70">
+                  Prospekt informacyjny
+                </span>
+                <span className="block text-lg font-semibold leading-tight">
+                  Pobierz PDF
+                </span>
+              </span>
+            </Link>
+          </div>
+
           <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:w-1/2">
             <Link
               href="https://www.n20.pl/"
